@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sistema Integral de Gestión Comercial</title>
+  <meta name="description" content="Plataforma moderna para emprendedores, PYMEs y empresas: ventas, facturas, proveedores, stock y más." />
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Fuente Montserrat -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --neon: #00ffb3;
+      --bg-a: #0b0f12;
+      --bg-b: #0e1418;
+    }
+    html{ scroll-behavior:smooth; }
+    body{
+      font-family: 'Montserrat', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial;
+      background: linear-gradient(135deg, rgba(0,255,179,0.12) 0%, rgba(11,15,18,0.10) 24%, rgba(11,15,18,1) 60%),
+                  linear-gradient(135deg, #0d1216 0%, #0b0f12 60%, #0a0e12 100%);
+    }
+    /* Animación de entrada */
+    .reveal{ opacity:0; transform: translateY(12px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.show{ opacity:1; transform: translateY(0); }
+    /* Cards */
+    .card-3d{ transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+    .card-3d:hover{ transform: translateY(-6px); box-shadow: 0 18px 42px rgba(0,255,179,.10); border-color: rgba(0,255,179,.35); }
+    /* Botones con brillo */
+    .btn-glow{ position: relative; overflow: hidden; transition: transform .15s ease, box-shadow .2s ease; }
+    .btn-glow:hover{ transform: translateY(-1px); box-shadow: 0 8px 24px rgba(0,255,179,.25);}
+    .btn-glow::after{
+      content:""; position:absolute; inset:0;
+      background: radial-gradient(120px 120px at var(--x,50%) var(--y,50%), rgba(255,255,255,.22), transparent 60%);
+      opacity:0; transition: opacity .25s ease;
+    }
+    .btn-glow:hover::after{ opacity:.85; }
+    /* WhatsApp flotante */
+    .wa-float{
+      position: fixed; width:58px; height:58px; bottom:20px; right:20px; z-index:60;
+      display:flex; align-items:center; justify-content:center; border-radius:9999px;
+      background: var(--neon); color:#02150f; box-shadow: 0 10px 26px rgba(0,0,0,.4);
+      transition: transform .2s ease;
+    }
+    .wa-float:hover{ transform: scale(1.07); }
+    .wa-float::before{
+      content:""; position:absolute; inset:-8px; border-radius:9999px;
+      background: radial-gradient(120px 120px at 50% 50%, rgba(0,255,179,.35), transparent 60%);
+      filter: blur(7px); z-index:-1; animation: pulse 2.2s infinite ease-in-out;
+    }
+    @keyframes pulse{ 0%,100%{ transform:scale(.96); opacity:.8 } 50%{ transform:scale(1.04); opacity:1 } }
+    /* Clientes */
+    .client-card{
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+      background: linear-gradient(145deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      border: 1px solid rgba(255,255,255,.08);
+    }
+    .client-card:hover{ transform: translateY(-6px); box-shadow: 0 10px 28px rgba(0,255,179,.18); border-color: rgba(0,255,179,.35); }
+    /* Destacado: Stock Automático */
+    .highlight{
+      background:
+       radial-gradient(140% 120% at 100% 0%, rgba(0,255,179,.18), transparent 45%),
+       linear-gradient(165deg, rgba(0,255,179,.08), rgba(255,255,255,.02));
+      border-color: rgba(0,255,179,.35);
+      box-shadow: inset 0 0 0 1px rgba(0,255,179,.12), 0 14px 46px rgba(0,255,179,.12);
+      position: relative;
+    }
+    .badge{
+      position:absolute; top:14px; right:14px;
+      background: rgba(0,255,179,.16); color: var(--neon);
+      border: 1px solid rgba(0,255,179,.45);
+      padding: .35rem .6rem; border-radius: 999px; font-size: .70rem; letter-spacing:.06em;
+      animation: badgePulse 2.6s infinite ease-in-out;
+      text-transform: uppercase; font-weight: 600;
+    }
+    @keyframes badgePulse{ 0%,100%{ transform: translateZ(0) scale(.98); box-shadow: 0 0 0 rgba(0,255,179,.0);} 50%{ transform: translateZ(0) scale(1.02); box-shadow: 0 0 24px rgba(0,255,179,.25);} }
+  </style>
+</head>
+<body class="text-gray-200 antialiased">
+
+  <!-- Header -->
+  <header class="fixed top-0 inset-x-0 z-50 border-b border-white/5 backdrop-blur bg-[#0b0f12]/75">
+    <nav class="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 h-16">
+      <a href="#inicio" class="flex items-center gap-2">
+        <span class="font-extrabold tracking-wide text-[var(--neon)]">Sistema Integral</span>
+      </a>
+      <ul class="hidden md:flex items-center gap-7 text-sm">
+        <li><a href="#modulos" class="hover:text-[var(--neon)]">Módulos</a></li>
+        <li><a href="#clientes" class="hover:text-[var(--neon)]">Clientes</a></li>
+        <li><a href="#nosotros" class="hover:text-[var(--neon)]">Nosotros</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="inicio" class="pt-28 sm:pt-32 pb-5 sm:pb-20 px-6 text-center reveal">
+  <div class="max-w-4xl mx-auto">
+    <h1 class="uppercase text-4xl sm:text-6xl font-extrabold leading-tight">
+      <span class="text-[var(--neon)]">Simplificá</span> tu gestión.<br class="hidden sm:block"/>
+      Crecé <span class="text-[var(--neon)]">sin fricción</span>.
+    </h1>
+    <p class="mt-5 text-lg sm:text-xl text-gray-300">
+      Para emprendedores, PYMEs y empresas.
+    </p>
+    <p class="mt-3 text-sm sm:text-base text-gray-400">
+      Adaptada a tu negocio y necesidades.<br class="hidden sm:block" />
+      También desarrollamos soluciones a medida cuando lo necesitás.
+    </p>
+  </div>
+</section>
+
+
+  <!-- Módulos -->
+  <section id="modulos" class="py-12 sm:py-16 px-6">
+    <div class="max-w-7xl mx-auto">
+  <h2 class="uppercase text-3xl font-bold text-center text-[var(--neon)] mb-10 reveal">Módulos principales</h2>
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+
+    <!-- Ventas -->
+    <article class="reveal card-3d rounded-2xl border highlight p-6 min-h-[240px] flex flex-col justify-between">
+      <div>
+        <h3 class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]">Gestión de Ventas</h3>
+        <p class="text-sm text-gray-100 mb-4">
+          Control total de operaciones con totales automáticos, filtros avanzados y PDF al instante.
+        </p>
+      </div>
+      <a href="modulos/ventas.html" class="text-[var(--neon)] font-semibold hover:underline mt-auto">Ver detalle →</a>
+    </article>
+
+    <!-- Ingresos de Proveedores -->
+    <article class="reveal card-3d rounded-2xl border highlight p-6 min-h-[240px] flex flex-col justify-between">
+      <div>
+        <h3 class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]">Ingresos de Proveedores</h3>
+        <p class="text-sm text-gray-100 mb-4">
+          Registrá entradas, actualizá stock y asegurá trazabilidad completa.
+        </p>
+      </div>
+      <a href="modulos/ingresos-proveedores.html" class="text-[var(--neon)] font-semibold hover:underline mt-auto">Ver detalle →</a>
+    </article>
+
+    <!-- Facturas de Clientes -->
+    <article class="reveal card-3d rounded-2xl border highlight p-6 min-h-[240px] flex flex-col justify-between">
+      <div>
+        <h3 class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]">Facturas de clientes y proveedores</h3>
+        <p class="text-sm text-gray-100 mb-4">
+          Pagos, vencimientos y estados. Control interno sin emisión AFIP.
+        </p>
+      </div>
+      <a href="modulos/facturas-clientes.html" class="text-[var(--neon)] font-semibold hover:underline mt-auto">Ver detalle →</a>
+    </article>
+
+     <!-- Totales de Ventas -->
+    <article class="reveal card-3d rounded-2xl border highlight p-6 min-h-[240px] flex flex-col justify-between">
+      <div>
+        <h3 class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]">Totales de Ventas e ingresos</h3>
+        <p class="text-sm text-gray-100 mb-4">
+          Indicadores clave de facturado, cobrado y pendiente por período para decisiones ágiles.
+        </p>
+      </div>
+      <a href="modulos/totales-ventas.html" class="text-[var(--neon)] font-semibold hover:underline mt-auto">Ver detalle →</a>
+    </article>
+
+     <!-- Totales de Facturas -->
+    <article class="reveal card-3d rounded-2xl border highlight p-6 min-h-[240px] flex flex-col justify-between">
+      <div>
+        <h3 class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]">Totales de Facturas</h3>
+        <p class="text-sm text-gray-100 mb-4">
+          Resumen en tiempo real: pagado, pendiente y vencido. Visualización clara de flujo de cobros.
+        </p>
+      </div>
+      <a href="modulos/totales-facturas.html" class="text-[var(--neon)] font-semibold hover:underline mt-auto">Ver detalle →</a>
+    </article>
+
+    <!-- Gastos -->
+    <article class="reveal card-3d rounded-2xl border highlight p-6 min-h-[240px] flex flex-col justify-between">
+      <div>
+        <h3 class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]">Gastos personalizados</h3>
+        <p class="text-sm text-gray-100 mb-4">
+          Control de egresos por período y tipo. Totales automáticos y reportes claros.
+        </p>
+      </div>
+      <a href="modulos/gastos.html" class="text-[var(--neon)] font-semibold hover:underline mt-auto">Ver detalle →</a>
+    </article>
+
+    <!-- Productos -->
+    <article class="reveal card-3d rounded-2xl border highlight p-6 min-h-[240px] flex flex-col justify-between">
+      <div>
+        <h3 class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]">Gestión de Productos</h3>
+        <p class="text-sm text-gray-100 mb-4">
+          Catálogo completo: stock, costos, marcas, modelos y cualquier otra categoría 100% personalizable.
+        </p>
+      </div>
+      <a href="modulos/productos.html" class="text-[var(--neon)] font-semibold hover:underline mt-auto">Ver detalle →</a>
+    </article>
+
+    <!-- Stock Automático -->
+    <article class="reveal card-3d rounded-2xl border highlight p-6 min-h-[240px] flex flex-col justify-between">
+      <div>
+        <h3 class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]">Stock Automático</h3>
+        <p class="text-sm text-gray-100 mb-4">
+          Actualización inteligente y en tiempo real del inventario. Ventas descuentan, ingresos suman — sin tareas manuales ni errores.
+        </p>
+      </div>
+      <a href="modulos/stock-automatico.html" class="text-[var(--neon)] font-semibold hover:underline mt-auto">Ver detalle →</a>
+    </article>
+
+    <!-- Carga Automática desde Foto -->
+    <article class="reveal card-3d rounded-2xl border highlight p-6 min-h-[240px] flex flex-col justify-between">
+      <div>
+        <h3 class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]">Carga desde Foto</h3>
+        <p class="text-sm text-gray-100 mb-4">
+          EN DESAROLLO
+        </p>
+        <p class="text-sm text-gray-100 mb-4">
+          Reconocimiento de facturas mediante OCR. Creá facturas, ventas e ingresos con solo una imagen. Ideal para simplificar la carga documental.
+        </p>
+      </div>
+      <a href="modulos/carga-foto.html" class="text-[var(--neon)] font-semibold hover:underline mt-auto">Ver detalle →</a>
+    </article>
+
+  </div>
+</div>
+
+
+  </section>
+  
+  <!-- Clientes con logos -->
+  <section id="clientes" class="py-16 px-6 border-t border-white/5">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="uppercase text-3xl font-bold text-center text-[var(--neon)] mb-10 reveal">Clientes que confían</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 reveal">
+        <div class="client-card rounded-xl p-6 text-center">
+          <img src="img/pecile.jpg" alt="Logo Autocris" class="mx-auto rounded-lg mb-4 w-36 h-36 object-cover"/>
+          <h3 class="uppercase font-semibold text-lg">Pecile equipamientos</h3>
+          <p class="text-sm text-gray-300 mt-2">Servicios automotrices con foco en velocidad y trazabilidad.</p>
+        </div>
+        <div class="client-card rounded-xl p-6 text-center">
+          <img src="img/lupe.jpg" alt="Logo Vidrios Córdoba" class="mx-auto rounded-lg mb-4 w-36 h-36 object-cover"/>
+          <h3 class="uppercase font-semibold text-lg">Lupe home</h3>
+          <p class="text-sm text-gray-300 mt-2">Mayorista de cristales con control de stock en tiempo real.</p>
+        </div>
+        <div class="client-card rounded-xl p-6 text-center">
+          <img src="img/ellugar.jpg" alt="Logo Metalúrgica Alfa" class="mx-auto rounded-lg mb-4 w-36 h-36 object-cover"/>
+          <h3 class="uppercase font-semibold text-lg">El lugar fuego y cava</h3>
+          <p class="text-sm text-gray-300 mt-2">Fabricación y mantenimiento con trazabilidad por proveedor.</p>
+        </div>
+        <div class="client-card rounded-xl p-6 text-center">
+          <img src="img/moon.jpg" alt="Logo DistribuGlass" class="mx-auto rounded-lg mb-4 w-36 h-36 object-cover"/>
+          <h3 class="uppercase font-semibold text-lg">Moon Boutique</h3>
+          <p class="text-sm text-gray-300 mt-2">Distribución eficiente y análisis de ventas en tiempo real.</p>
+        </div>
+        <div class="client-card rounded-xl p-6 text-center">
+          <img src="img/fica.jpg" alt="Logo DistribuGlass" class="mx-auto rounded-lg mb-4 w-36 h-36 object-cover"/>
+          <h3 class="uppercase font-semibold text-lg">Productora fica</h3>
+          <p class="text-sm text-gray-300 mt-2">Distribución eficiente y análisis de ventas en tiempo real.</p>
+        </div>
+        <div class="client-card rounded-xl p-6 text-center">
+          <img src="img/seven.jpg" alt="Logo DistribuGlass" class="mx-auto rounded-lg mb-4 w-36 h-36 object-cover"/>
+          <h3 class="uppercase font-semibold text-lg">Seven padel</h3>
+          <p class="text-sm text-gray-300 mt-2">Distribución eficiente y análisis de ventas en tiempo real.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre nosotros -->
+  <section id="nosotros" class="py-16 px-6 border-t border-white/5">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="uppercase text-3xl font-bold text-[var(--neon)] mb-6 reveal">Sobre nosotros</h2>
+      <p class="text-gray-300 reveal max-w-3xl mx-auto">
+        Transformamos procesos complejos en flujos simples y eficientes. Acompañamos a emprendedores, PYMEs y empresas con
+        tecnología accesible y un enfoque humano.
+      </p>
+      <p class="text-gray-400 reveal mt-3">
+        Acompañamos cada empresa con soporte permanente, actualizaciones continuas y mejora constante del sistema.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/5 py-10 text-center text-sm text-gray-400">
+    <p>© 2025 Sistema Integral de Gestión Comercial — Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- WhatsApp -->
+  <a href="https://wa.me/PHONE_NUMBER" target="_blank" class="wa-float" aria-label="WhatsApp">CONTACTANOS</a>
+
+  <!-- JS: efectos de entrada + brillo en botones -->
+  <script>
+    // Reveal on scroll
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target);} });
+    },{threshold:0.12});
+    document.querySelectorAll('.reveal').forEach(el=> io.observe(el));
+
+    // Brillo animado en botones según puntero
+    document.querySelectorAll('.btn-glow').forEach(btn=>{
+      btn.addEventListener('pointermove', e=>{
+        const r = btn.getBoundingClientRect();
+        btn.style.setProperty('--x', `${e.clientX - r.left}px`);
+        btn.style.setProperty('--y', `${e.clientY - r.top}px`);
+      });
+    });
+  </script>
+</body>
+</html>

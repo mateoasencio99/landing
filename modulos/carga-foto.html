@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Carga desde Foto — Sistema Integral</title>
+  <meta name="description" content="Reconocimiento automático de facturas mediante OCR. Creá comprobantes, ventas e ingresos con solo una imagen." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --neon: #00ffb3;
+      --bg-a: #0b0f12;
+      --bg-b: #0e1418;
+    }
+    body {
+      font-family: 'Montserrat', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial;
+      background: linear-gradient(135deg, rgba(0,255,179,0.12) 0%, rgba(11,15,18,0.10) 24%, rgba(11,15,18,1) 60%),
+                  linear-gradient(135deg, #0d1216 0%, #0b0f12 60%, #0a0e12 100%);
+      color: #e5e7eb;
+      scroll-behavior: smooth;
+    }
+    .reveal { opacity: 0; transform: translateY(12px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.show { opacity: 1; transform: translateY(0); }
+    .card {
+      background: linear-gradient(145deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 42px rgba(0,255,179,.12);
+      border-color: rgba(0,255,179,.35);
+    }
+    .highlight {
+      border-color: rgba(0,255,179,.35);
+      box-shadow: inset 0 0 0 1px rgba(0,255,179,.12), 0 10px 36px rgba(0,255,179,.1);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="fixed top-0 inset-x-0 z-50 border-b border-white/5 backdrop-blur bg-[#0b0f12]/80">
+    <nav class="max-w-7xl mx-auto flex items-center justify-between px-6 h-16">
+      <a href="../index.html" class="flex items-center gap-2">
+        <span class="font-extrabold tracking-wide text-[var(--neon)]">Sistema Integral</span>
+      </a>
+      <a href="../index.html#modulos" class="text-sm hover:text-[var(--neon)]">← Volver</a>
+    </nav>
+  </header>
+
+  <!-- Contenido principal -->
+  <main class="pt-28 pb-16 px-6 max-w-5xl mx-auto">
+
+    <!-- Hero -->
+    <section class="text-center mb-12 reveal">
+      <h1 class="uppercase text-4xl sm:text-5xl font-extrabold mb-4 text-[var(--neon)]">📷 CARGA DESDE FOTO</h1>
+      <p class="text-lg text-gray-300 max-w-3xl mx-auto">
+        Reconocimiento de facturas mediante OCR.  
+        Creá facturas, ventas e ingresos con solo una imagen.
+      </p>
+      <p class="text-sm text-gray-400 mt-3 max-w-2xl mx-auto">
+        Ideal para simplificar la carga documental y automatizar procesos administrativos.
+      </p>
+    </section>
+
+    <!-- Estado de desarrollo -->
+    <section class="mb-10 reveal">
+      <div class="card border-yellow-400/40 bg-yellow-400/5 text-center py-8">
+        <h2 class="text-2xl font-bold mb-2 text-yellow-300">🚧 EN DESARROLLO</h2>
+        <p class="text-sm text-gray-300 max-w-xl mx-auto">
+          Estamos trabajando en una herramienta de reconocimiento inteligente que permitirá procesar facturas desde imágenes o fotos, transformando automáticamente la información en comprobantes dentro del sistema.
+        </p>
+      </div>
+    </section>
+
+    <!-- Descripción general -->
+    <section class="mb-12 reveal">
+      <div class="card highlight">
+        <h2 class="text-2xl font-bold mb-3 text-[var(--neon)]">🤖 TECNOLOGÍA OCR</h2>
+        <p class="text-gray-300 mb-4">
+          El sistema identificará datos clave desde una foto o escaneo:
+        </p>
+        <ul class="list-disc list-inside text-gray-400 space-y-2">
+          <li>Lectura automática de número de factura, fecha e importes.</li>
+          <li>Reconocimiento de proveedor o cliente.</li>
+          <li>Conversión inmediata en comprobante dentro del sistema.</li>
+          <li>Reducción total del tiempo de carga manual.</li>
+        </ul>
+        <p class="text-gray-400 mt-4">
+          Gracias al reconocimiento óptico de caracteres (OCR), simplifica el proceso administrativo y mejora la precisión de los datos cargados.
+        </p>
+      </div>
+    </section>
+
+    <!-- Futuras funcionalidades -->
+    <section class="reveal">
+      <div class="card">
+        <h2 class="text-2xl font-bold mb-3 text-[var(--neon)]">💡 FUNCIONALIDADES PRÓXIMAS</h2>
+        <ul class="list-none text-gray-300 space-y-2">
+          <li>✅ Carga automática desde imágenes o PDF.</li>
+          <li>🧾 Creación de facturas, ventas o ingresos al instante.</li>
+          <li>🔍 Validación inteligente de datos detectados.</li>
+          <li>📱 Integración con cámara y galería desde dispositivos móviles.</li>
+          <li>⚙️ Sincronización con los módulos de facturación y stock.</li>
+        </ul>
+        <p class="text-gray-400 mt-4">
+          Próximamente disponible. Este módulo marcará un salto de eficiencia en la digitalización de comprobantes.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/5 py-10 text-center text-sm text-gray-400">
+    <p>© 2025 Sistema Integral de Gestión Comercial — Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- JS: animación reveal -->
+  <script>
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target);} });
+    },{threshold:0.12});
+    document.querySelectorAll('.reveal').forEach(el=> io.observe(el));
+  </script>
+
+</body>
+</html>

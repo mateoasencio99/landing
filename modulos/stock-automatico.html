@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stock Automático — Sistema Integral</title>
+  <meta name="description" content="Actualización inteligente y en tiempo real del inventario. Ventas descuentan, ingresos suman — sin tareas manuales ni errores." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --neon: #00ffb3;
+      --bg-a: #0b0f12;
+      --bg-b: #0e1418;
+    }
+    body {
+      font-family: 'Montserrat', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial;
+      background: linear-gradient(135deg, rgba(0,255,179,0.12) 0%, rgba(11,15,18,0.10) 24%, rgba(11,15,18,1) 60%),
+                  linear-gradient(135deg, #0d1216 0%, #0b0f12 60%, #0a0e12 100%);
+      color: #e5e7eb;
+      scroll-behavior: smooth;
+    }
+    .reveal { opacity: 0; transform: translateY(12px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.show { opacity: 1; transform: translateY(0); }
+    .card {
+      background: linear-gradient(145deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 42px rgba(0,255,179,.12);
+      border-color: rgba(0,255,179,.35);
+    }
+    .highlight {
+      border-color: rgba(0,255,179,.35);
+      box-shadow: inset 0 0 0 1px rgba(0,255,179,.12), 0 10px 36px rgba(0,255,179,.1);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="fixed top-0 inset-x-0 z-50 border-b border-white/5 backdrop-blur bg-[#0b0f12]/80">
+    <nav class="max-w-7xl mx-auto flex items-center justify-between px-6 h-16">
+      <a href="../index.html" class="flex items-center gap-2">
+        <span class="font-extrabold tracking-wide text-[var(--neon)]">Sistema Integral</span>
+      </a>
+      <a href="../index.html#modulos" class="text-sm hover:text-[var(--neon)]">← Volver</a>
+    </nav>
+  </header>
+
+  <!-- Contenido principal -->
+  <main class="pt-28 pb-16 px-6 max-w-5xl mx-auto">
+
+    <!-- Hero -->
+    <section class="text-center mb-12 reveal">
+      <h1 class="uppercase text-4xl sm:text-5xl font-extrabold mb-4 text-[var(--neon)]">⚙️ STOCK AUTOMÁTICO</h1>
+      <p class="text-lg text-gray-300 max-w-3xl mx-auto">
+        Actualización inteligente y en tiempo real del inventario.  
+        Las ventas descuentan, los ingresos suman — sin tareas manuales ni errores.
+      </p>
+      <p class="text-sm text-gray-400 mt-3 max-w-2xl mx-auto">
+        Un sistema que mantiene tu stock sincronizado automáticamente y te libera del control manual.
+      </p>
+    </section>
+    
+    <!-- Panel principal -->
+    <section class="mb-12 reveal">
+      <div class="card highlight">
+        <h2 class="text-2xl font-bold mb-3 text-[var(--neon)]">🔍 PANEL PRINCIPAL</h2>
+        <p class="text-gray-300 mb-4">
+          Visualizá tu inventario actualizado en tiempo real con información precisa de cada producto:
+        </p>
+        <ul class="list-disc list-inside text-gray-400 space-y-2">
+          <li>Stock disponible, reservado y total por producto.</li>
+          <li>Indicadores automáticos de reposición o bajo stock.</li>
+          <li>Historial de movimientos recientes (ventas, ingresos, ajustes).</li>
+          <li>Filtros por categoría, marca o proveedor.</li>
+        </ul>
+        <p class="text-gray-400 mt-4">
+          El panel te muestra la realidad de tu inventario al instante, sin necesidad de recalcular o actualizar manualmente.
+        </p>
+      </div>
+    </section>
+
+    <!-- Funcionamiento automático -->
+    <section class="mb-12 reveal">
+      <div class="card">
+        <h2 class="text-2xl font-bold mb-3 text-[var(--neon)]">⚡ FUNCIONAMIENTO AUTOMÁTICO</h2>
+        <p class="text-gray-300 mb-4">
+          Cada operación del sistema actualiza el stock de forma inteligente:
+        </p>
+        <ul class="list-disc list-inside text-gray-400 space-y-2">
+          <li>Las ventas descuentan automáticamente las cantidades vendidas.</li>
+          <li>Los ingresos de proveedores incrementan el inventario sin intervención manual.</li>
+          <li>Los ajustes y devoluciones actualizan el stock en segundos.</li>
+          <li>Alertas automáticas ante inconsistencias o diferencias detectadas.</li>
+        </ul>
+        <p class="text-gray-400 mt-4">
+          Este proceso elimina errores humanos y garantiza coherencia total entre movimientos y disponibilidad real.
+        </p>
+      </div>
+    </section>
+
+    <!-- Funcionalidades destacadas -->
+    <section class="reveal">
+      <div class="card highlight">
+        <h2 class="text-2xl font-bold mb-3 text-[var(--neon)]">💾 FUNCIONALIDADES DESTACADAS</h2>
+        <ul class="list-none text-gray-300 space-y-2">
+          <li>✅ Actualización automática en tiempo real.</li>
+          <li>🔄 Sincronización instantánea entre ventas, ingresos y stock.</li>
+          <li>📊 Indicadores de bajo stock y reposición inteligente.</li>
+          <li>🧩 Integración directa con módulos de ventas y proveedores.</li>
+          <li>💡 Interfaz moderna, clara y adaptable.</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/5 py-10 text-center text-sm text-gray-400">
+    <p>© 2025 Sistema Integral de Gestión Comercial — Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- JS: animación reveal -->
+  <script>
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target);} });
+    },{threshold:0.12});
+    document.querySelectorAll('.reveal').forEach(el=> io.observe(el));
+  </script>
+
+</body>
+</html>
