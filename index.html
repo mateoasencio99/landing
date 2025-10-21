@@ -80,18 +80,37 @@
 <body class="text-gray-200 antialiased">
 
   <!-- Header -->
-  <header class="fixed top-0 inset-x-0 z-50 border-b border-white/5 backdrop-blur bg-[#0b0f12]/75">
-    <nav class="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 h-16">
-      <a href="#inicio" class="flex items-center gap-2">
-        <span class="font-extrabold tracking-wide text-[var(--neon)]">Sistema Integral</span>
-      </a>
-      <ul class="hidden md:flex items-center gap-7 text-sm">
-        <li><a href="#modulos" class="hover:text-[var(--neon)]">Módulos</a></li>
-        <li><a href="#clientes" class="hover:text-[var(--neon)]">Clientes</a></li>
-        <li><a href="#nosotros" class="hover:text-[var(--neon)]">Nosotros</a></li>
-      </ul>
-    </nav>
-  </header>
+  <header class="fixed top-0 inset-x-0 z-50 border-b border-white/10 backdrop-blur bg-[#0b0f12]/80">
+  <nav class="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 h-20">
+    <!-- Logo -->
+    <a href="#inicio" class="flex items-center gap-2">
+      <img src="img/logo.png" alt="Aspa Tech" class="h-12 sm:h-14 w-auto">
+    </a>
+
+    <!-- Botón hamburguesa / cierre -->
+    <button id="menu-btn" class="md:hidden flex flex-col gap-1.5 p-2 rounded-md hover:bg-white/5 transition relative z-50">
+      <span class="w-6 h-0.5 bg-white transition-all"></span>
+      <span class="w-6 h-0.5 bg-white transition-all"></span>
+      <span class="w-6 h-0.5 bg-white transition-all"></span>
+    </button>
+
+    <!-- Menú escritorio -->
+    <ul class="hidden md:flex items-center gap-8 text-base font-medium text-gray-200">
+      <li><a href="#modulos" class="hover:text-[var(--neon)] transition">Módulos</a></li>
+      <li><a href="#productos" class="hover:text-[var(--neon)] transition">Productos</a></li>
+      <li><a href="#clientes" class="hover:text-[var(--neon)] transition">Clientes</a></li>
+      <li><a href="#nosotros" class="hover:text-[var(--neon)] transition">Nosotros</a></li>
+    </ul>
+  </nav>
+
+  <!-- Menú móvil (overlay animado) -->
+  <div id="mobile-menu" class="fixed top-0 left-0 w-full h-screen bg-[#0b0f12]/95 backdrop-blur-sm transform -translate-y-full transition-transform duration-300 ease-in-out flex flex-col items-center justify-center space-y-8 text-xl text-gray-200">
+    <a href="#modulos" class="hover:text-[var(--neon)] transition">Módulos</a>
+    <a href="#productos" class="hover:text-[var(--neon)] transition">Productos</a>
+    <a href="#clientes" class="hover:text-[var(--neon)] transition">Clientes</a>
+    <a href="#nosotros" class="hover:text-[var(--neon)] transition">Nosotros</a>
+  </div>
+</header>
 
   <!-- Hero -->
   <section id="inicio" class="pt-28 sm:pt-32 pb-5 sm:pb-20 px-6 text-center reveal">
@@ -228,6 +247,57 @@
 
 
   </section>
+
+
+<section id="productos" class="py-16 px-6 border-t border-white/5">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="uppercase text-3xl font-bold text-center text-[var(--neon)] mb-10 reveal">Nuestros productos</h2>
+
+    <div class="grid gap-8 reveal">
+
+      <!-- Resto Master -->
+      <div class="client-card rounded-xl p-6 flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-10">
+        <img src="img/resto-master-logo.png" alt="Logo Resto Master" class="rounded-lg w-52 h-52 object-cover flex-shrink-0 mb-6 md:mb-0"/>
+        <div class="text-left">
+          <h3 class="uppercase font-semibold text-lg mb-2">Resto master</h3>
+          <p class="text-sm text-gray-300 mb-3 leading-relaxed">
+            Sistema de gestión de locales gastronómicos.
+          </p>
+          <ul class="list-disc list-inside text-sm text-gray-300 space-y-1">
+            <li>Impresión automática de comandas para cocina y barra.</li>
+            <li>Administración de mesas y pedidos con o sin asignación de mesa.</li>
+            <li>Control de stock por ingrediente con actualización automática.</li>
+            <li>Gestión de caja, pagos y métodos de cobro.</li>
+            <li>Seguimiento en tiempo real de pedidos y estados en cocina.</li>
+            <li>Gestión completa de reservas y disponibilidad.</li>
+            <li>Categorización y subcategorización totalmente configurables.</li>
+            <li>Administración de productos, ingredientes, proveedores y empleados desde un mismo panel.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- AyP Finance -->
+      <div class="client-card rounded-xl p-6 flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-10">
+        <img src="img/ayp.png" alt="Logo AyP Finance" class="rounded-lg w-52 h-52 object-cover flex-shrink-0 mb-6 md:mb-0"/>
+        <div class="text-left">
+          <h3 class="uppercase font-semibold text-lg mb-2">A&P Finance</h3>
+          <p class="text-sm text-gray-300 mb-3 leading-relaxed">
+            Sistema de gestión de cheques y clientes.
+          </p>
+          <ul class="list-disc list-inside text-sm text-gray-300 space-y-1">
+            <li>Gestión integral de compra y venta de cheques, con obtención automática de datos del BCRA mediante CUIT.</li>
+            <li>Cálculo automático de comisiones en operaciones de compra y venta.</li>
+            <li>Asignación de imágenes a cada cheque para trazabilidad documental.</li>
+            <li>Generación automática de recibos en PDF para cada transacción.</li>
+            <li>Gestión de gastos totalmente configurables.</li>
+            <li>Administración centralizada de clientes y operaciones.</li>
+            <li>Reportes financieros automáticos y análisis de rendimiento.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
   
   <!-- Clientes con logos -->
 <section id="clientes" class="py-16 px-6 border-t border-white/5">
@@ -346,7 +416,7 @@
 
   <!-- Footer -->
   <footer class="border-t border-white/5 py-10 text-center text-sm text-gray-400">
-    <p>© 2025 Sistema Integral de Gestión Comercial — Todos los derechos reservados.</p>
+    <p>© 2025 ASPA TECH — Todos los derechos reservados.</p>
   </footer>
 
   <!-- WhatsApp -->
@@ -374,5 +444,42 @@
       });
     });
   </script>
+
+   <script>
+  const btn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const links = mobileMenu.querySelectorAll('a');
+  let open = false;
+
+  function toggleMenu(forceClose = false) {
+    open = forceClose ? false : !open;
+    mobileMenu.style.transform = open ? 'translateY(0)' : 'translateY(-100%)';
+    btn.classList.toggle('open', open);
+    document.body.style.overflow = open ? 'hidden' : 'auto'; // bloquea scroll
+  }
+
+  btn.addEventListener('click', () => toggleMenu());
+  links.forEach(link => link.addEventListener('click', () => toggleMenu(true)));
+
+  mobileMenu.addEventListener('click', e => {
+    if (e.target === mobileMenu) toggleMenu(true);
+  });
+</script>
+
+<style>
+  #menu-btn.open span:nth-child(1) {
+    transform: rotate(45deg) translateY(7px);
+  }
+  #menu-btn.open span:nth-child(2) {
+    opacity: 0;
+  }
+  #menu-btn.open span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-7px);
+  }
+
+  #menu-btn.open span {
+    background-color: var(--neon);
+  }
+</style>
 </body>
 </html>
