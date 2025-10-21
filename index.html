@@ -126,11 +126,15 @@
     </a>
 
     <!-- Botón hamburguesa / cierre -->
-    <button id="menu-btn" class="md:hidden flex flex-col gap-1.5 p-2 rounded-md hover:bg-white/5 transition relative z-50">
-      <span class="w-6 h-0.5 bg-white transition-all"></span>
-      <span class="w-6 h-0.5 bg-white transition-all"></span>
-      <span class="w-6 h-0.5 bg-white transition-all"></span>
-    </button>
+    <button id="menu-btn" class="md:hidden p-2 rounded-md hover:bg-white/5 transition z-50" aria-label="Abrir menú">
+  <!-- Ícono SVG (hamburguesa + X animada) -->
+  <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="3" y1="6" x2="21" y2="6" />
+    <line x1="3" y1="12" x2="21" y2="12" />
+    <line x1="3" y1="18" x2="21" y2="18" />
+  </svg>
+</button>
+
 
     <!-- Menú escritorio -->
     <ul class="hidden md:flex items-center gap-8 text-base font-medium text-gray-200">
@@ -497,21 +501,5 @@
     if (e.target === mobileMenu) toggleMenu(true);
   });
 </script>
-
-<style>
-  #menu-btn.open span:nth-child(1) {
-    transform: rotate(45deg) translateY(7px);
-  }
-  #menu-btn.open span:nth-child(2) {
-    opacity: 0;
-  }
-  #menu-btn.open span:nth-child(3) {
-    transform: translateY(-8.5px) rotate(-45deg);
-  }
-
-  #menu-btn.open span {
-    background-color: var(--neon);
-  }
-</style>
 </body>
 </html>
