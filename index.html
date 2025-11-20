@@ -47,6 +47,8 @@
   <link rel="canonical" href="https://aspatech.com.ar/">
 
   <style>
+    
+
     :root{
       --neon: #00ffb3;
       --bg-a: #0b0f12;
@@ -103,6 +105,47 @@
       box-shadow: inset 0 0 0 1px rgba(0,255,179,.12), 0 14px 46px rgba(0,255,179,.12);
       position: relative;
     }
+
+    .highlight {
+      position: relative;
+      border-color: var(--neon) !important;
+    }
+
+    .highlight::after {
+      content: "";
+      position: absolute;
+      inset: -4px;
+      border-radius: 18px;
+      border: 2px solid rgba(0,255,179,.35);
+      box-shadow: 0 0 24px rgba(0,255,179,.35);
+      pointer-events: none;
+    }
+
+    .highlight-strong {
+  position: relative;
+  border-color: var(--neon) !important;
+  background:
+    radial-gradient(150% 130% at 50% 0%, rgba(0,255,179,.32), transparent 55%),
+    linear-gradient(165deg, rgba(0,255,179,.14), rgba(255,255,255,.04));
+  box-shadow:
+    inset 0 0 0 1px rgba(0,255,179,.32),
+    0 0 26px rgba(0,255,179,.38),
+    0 14px 50px rgba(0,255,179,.20);
+}
+
+.highlight-strong::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 20px;
+  border: 2px solid rgba(0,255,179,.55);
+  box-shadow:
+    0 0 34px rgba(0,255,179,.45),
+    0 0 12px rgba(0,255,179,.35) inset;
+  pointer-events: none;
+}
+
+
     .badge{
       position:absolute; top:14px; right:14px;
       background: rgba(0,255,179,.16); color: var(--neon);
@@ -177,113 +220,130 @@
 
 
   <!-- Módulos -->
-  <section id="modulos" class="py-12 sm:py-16 px-6">
-    <div class="max-w-7xl mx-auto">
-  <h2 class="uppercase text-3xl font-bold text-center text-[var(--neon)] mb-10 reveal">Módulos principales</h2>
-  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+<section id="modulos" class="py-12 sm:py-16 px-6">
+  <div class="max-w-7xl mx-auto">
 
-    <!-- Ventas -->
-    <article class="reveal card-3d rounded-2xl border highlight p-6 min-h-[240px] flex flex-col justify-between">
-      <div>
-        <h3 class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]">Gestión de Ventas</h3>
-        <p class="text-sm text-gray-100 mb-4">
-          Control total de operaciones con totales automáticos, filtros avanzados y PDF al instante.
-        </p>
-      </div>
-      <a href="modulos/ventas.html" class="text-[var(--neon)] font-semibold hover:underline mt-auto">Ver detalle →</a>
-    </article>
+    <h2 class="uppercase text-3xl font-bold text-center text-[var(--neon)] mb-10 reveal">
+      Módulos principales
+    </h2>
 
-    <!-- Ingresos de Proveedores -->
-    <article class="reveal card-3d rounded-2xl border highlight p-6 min-h-[240px] flex flex-col justify-between">
-      <div>
-        <h3 class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]">Ingresos de Proveedores</h3>
-        <p class="text-sm text-gray-100 mb-4">
-          Registrá entradas, actualizá stock y asegurá trazabilidad completa.
-        </p>
-      </div>
-      <a href="modulos/ingresos-proveedores.html" class="text-[var(--neon)] font-semibold hover:underline mt-auto">Ver detalle →</a>
-    </article>
+    <!-- GRID MODIFICADA: TODAS LAS FILAS DE A 2 -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
 
-    <!-- Facturas de Clientes -->
-    <article class="reveal card-3d rounded-2xl border highlight p-6 min-h-[240px] flex flex-col justify-between">
-      <div>
-        <h3 class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]">Facturas de clientes y proveedores</h3>
-        <p class="text-sm text-gray-100 mb-4">
-          Pagos, vencimientos y estados. Control interno sin emisión AFIP.
-        </p>
-      </div>
-      <a href="modulos/facturas-clientes.html" class="text-[var(--neon)] font-semibold hover:underline mt-auto">Ver detalle →</a>
-    </article>
+      <!-- Ventas -->
+      <article class="reveal card-3d rounded-2xl border highlight p-6 min-h-[240px] flex flex-col justify-between">
+        <div>
+          <h3 class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]">Gestión de Ventas</h3>
+          <p class="text-sm text-gray-100 mb-4">
+            Control total de operaciones con totales automáticos, filtros avanzados y PDF al instante.
+          </p>
+        </div>
+        <a href="modulos/ventas.html" class="text-[var(--neon)] font-semibold hover:underline mt-auto">Ver detalle →</a>
+      </article>
 
-     <!-- Totales de Ventas -->
-    <article class="reveal card-3d rounded-2xl border highlight p-6 min-h-[240px] flex flex-col justify-between">
-      <div>
-        <h3 class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]">Totales de Ventas e ingresos</h3>
-        <p class="text-sm text-gray-100 mb-4">
-          Indicadores clave de facturado, cobrado y pendiente por período para decisiones ágiles.
-        </p>
-      </div>
-      <a href="modulos/totales-ventas.html" class="text-[var(--neon)] font-semibold hover:underline mt-auto">Ver detalle →</a>
-    </article>
+      <!-- Proveedores -->
+      <article class="reveal card-3d rounded-2xl border highlight p-6 min-h-[240px] flex flex-col justify-between">
+        <div>
+          <h3 class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]">Ingresos de Proveedores</h3>
+          <p class="text-sm text-gray-100 mb-4">
+            Registrá entradas, actualizá stock y asegurá trazabilidad completa.
+          </p>
+        </div>
+        <a href="modulos/ingresos-proveedores.html" class="text-[var(--neon)] font-semibold hover:underline mt-auto">Ver detalle →</a>
+      </article>
 
-     <!-- Totales de Facturas -->
-    <article class="reveal card-3d rounded-2xl border highlight p-6 min-h-[240px] flex flex-col justify-between">
-      <div>
-        <h3 class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]">Totales de Facturas</h3>
-        <p class="text-sm text-gray-100 mb-4">
-          Resumen en tiempo real: pagado, pendiente y vencido. Visualización clara de flujo de cobros.
-        </p>
-      </div>
-      <a href="modulos/totales-facturas.html" class="text-[var(--neon)] font-semibold hover:underline mt-auto">Ver detalle →</a>
-    </article>
+      <!-- Facturas -->
+      <article class="reveal card-3d rounded-2xl border highlight p-6 min-h-[240px] flex flex-col justify-between">
+        <div>
+          <h3 class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]">Facturas de Clientes y Proveedores</h3>
+          <p class="text-sm text-gray-100 mb-4">
+            Pagos, vencimientos y estados. Control interno sin emisión AFIP.
+          </p>
+        </div>
+        <a href="modulos/facturas-clientes.html" class="text-[var(--neon)] font-semibold hover:underline mt-auto">Ver detalle →</a>
+      </article>
 
-    <!-- Gastos -->
-    <article class="reveal card-3d rounded-2xl border highlight p-6 min-h-[240px] flex flex-col justify-between">
-      <div>
-        <h3 class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]">Gastos personalizados</h3>
-        <p class="text-sm text-gray-100 mb-4">
-          Control de egresos por período y tipo. Totales automáticos y reportes claros.
-        </p>
-      </div>
-      <a href="modulos/gastos.html" class="text-[var(--neon)] font-semibold hover:underline mt-auto">Ver detalle →</a>
-    </article>
+      <!-- Totales ventas -->
+      <article class="reveal card-3d rounded-2xl border highlight p-6 min-h-[240px] flex flex-col justify-between">
+        <div>
+          <h3 class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]">Totales de Ventas e Ingresos</h3>
+          <p class="text-sm text-gray-100 mb-4">
+            Indicadores clave de facturado, cobrado y pendiente por período para decisiones ágiles.
+          </p>
+        </div>
+        <a href="modulos/totales-ventas.html" class="text-[var(--neon)] font-semibold hover:underline mt-auto">Ver detalle →</a>
+      </article>
 
-    <!-- Productos -->
-    <article class="reveal card-3d rounded-2xl border highlight p-6 min-h-[240px] flex flex-col justify-between">
-      <div>
-        <h3 class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]">Gestión de Productos</h3>
-        <p class="text-sm text-gray-100 mb-4">
-          Catálogo completo: stock, costos, marcas, modelos y cualquier otra categoría 100% personalizable.
-        </p>
-      </div>
-      <a href="modulos/productos.html" class="text-[var(--neon)] font-semibold hover:underline mt-auto">Ver detalle →</a>
-    </article>
+      <!-- Totales facturas -->
+      <article class="reveal card-3d rounded-2xl border highlight p-6 min-h-[240px] flex flex-col justify-between">
+        <div>
+          <h3 class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]">Totales de Facturas</h3>
+          <p class="text-sm text-gray-100 mb-4">
+            Resumen en tiempo real: pagado, pendiente y vencido. Visualización clara del flujo de cobros.
+          </p>
+        </div>
+        <a href="modulos/totales-facturas.html" class="text-[var(--neon)] font-semibold hover:underline mt-auto">Ver detalle →</a>
+      </article>
 
-    <!-- Stock Automático -->
-    <article class="reveal card-3d rounded-2xl border highlight p-6 min-h-[240px] flex flex-col justify-between">
-      <div>
-        <h3 class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]">Stock Automático</h3>
-        <p class="text-sm text-gray-100 mb-4">
-          Actualización inteligente y en tiempo real del inventario. Ventas descuentan, ingresos suman — sin tareas manuales ni errores.
-        </p>
-      </div>
-      <a href="modulos/stock-automatico.html" class="text-[var(--neon)] font-semibold hover:underline mt-auto">Ver detalle →</a>
-    </article>
+      <!-- Gastos -->
+      <article class="reveal card-3d rounded-2xl border highlight p-6 min-h-[240px] flex flex-col justify-between">
+        <div>
+          <h3 class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]">Gastos Personalizados</h3>
+          <p class="text-sm text-gray-100 mb-4">
+            Control de egresos por período y tipo. Totales automáticos y reportes claros.
+          </p>
+        </div>
+        <a href="modulos/gastos.html" class="text-[var(--neon)] font-semibold hover:underline mt-auto">Ver detalle →</a>
+      </article>
 
-    <article class="reveal card-3d rounded-2xl border highlight p-6 min-h-[240px] flex flex-col justify-between">
+      <!-- Productos -->
+      <article class="reveal card-3d rounded-2xl border highlight p-6 min-h-[240px] flex flex-col justify-between">
+        <div>
+          <h3 class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]">Gestión de Productos</h3>
+          <p class="text-sm text-gray-100 mb-4">
+            Catálogo completo: stock, costos, marcas, modelos y categorías personalizadas.
+          </p>
+        </div>
+        <a href="modulos/productos.html" class="text-[var(--neon)] font-semibold hover:underline mt-auto">Ver detalle →</a>
+      </article>
+
+      <!-- Stock automático -->
+      <article class="reveal card-3d rounded-2xl border highlight p-6 min-h-[240px] flex flex-col justify-between">
+        <div>
+          <h3 class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]">Stock Automático</h3>
+          <p class="text-sm text-gray-100 mb-4">
+            Actualización inteligente del inventario en tiempo real. Sin tareas manuales ni errores.
+          </p>
+        </div>
+        <a href="modulos/stock-automatico.html" class="text-[var(--neon)] font-semibold hover:underline mt-auto">Ver detalle →</a>
+      </article>
+
+      <!-- Lector de códigos (RESALTADO LEVE) -->
+      <article class="reveal card-3d rounded-2xl border highlight highlight-strong p-6 min-h-[240px] flex flex-col justify-between">
         <div>
           <h3 class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]">Lector de Códigos</h3>
           <p class="text-sm text-gray-100 mb-4">
-            Compatible con lectores de código de barras USB y láser. Agilizá búsquedas, ventas, cargas de stock y control de inventario leyendo el código al instante sin usar el teclado.
-          </p>  
+            Compatible con lectores USB y láser. Lectura instantánea para buscar, vender y controlar stock sin teclado.
+          </p>
         </div>
         <a href="modulos/lectores-codigos.html" class="text-[var(--neon)] font-semibold hover:underline mt-auto">Ver detalle →</a>
-    </article>
+      </article>
+
+      <!-- Impresoras Térmicas (RESALTADO LEVE) -->
+      <article class="reveal card-3d rounded-2xl border highlight highlight-strong p-6 min-h-[240px] flex flex-col justify-between">
+        <div>
+          <h3 class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]">Impresoras Térmicas</h3>
+          <p class="text-sm text-gray-100 mb-4">
+            Conectá tu impresora térmica USB para imprimir tickets, comprobantes y órdenes al instante.
+          </p>
+        </div>
+        <a href="modulos/impresoras-termicas.html" class="text-[var(--neon)] font-semibold hover:underline mt-auto">Ver detalle →</a>
+      </article>
+
+    </div>
   </div>
-</div>
+</section>
 
-
-  </section>
 
 
 <section id="productos" class="py-16 px-6 border-t border-white/5">
@@ -293,7 +353,7 @@
     <div class="grid gap-8 reveal">
 
       <!-- Resto Master -->
-      <div class="client-card rounded-xl p-6 flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-10">
+      <div class="client-card highlight rounded-xl p-6 flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-10">
         <img src="img/resto-master-logo.png" alt="Logo Resto Master" class="rounded-lg w-52 h-52 object-cover flex-shrink-0 mb-6 md:mb-0"/>
         <div class="text-left">
           <h3 class="uppercase font-semibold text-lg mb-2">Resto master</h3>
@@ -314,7 +374,7 @@
       </div>
 
       <!-- AyP Finance -->
-      <div class="client-card rounded-xl p-6 flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-10">
+      <div class="client-card highlight rounded-xl p-6 flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-10">
         <img src="img/ayp.png" alt="Logo AyP Finance" class="rounded-lg w-52 h-52 object-cover flex-shrink-0 mb-6 md:mb-0"/>
         <div class="text-left">
           <h3 class="uppercase font-semibold text-lg mb-2">A&P Finance</h3>
@@ -343,7 +403,7 @@
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 reveal">
 
       <!-- Pecile -->
-      <div class="client-card rounded-xl p-6 text-center">
+      <div class="client-card highlight rounded-xl p-6 text-center">
         <img src="img/pecile.jpg" alt="Logo Pecile" class="mx-auto rounded-lg mb-4 w-36 h-36 object-cover"/>
         <h3 class="uppercase font-semibold text-lg">Pecile Equipamientos</h3>
         <p class="text-xs text-gray-400 mt-1 italic tracking-wide">📍 San Francisco, Córdoba</p>
@@ -354,7 +414,7 @@
       </div>
 
       <!-- Lupe Home -->
-      <div class="client-card rounded-xl p-6 text-center">
+      <div class="client-card highlight rounded-xl p-6 text-center">
         <img src="img/lupe.jpg" alt="Logo Lupe Home" class="mx-auto rounded-lg mb-4 w-36 h-36 object-cover"/>
         <h3 class="uppercase font-semibold text-lg">Lupe Home</h3>
         <p class="text-xs text-gray-400 mt-1 italic tracking-wide">📍 San Francisco, Córdoba</p>
@@ -365,7 +425,7 @@
       </div>
 
       <!-- El Lugar -->
-      <div class="client-card rounded-xl p-6 text-center">
+      <div class="client-card highlight rounded-xl p-6 text-center">
         <img src="img/ellugar.jpg" alt="Logo El Lugar" class="mx-auto rounded-lg mb-4 w-36 h-36 object-cover"/>
         <h3 class="uppercase font-semibold text-lg">El Lugar Fuego y Cava</h3>
         <p class="text-xs text-gray-400 mt-1 italic tracking-wide">📍 San Francisco, Córdoba</p>
@@ -376,7 +436,7 @@
       </div>
 
       <!-- Moon Boutique -->
-      <div class="client-card rounded-xl p-6 text-center">
+      <div class="client-card highlight rounded-xl p-6 text-center">
         <img src="img/moon.jpg" alt="Logo Moon Boutique" class="mx-auto rounded-lg mb-4 w-36 h-36 object-cover"/>
         <h3 class="uppercase font-semibold text-lg">Moon Boutique</h3>
         <p class="text-xs text-gray-400 mt-1 italic tracking-wide">📍 San Francisco, Córdoba</p>
@@ -386,7 +446,7 @@
         </p>
       </div>
       <!-- Seven Padel -->
-      <div class="client-card rounded-xl p-6 text-center">
+      <div class="client-card highlight rounded-xl p-6 text-center">
         <img src="img/seven.jpg" alt="Logo Seven Padel" class="mx-auto rounded-lg mb-4 w-36 h-36 object-cover"/>
         <h3 class="uppercase font-semibold text-lg">Seven Padel</h3>
         <p class="text-xs text-gray-400 mt-1 italic tracking-wide">📍 Arroyito, Córdoba</p>
@@ -396,7 +456,7 @@
         </p>
       </div>
       <!-- Fica -->
-      <div class="client-card rounded-xl p-6 text-center">
+      <div class="client-card highlight rounded-xl p-6 text-center">
         <img src="img/fica.jpg" alt="Logo Fica" class="mx-auto rounded-lg mb-4 w-36 h-36 object-cover"/>
         <h3 class="uppercase font-semibold text-lg">Productora Fica</h3>
         <p class="text-xs text-gray-400 mt-1 italic tracking-wide">📍 San Francisco, Córdoba</p>

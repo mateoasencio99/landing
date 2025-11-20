@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="google" content="notranslate">
+
+  <title>ASPA TECH — Impresoras Térmicas</title>
+  <meta name="description" content="ASPA TECH integra impresoras térmicas USB para impresión de tickets, recibos y comprobantes desde ventas o comandas. Simple, rápida y eficiente." />
+
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+
+  <meta property="og:title" content="ASPA TECH — Impresoras térmicas USB">
+  <meta property="og:description" content="Impresión rápida de tickets y comprobantes integrada a ventas, pedidos y comandas. Compatible con impresoras térmicas USB.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aspatech.com.ar/">
+  <meta property="og:image" content="https://aspatech.com.ar/img/logo-fondo.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ASPA TECH — Impresoras térmicas">
+  <meta name="twitter:description" content="Integración con impresoras térmicas USB para emitir tickets y comprobantes al instante.">
+  <meta name="twitter:image" content="https://aspatech.com.ar/img/logo-fondo.png">
+
+  <meta name="theme-color" content="#00ffb3">
+  <meta name="msapplication-TileColor" content="#00ffb3">
+  <meta name="msapplication-config" content="browserconfig.xml">
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    :root {
+      --neon: #00ffb3;
+    }
+    body {
+      font-family: 'Montserrat', ui-sans-serif, system-ui;
+      background: linear-gradient(135deg, rgba(0,255,179,0.12) 0%, rgba(11,15,18,0.10) 24%, rgba(11,15,18,1) 60%),
+                  linear-gradient(135deg, #0d1216 0%, #0b0f12 60%, #0a0e12 100%);
+      color: #e5e7eb;
+      scroll-behavior: smooth;
+    }
+    .reveal { opacity: 0; transform: translateY(12px); transition: opacity .6s, transform .6s; }
+    .reveal.show { opacity: 1; transform: translateY(0); }
+
+    .card {
+      background: linear-gradient(145deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      transition: transform .25s, box-shadow .25s, border-color .25s;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 42px rgba(0,255,179,.12);
+      border-color: rgba(0,255,179,.35);
+    }
+
+    .highlight {
+      border-color: rgba(0,255,179,.35);
+      box-shadow: inset 0 0 0 1px rgba(0,255,179,.12), 0 10px 36px rgba(0,255,179,.1);
+    }
+
+    .wa-float {
+      position: fixed; width:58px; height:58px; bottom:20px; right:20px; z-index:60;
+      display:flex; align-items:center; justify-content:center; border-radius:9999px;
+      background: var(--neon); color:#02150f; box-shadow: 0 10px 26px rgba(0,0,0,.4);
+      transition: transform .2s;
+    }
+    .wa-float:hover { transform: scale(1.07); }
+  </style>
+</head>
+
+<body>
+
+<header class="fixed top-0 inset-x-0 z-50 border-b border-white/10 backdrop-blur bg-[#0b0f12]/80">
+  <nav class="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 h-20">
+    <a href="../index.html#inicio">
+      <img src="../img/logo.png" class="h-12 sm:h-14 w-auto">
+    </a>
+
+    <button id="menu-btn" class="md:hidden flex flex-col gap-1.5 p-2 rounded-md hover:bg-white/5 transition">
+      <span class="w-6 h-0.5 bg-white"></span>
+      <span class="w-6 h-0.5 bg-white"></span>
+      <span class="w-6 h-0.5 bg-white"></span>
+    </button>
+
+    <ul class="hidden md:flex gap-8 text-base font-medium text-gray-200">
+      <li><a href="../index.html#modulos" class="hover:text-[var(--neon)]">Módulos</a></li>
+      <li><a href="../index.html#productos" class="hover:text-[var(--neon)]">Otros productos</a></li>
+      <li><a href="../index.html#clientes" class="hover:text-[var(--neon)]">Clientes</a></li>
+      <li><a href="../index.html#nosotros" class="hover:text-[var(--neon)]">Nosotros</a></li>
+    </ul>
+  </nav>
+
+  <div id="mobile-menu"
+       class="fixed top-0 left-0 w-full h-screen bg-[#0b0f12]/95 backdrop-blur-sm transform -translate-y-full transition-transform flex flex-col items-center justify-center space-y-8 text-xl text-gray-200">
+    <a href="../index.html#modulos">Módulos</a>
+    <a href="../index.html#productos">Otros productos</a>
+    <a href="../index.html#clientes">Clientes</a>
+    <a href="../index.html#nosotros">Nosotros</a>
+  </div>
+</header>
+
+<main class="pt-28 pb-16 px-6 max-w-5xl mx-auto">
+
+  <!-- Título -->
+  <section class="text-center mb-12 reveal">
+    <h1 class="uppercase text-4xl sm:text-5xl font-extrabold mb-4 text-[var(--neon)]">
+      🧾 Impresoras Térmicas
+    </h1>
+    <p class="text-lg text-gray-300 max-w-3xl mx-auto">
+      Integración directa con impresoras térmicas por USB para imprimir 
+      <span class="text-[var(--neon)] font-semibold">tickets, comprobantes y órdenes</span>
+      al instante.
+    </p>
+    <p class="text-sm text-gray-400 mt-3 max-w-2xl mx-auto">
+      Ideal para comercios, mostradores, depósitos, kioscos, tiendas y sistemas
+      que necesitan emitir comprobantes rápidos sin procesos complicados.
+    </p>
+  </section>
+
+  <!-- Sección 1 -->
+  <section class="mb-12 reveal">
+    <div class="card highlight">
+      <h2 class="text-2xl font-bold mb-3 text-[var(--neon)]">🖨️ Impresión automática por USB</h2>
+
+      <p class="text-gray-300 mb-4">
+        Compatible con impresoras térmicas estándar que trabajen con conexión USB.
+        La integración permite:
+      </p>
+
+      <ul class="list-disc list-inside text-gray-400 space-y-2">
+        <li>Emisión de tickets desde el módulo de <strong>Ventas</strong>.</li>
+        <li>Impresión de <strong>comprobantes internos</strong> y recibos.</li>
+        <li>Órdenes de trabajo o entrega listas para el cliente.</li>
+        <li>Velocidad de impresión optimizada para alto volumen.</li>
+        <li>Formato claro y adaptable a distintos anchos de papel.</li>
+      </ul>
+
+      <p class="text-gray-400 mt-4">
+        No requiere configuraciones avanzadas: solo conectar por USB y utilizar.
+      </p>
+    </div>
+  </section>
+
+  <!-- Sección 2 -->
+  <section class="reveal">
+    <div class="card">
+      <h2 class="text-2xl font-bold mb-3 text-[var(--neon)]">💡 Funcionalidades principales</h2>
+
+      <ul class="list-none text-gray-300 space-y-2">
+        <li>🧾 Emisión rápida de tickets desde ventas.</li>
+        <li>📄 Impresión de recibos internos.</li>
+        <li>📦 Comprobantes de entrega o retiro de mercadería.</li>
+        <li>📋 Formato amigable y legible, optimizado para papel térmico.</li>
+        <li>⚙️ Compatible con impresoras térmicas USB genéricas.</li>
+      </ul>
+
+      <p class="text-gray-400 mt-4">
+        Ideal para agilizar atención al cliente y mejorar la organización interna de tu negocio.
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="border-t border-white/5 py-10 text-center text-sm text-gray-400">
+  © 2025 ASPA TECH — Todos los derechos reservados.
+</footer>
+
+<a href="https://wa.me/5493564584838" target="_blank" class="wa-float">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="28" height="28" viewBox="0 0 32 32">
+    <path d="M16.001 2.666c-7.36 0-13.334 5.974-13.334 13.334 0 2.352.6 4.647 1.736 6.68l-1.824 6.68 6.864-1.808a13.215 13.215 0 0 0 6.558 1.8h.001c7.36 0 13.333-5.974 13.333-13.334 0-7.36-5.973-13.334-13.334-13.334Z"/>
+  </svg>
+</a>
+
+<script>
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target);} });
+  },{threshold:0.12});
+  document.querySelectorAll('.reveal').forEach(el=> io.observe(el));
+</script>
+
+<script>
+  const btn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const links = mobileMenu.querySelectorAll('a');
+  let open = false;
+
+  const toggleMenu = (forceClose = false) => {
+    open = forceClose ? false : !open;
+    mobileMenu.style.transform = open ? 'translateY(0)' : 'translateY(-100%)';
+    document.body.style.overflow = open ? 'hidden' : 'auto';
+  };
+
+  btn.addEventListener('click', () => toggleMenu());
+  links.forEach(link => link.addEventListener('click', () => toggleMenu(true)));
+  mobileMenu.addEventListener('click', e => { if(e.target===mobileMenu) toggleMenu(true); });
+</script>
+
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+        data-cf-beacon='{"token": "a99d5983a81b4700873e3c4e01cf3287"}'></script>
+
+</body>
+</html>
