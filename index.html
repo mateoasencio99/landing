@@ -121,29 +121,14 @@
       pointer-events: none;
     }
 
-    .highlight-strong {
-  position: relative;
-  border-color: var(--neon) !important;
-  background:
-    radial-gradient(150% 130% at 50% 0%, rgba(0,255,179,.32), transparent 55%),
-    linear-gradient(165deg, rgba(0,255,179,.14), rgba(255,255,255,.04));
-  box-shadow:
-    inset 0 0 0 1px rgba(0,255,179,.32),
-    0 0 26px rgba(0,255,179,.38),
-    0 14px 50px rgba(0,255,179,.20);
-}
-
-.highlight-strong::after {
-  content: "";
-  position: absolute;
-  inset: -6px;
-  border-radius: 20px;
-  border: 2px solid rgba(0,255,179,.55);
-  box-shadow:
-    0 0 34px rgba(0,255,179,.45),
-    0 0 12px rgba(0,255,179,.35) inset;
-  pointer-events: none;
-}
+    .module-chip {
+      font-size: .75rem;
+      padding: .35rem .65rem;
+      border-radius: 999px;
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.10);
+      color: #d1d5db;
+    }
 
 
     .badge{
@@ -181,18 +166,18 @@
 
     <!-- Menú escritorio -->
     <ul class="hidden md:flex items-center gap-8 text-base font-medium text-gray-200">
-      <li><a href="#nosotros" class="hover:text-[var(--neon)] transition">Nosotros</a></li>
       <li><a href="#modulos" class="hover:text-[var(--neon)] transition">Módulos</a></li>
       <li><a href="#clientes" class="hover:text-[var(--neon)] transition">Clientes</a></li>
+      <li><a href="#nosotros" class="hover:text-[var(--neon)] transition">Nosotros</a></li>
       <li><a href="#productos" class="hover:text-[var(--neon)] transition">Otros productos</a></li>
     </ul>
   </nav>
 
   <!-- Menú móvil (overlay animado) -->
   <div id="mobile-menu" class="fixed top-0 left-0 w-full h-screen bg-[#0b0f12]/95 backdrop-blur-sm transform -translate-y-full transition-transform duration-300 ease-in-out flex flex-col items-center justify-center space-y-8 text-xl text-gray-200">
-    <a href="#nosotros" class="hover:text-[var(--neon)] transition">Nosotros</a>
     <a href="#modulos" class="hover:text-[var(--neon)] transition">Módulos</a>
     <a href="#clientes" class="hover:text-[var(--neon)] transition">Clientes</a>
+     <a href="#nosotros" class="hover:text-[var(--neon)] transition">Nosotros</a>
     <a href="#productos" class="hover:text-[var(--neon)] transition">Otros productos</a>
   </div>
 </header>
@@ -215,6 +200,280 @@
       <span class="font-semibold text-[var(--neon)]">desarrollamos</span> sistemas pensados para 
       <span class="text-gray-200">emprendedores, PYMEs y empresas</span>.
     </p>
+  </div>
+</section>
+
+  <!-- Módulos -->
+<section id="modulos" class="py-12 border-t border-white/5 sm:py-16 px-6">
+  <div class="max-w-7xl mx-auto">
+
+    <h2 class="uppercase text-3xl font-bold text-center text-[var(--neon)] mb-10 reveal">
+      Todo tu negocio en un solo sistema
+    </h2>
+
+    <p class="text-center text-gray-300 max-w-3xl mx-auto mb-12 reveal">
+      ASPA TECH centraliza ventas, facturación, stock y finanzas en una sola plataforma.
+      Automatizá procesos, evitá errores y tomá decisiones en tiempo real.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+
+      <!-- Ventas + Facturación -->
+      <article class="reveal card-3d rounded-2xl border highlight p-6 md:col-span-2 relative overflow-hidden">
+        <div class="badge">ARCA / AFIP</div>
+        <div class="text-4xl mb-4">🧾</div>
+        <h3 class="uppercase text-xl font-extrabold mb-3 text-[var(--neon)]">
+          Ventas + Facturación
+        </h3>
+        <p class="text-sm text-gray-300 leading-relaxed">
+          Vendé y facturá desde un mismo lugar con cálculo automático de IVA, neto y totales.
+        </p>
+        <div class="flex flex-wrap gap-2 mt-5">
+          <span class="module-chip">Factura A/B/C</span>
+          <span class="module-chip">IVA automático</span>
+          <span class="module-chip">PDF</span>
+        </div>
+      </article>
+
+      <!-- Pedidos -->
+      <article class="reveal card-3d rounded-2xl border highlight p-6">
+        <div class="text-4xl mb-4">📦</div>
+        <h3 class="uppercase text-xl font-extrabold mb-3 text-[var(--neon)]">
+          Pedidos en tiempo real
+        </h3>
+        <p class="text-sm text-gray-300">
+          Registrá pedidos desde cualquier lugar con impacto inmediato en el sistema.
+        </p>
+      </article>
+
+      <!-- Cuenta corriente -->
+      <article class="reveal card-3d rounded-2xl border highlight  p-6">
+        <div class="text-4xl mb-4">👥</div>
+        <h3 class="uppercase text-xl font-extrabold mb-3 text-[var(--neon)]">
+          Cuenta corriente
+        </h3>
+        <p class="text-sm text-gray-300">
+          Control total de deudas, pagos y vencimientos por cliente.
+        </p>
+      </article>
+
+      <!-- Stock -->
+      <article class="reveal card-3d rounded-2xl border highlight  p-6">
+        <div class="text-4xl mb-4">📊</div>
+        <h3 class="uppercase text-xl font-extrabold mb-3 text-[var(--neon)]">
+          Stock automático
+        </h3>
+        <p class="text-sm text-gray-300">
+          Se actualiza solo con cada movimiento. Sin errores ni tareas manuales.
+        </p>
+      </article>
+
+      <!-- Recibos -->
+      <article class="reveal card-3d rounded-2xl border highlight p-6">
+        <div class="text-4xl mb-4">💰</div>
+        <h3 class="uppercase text-xl font-extrabold mb-3 text-[var(--neon)]">
+          Recibos y cobros
+        </h3>
+        <p class="text-sm text-gray-300">
+          Registrá pagos y generá recibos automáticamente.
+        </p>
+      </article>
+
+      <!-- Bancos -->
+      <article class="reveal card-3d rounded-2xl border highlight p-6">
+        <div class="text-4xl mb-4">🏦</div>
+        <h3 class="uppercase text-xl font-extrabold mb-3 text-[var(--neon)]">
+          Bancos y conciliación
+        </h3>
+        <p class="text-sm text-gray-300">
+          Controlá movimientos y conciliá ingresos fácilmente.
+        </p>
+      </article>
+
+      <!-- Compras -->
+      <article class="reveal card-3d rounded-2xl border highlight p-6">
+        <div class="text-4xl mb-4">🛒</div>
+        <h3 class="uppercase text-xl font-extrabold mb-3 text-[var(--neon)]">
+          Compras
+        </h3>
+        <p class="text-sm text-gray-300">
+          Gestioná órdenes y entradas de mercadería con impacto en stock.
+        </p>
+      </article>
+
+      <!-- Proveedores -->
+      <article class="reveal card-3d rounded-2xl border highlight p-6">
+        <div class="text-4xl mb-4">📄</div>
+        <h3 class="uppercase text-xl font-extrabold mb-3 text-[var(--neon)]">
+          Proveedores
+        </h3>
+        <p class="text-sm text-gray-300">
+          Control de pagos, vencimientos y cuentas a pagar.
+        </p>
+      </article>
+
+      <!-- Cheques -->
+      <article class="reveal card-3d rounded-2xl border highlight p-6">
+        <div class="text-4xl mb-4">🏷️</div>
+        <h3 class="uppercase text-xl font-extrabold mb-3 text-[var(--neon)]">
+          Cheques
+        </h3>
+        <p class="text-sm text-gray-300">
+          Gestión completa de cheques emitidos y recibidos.
+        </p>
+      </article>
+
+      <!-- Lector -->
+      <article class="reveal card-3d rounded-2xl border highlight p-6">
+        <div class="text-4xl mb-4">📡</div>
+        <h3 class="uppercase text-xl font-extrabold mb-3 text-[var(--neon)]">
+          Lector de códigos
+        </h3>
+        <p class="text-sm text-gray-300">
+          Escaneá productos y acelerá ventas sin usar teclado.
+        </p>
+      </article>
+
+      <!-- Impresoras -->
+      <article class="reveal card-3d rounded-2xl border highlight p-6">
+        <div class="text-4xl mb-4">🖨️</div>
+        <h3 class="uppercase text-xl font-extrabold mb-3 text-[var(--neon)]">
+          Impresoras térmicas
+        </h3>
+        <p class="text-sm text-gray-300">
+          Imprimí tickets y comprobantes automáticamente.
+        </p>
+      </article>
+
+      <!-- Rutas -->
+      <!-- <article class="reveal card-3d rounded-2xl border highlight  p-6 md:col-span-2 relative overflow-hidden">
+        <div class="badge">Nuevo</div>
+        <div class="text-4xl mb-4">🗺️</div>
+        <h3 class="uppercase text-xl font-extrabold mb-3 text-[var(--neon)]">
+          Optimización de rutas
+        </h3>
+        <p class="text-sm text-gray-300 mb-3">
+          Calculá recorridos inteligentes automáticamente según múltiples destinos.
+        </p>
+        <ul class="text-sm text-gray-300 space-y-1">
+          <li>⚡ Rutas optimizadas automáticamente</li>
+          <li>📍 Según tráfico real</li>
+          <li>🧠 Decisiones en segundos</li>
+          <li>💰 Menos tiempo y costos</li>
+        </ul>
+        <p class="text-xs text-gray-500 mt-4">Potenciado por Google Maps</p>
+      </article> -->
+
+    </div>
+
+    <!-- Cierre -->
+    <div class="text-center mt-14 reveal rounded-2xl border border-[var(--neon)]/30 bg-white/5 p-8">
+      <p class="text-gray-300 text-lg">
+        ⚡ Más velocidad · 📊 Más control · 🔗 Más integración
+      </p>
+      <p class="text-[var(--neon)] font-bold mt-3 text-2xl">
+        Llevá tu gestión al siguiente nivel
+      </p>
+    </div>
+
+  </div>
+</section>
+  
+  <!-- Clientes con logos -->
+<section id="clientes" class="py-16 px-6 border-t border-white/5">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="uppercase text-3xl font-bold text-center text-[var(--neon)] mb-4 reveal">
+      Clientes que confían
+    </h2>
+
+    <p class="text-center text-gray-300 max-w-3xl mx-auto mb-10 reveal">
+      Empresas que ya gestionan sus procesos con soluciones desarrolladas por ASPA TECH.
+    </p>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 reveal">
+
+      <div class="client-card highlight rounded-2xl p-6 text-center flex flex-col items-center">
+        <div class="w-36 h-36 rounded-2xl overflow-hidden border border-white/10 bg-white/5 mb-4">
+          <img src="img/pecile.jpg" alt="Logo Pecile Equipamientos" class="w-full h-full object-cover"/>
+        </div>
+        <span class="module-chip mb-3">Equipamiento automotriz</span>
+        <h3 class="uppercase font-semibold text-lg">Pecile Equipamientos</h3>
+        <p class="text-xs text-gray-400 mt-1 italic tracking-wide">📍 San Francisco, Córdoba</p>
+      </div>
+
+      <div class="client-card highlight rounded-2xl p-6 text-center flex flex-col items-center">
+        <div class="w-36 h-36 rounded-2xl overflow-hidden border border-white/10 bg-white/5 mb-4">
+          <img src="img/lupe.jpg" alt="Logo Lupe Home" class="w-full h-full object-cover"/>
+        </div>
+        <span class="module-chip mb-3">Fabricación y distribución</span>
+        <h3 class="uppercase font-semibold text-lg">Lupe Home</h3>
+        <p class="text-xs text-gray-400 mt-1 italic tracking-wide">📍 San Francisco, Córdoba</p>
+      </div>
+
+      <div class="client-card highlight rounded-2xl p-6 text-center flex flex-col items-center">
+        <div class="w-36 h-36 rounded-2xl overflow-hidden border border-white/10 bg-white/5 mb-4">
+          <img src="img/ellugar.jpg" alt="Logo El Lugar Fuego y Cava" class="w-full h-full object-cover"/>
+        </div>
+        <span class="module-chip mb-3">Gastronomía</span>
+        <h3 class="uppercase font-semibold text-lg">El Lugar Fuego y Cava</h3>
+        <p class="text-xs text-gray-400 mt-1 italic tracking-wide">📍 San Francisco, Córdoba</p>
+      </div>
+
+      <div class="client-card highlight rounded-2xl p-6 text-center flex flex-col items-center">
+        <div class="w-36 h-36 rounded-2xl overflow-hidden border border-white/10 bg-white/5 mb-4">
+          <img src="img/moon.jpg" alt="Logo Moon Boutique" class="w-full h-full object-cover"/>
+        </div>
+        <span class="module-chip mb-3">Indumentaria</span>
+        <h3 class="uppercase font-semibold text-lg">Moon Boutique</h3>
+        <p class="text-xs text-gray-400 mt-1 italic tracking-wide">📍 San Francisco, Córdoba</p>
+      </div>
+
+      <div class="client-card highlight rounded-2xl p-6 text-center flex flex-col items-center">
+        <div class="w-36 h-36 rounded-2xl overflow-hidden border border-white/10 bg-white/5 mb-4">
+          <img src="img/seven.jpg" alt="Logo Seven Padel" class="w-full h-full object-cover"/>
+        </div>
+        <span class="module-chip mb-3">Club deportivo y tienda</span>
+        <h3 class="uppercase font-semibold text-lg">Seven Padel</h3>
+        <p class="text-xs text-gray-400 mt-1 italic tracking-wide">📍 Arroyito, Córdoba</p>
+      </div>
+
+      <div class="client-card highlight rounded-2xl p-6 text-center flex flex-col items-center">
+        <div class="w-36 h-36 rounded-2xl overflow-hidden border border-white/10 bg-white/5 mb-4">
+          <img src="img/esquina.jpg" alt="Logo La Esquina de Roca" class="w-full h-full object-cover"/>
+        </div>
+        <span class="module-chip mb-3">Proveeduría</span>
+        <h3 class="uppercase font-semibold text-lg">La Esquina de Roca</h3>
+        <p class="text-xs text-gray-400 mt-1 italic tracking-wide">📍 San Francisco, Córdoba</p>
+      </div>
+
+      <div class="client-card highlight rounded-2xl p-6 text-center flex flex-col items-center">
+        <div class="w-36 h-36 rounded-2xl overflow-hidden border border-white/10 bg-white/5 mb-4">
+          <img src="img/amarre.jpg" alt="Logo Amarre" class="w-full h-full object-cover"/>
+        </div>
+        <span class="module-chip mb-3">Distribuidora mayorista</span>
+        <h3 class="uppercase font-semibold text-lg">Amarre</h3>
+        <p class="text-xs text-gray-400 mt-1 italic tracking-wide">📍 Villa Crespo, Buenos Aires</p>
+      </div>
+
+      <div class="client-card highlight rounded-2xl p-6 text-center flex flex-col items-center">
+        <div class="w-36 h-36 rounded-2xl overflow-hidden border border-white/10 bg-white/5 mb-4">
+          <img src="img/fica.jpg" alt="Logo Productora Fica" class="w-full h-full object-cover"/>
+        </div>
+        <span class="module-chip mb-3">Eventos y competencias</span>
+        <h3 class="uppercase font-semibold text-lg">Productora Fica</h3>
+        <p class="text-xs text-gray-400 mt-1 italic tracking-wide">📍 San Francisco, Córdoba</p>
+      </div>
+
+      <div class="client-card highlight rounded-2xl p-6 text-center flex flex-col items-center">
+        <div class="w-36 h-36 rounded-2xl overflow-hidden border border-white/10 bg-white/5 mb-4">
+          <img src="img/disribuciones.jpeg" alt="Logo Distribuciones SRL" class="w-full h-full object-cover"/>
+        </div>
+        <span class="module-chip mb-3">Fiambres y quesos</span>
+        <h3 class="uppercase font-semibold text-lg">Distribuciones SRL</h3>
+        <p class="text-xs text-gray-400 mt-1 italic tracking-wide">📍 San Francisco, Córdoba</p>
+      </div>
+
+    </div>
   </div>
 </section>
 
@@ -248,277 +507,72 @@
   </div>
 </section>
 
-  <!-- Módulos -->
-<section id="modulos" class="py-12 border-t border-white/5 sm:py-16 px-6">
-  <div class="max-w-7xl mx-auto">
-
-    <h2 class="uppercase text-3xl font-bold text-center text-[var(--neon)] mb-10 reveal">
-      Módulos principales
-    </h2>
-    
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-        <!-- Facturación Electrónica (FULL WIDTH) -->
-        <article class="reveal card-3d rounded-2xl border highlight highlight-strong p-6 min-h-[240px] flex flex-col justify-between md:col-span-2">
-          <div>
-            <h3 class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]">
-              Facturación Electrónica ARCA / AFIP
-            </h3>
-            <p class="text-sm text-gray-100 mb-4">
-              Emití comprobantes fiscales electrónicos directamente desde el sistema, cumpliendo
-              con la normativa vigente de <strong>ARCA / AFIP</strong>.
-            </p>
-            <p class="text-sm text-gray-300">
-              Automatizá numeración, puntos de venta, generación de comprobantes y
-              resguardo digital, todo integrado con tus ventas y clientes.
-            </p>
-          </div>
-          <a href="modulos/facturacion-electronica.html"
-            class="text-[var(--neon)] font-semibold hover:underline mt-auto">
-            Ver detalle →
-          </a>
-        </article>
-
-      <!-- Ventas -->
-      <article class="reveal card-3d rounded-2xl border highlight p-6 min-h-[240px] flex flex-col justify-between">
-        <div>
-          <h3 class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]">Gestión de Ventas</h3>
-          <p class="text-sm text-gray-100 mb-4">
-            Control total de operaciones con totales automáticos, filtros avanzados y PDF al instante.
-          </p>
-        </div>
-        <a href="modulos/ventas.html" class="text-[var(--neon)] font-semibold hover:underline mt-auto">Ver detalle →</a>
-      </article>
-
-      <!-- Proveedores -->
-      <article class="reveal card-3d rounded-2xl border highlight p-6 min-h-[240px] flex flex-col justify-between">
-        <div>
-          <h3 class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]">Ingresos de Proveedores</h3>
-          <p class="text-sm text-gray-100 mb-4">
-            Registrá entradas, actualizá stock y asegurá trazabilidad completa.
-          </p>
-        </div>
-        <a href="modulos/ingresos-proveedores.html" class="text-[var(--neon)] font-semibold hover:underline mt-auto">Ver detalle →</a>
-      </article>
-
-      <!-- Facturas -->
-      <article class="reveal card-3d rounded-2xl border highlight p-6 min-h-[240px] flex flex-col justify-between">
-        <div>
-          <h3 class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]">Facturas de Proveedores</h3>
-          <p class="text-sm text-gray-100 mb-4">
-            Pagos, vencimientos y estados.
-          </p>
-        </div>
-        <a href="modulos/facturas-proveedores.html" class="text-[var(--neon)] font-semibold hover:underline mt-auto">Ver detalle →</a>
-      </article>
-
-      <!-- Totales ventas -->
-      <article class="reveal card-3d rounded-2xl border highlight p-6 min-h-[240px] flex flex-col justify-between">
-        <div>
-          <h3 class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]">Totales de Ventas e Ingresos</h3>
-          <p class="text-sm text-gray-100 mb-4">
-            Indicadores clave de facturado, cobrado y pendiente por período para decisiones ágiles.
-          </p>
-        </div>
-        <a href="modulos/totales-ventas.html" class="text-[var(--neon)] font-semibold hover:underline mt-auto">Ver detalle →</a>
-      </article>
-
-      <!-- Totales facturas -->
-      <article class="reveal card-3d rounded-2xl border highlight p-6 min-h-[240px] flex flex-col justify-between">
-        <div>
-          <h3 class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]">Totales de Facturas</h3>
-          <p class="text-sm text-gray-100 mb-4">
-            Resumen en tiempo real: pagado, pendiente y vencido. Visualización clara del flujo de cobros.
-          </p>
-        </div>
-        <a href="modulos/totales-facturas.html" class="text-[var(--neon)] font-semibold hover:underline mt-auto">Ver detalle →</a>
-      </article>
-
-      <!-- Gastos -->
-      <article class="reveal card-3d rounded-2xl border highlight p-6 min-h-[240px] flex flex-col justify-between">
-        <div>
-          <h3 class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]">Gastos Personalizados</h3>
-          <p class="text-sm text-gray-100 mb-4">
-            Control de egresos por período y tipo. Totales automáticos y reportes claros.
-          </p>
-        </div>
-        <a href="modulos/gastos.html" class="text-[var(--neon)] font-semibold hover:underline mt-auto">Ver detalle →</a>
-      </article>
-
-      <!-- Productos -->
-      <article class="reveal card-3d rounded-2xl border highlight p-6 min-h-[240px] flex flex-col justify-between">
-        <div>
-          <h3 class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]">Gestión de Productos</h3>
-          <p class="text-sm text-gray-100 mb-4">
-            Catálogo completo: stock, costos, marcas, modelos y categorías personalizadas.
-          </p>
-        </div>
-        <a href="modulos/productos.html" class="text-[var(--neon)] font-semibold hover:underline mt-auto">Ver detalle →</a>
-      </article>
-
-      <!-- Stock automático -->
-      <article class="reveal card-3d rounded-2xl border highlight p-6 min-h-[240px] flex flex-col justify-between">
-        <div>
-          <h3 class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]">Stock Automático</h3>
-          <p class="text-sm text-gray-100 mb-4">
-            Actualización inteligente del inventario en tiempo real. Sin tareas manuales ni errores.
-          </p>
-        </div>
-        <a href="modulos/stock-automatico.html" class="text-[var(--neon)] font-semibold hover:underline mt-auto">Ver detalle →</a>
-      </article>
-
-      <!-- Lector de códigos (RESALTADO LEVE) -->
-      <article class="reveal card-3d rounded-2xl border highlight highlight-strong p-6 min-h-[240px] flex flex-col justify-between">
-        <div>
-          <h3 class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]">Lector de Códigos</h3>
-          <p class="text-sm text-gray-100 mb-4">
-            Compatible con lectores USB y láser. Lectura instantánea para buscar, vender y controlar stock sin teclado.
-          </p>
-        </div>
-        <a href="modulos/lectores-codigos.html" class="text-[var(--neon)] font-semibold hover:underline mt-auto">Ver detalle →</a>
-      </article>
-
-      <!-- Impresoras Térmicas (RESALTADO LEVE) -->
-      <article class="reveal card-3d rounded-2xl border highlight highlight-strong p-6 min-h-[240px] flex flex-col justify-between">
-        <div>
-          <h3 class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]">Impresoras Térmicas</h3>
-          <p class="text-sm text-gray-100 mb-4">
-            Conectá tu impresora térmica USB para imprimir tickets, comprobantes y órdenes al instante.
-          </p>
-        </div>
-        <a href="modulos/impresoras-termicas.html" class="text-[var(--neon)] font-semibold hover:underline mt-auto">Ver detalle →</a>
-      </article>
-
-    </div>
-  </div>
-</section>
-  
-  <!-- Clientes con logos -->
-<section id="clientes" class="py-16 px-6 border-t border-white/5">
-  <div class="max-w-7xl mx-auto">
-    <h2 class="uppercase text-3xl font-bold text-center text-[var(--neon)] mb-10 reveal">Clientes que confían</h2>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 reveal">
-      <div class="client-card highlight rounded-xl p-6 text-center">
-        <img src="img/pecile.jpg" alt="Logo Pecile" class="mx-auto rounded-lg mb-4 w-36 h-36 object-cover"/>
-        <h3 class="uppercase font-semibold text-lg">Pecile Equipamientos</h3>
-        <p class="text-xs text-gray-400 mt-1 italic tracking-wide">📍 San Francisco, Córdoba</p>
-        <p class="text-sm text-gray-300 mt-3 leading-relaxed">
-          <span class="font-semibold text-gray-100">Equipamiento automotriz profesional.</span><br>
-        </p>
-      </div>
-      <div class="client-card highlight rounded-xl p-6 text-center">
-        <img src="img/lupe.jpg" alt="Logo Lupe Home" class="mx-auto rounded-lg mb-4 w-36 h-36 object-cover"/>
-        <h3 class="uppercase font-semibold text-lg">Lupe Home</h3>
-        <p class="text-xs text-gray-400 mt-1 italic tracking-wide">📍 San Francisco, Córdoba</p>
-        <p class="text-sm text-gray-300 mt-3 leading-relaxed">
-          <span class="font-semibold text-gray-100">Fabricación y distribución de sillones.</span><br>
-        </p>
-      </div>
-      <div class="client-card highlight rounded-xl p-6 text-center">
-        <img src="img/ellugar.jpg" alt="Logo El Lugar" class="mx-auto rounded-lg mb-4 w-36 h-36 object-cover"/>
-        <h3 class="uppercase font-semibold text-lg">El Lugar Fuego y Cava</h3>
-        <p class="text-xs text-gray-400 mt-1 italic tracking-wide">📍 San Francisco, Córdoba</p>
-        <p class="text-sm text-gray-300 mt-3 leading-relaxed">
-          <span class="font-semibold text-gray-100">Restaurante y cava</span><br>
-        </p>
-      </div>
-      <div class="client-card highlight rounded-xl p-6 text-center">
-        <img src="img/moon.jpg" alt="Logo Moon Boutique" class="mx-auto rounded-lg mb-4 w-36 h-36 object-cover"/>
-        <h3 class="uppercase font-semibold text-lg">Moon Boutique</h3>
-        <p class="text-xs text-gray-400 mt-1 italic tracking-wide">📍 San Francisco, Córdoba</p>
-        <p class="text-sm text-gray-300 mt-3 leading-relaxed">
-          <span class="font-semibold text-gray-100">Tienda de indumentaria femenina.</span><br>
-        </p>
-      </div>
-      <div class="client-card highlight rounded-xl p-6 text-center">
-        <img src="img/seven.jpg" alt="Logo Seven Padel" class="mx-auto rounded-lg mb-4 w-36 h-36 object-cover"/>
-        <h3 class="uppercase font-semibold text-lg">Seven Padel</h3>
-        <p class="text-xs text-gray-400 mt-1 italic tracking-wide">📍 Arroyito, Córdoba</p>
-        <p class="text-sm text-gray-300 mt-3 leading-relaxed">
-          <span class="font-semibold text-gray-100">Club deportivo y tienda de pádel.</span><br>
-        </p>
-      </div>
-      <div class="client-card highlight rounded-xl p-6 text-center">
-        <img src="img/esquina.jpg" alt="Logo La Esquina de Roca" class="mx-auto rounded-lg mb-4 w-36 h-36 object-cover"/>
-        <h3 class="uppercase font-semibold text-lg">La Esquina de Roca</h3>
-        <p class="text-xs text-gray-400 mt-1 italic tracking-wide">📍 San Francisco, Córdoba</p>
-        <p class="text-sm text-gray-300 mt-3 leading-relaxed">
-          <span class="font-semibold text-gray-100">Proveeduría.</span><br> 
-        </p>
-      </div>
-      <div class="client-card highlight rounded-xl p-6 text-center">
-        <img src="img/amarre.jpg" alt="Amarre" class="mx-auto rounded-lg mb-4 w-36 h-36 object-cover"/>
-        <h3 class="uppercase font-semibold text-lg">Amarre</h3>
-        <p class="text-xs text-gray-400 mt-1 italic tracking-wide">📍 Villa Crespo, Buenos Aires</p>
-        <p class="text-sm text-gray-300 mt-3 leading-relaxed">
-          <span class="font-semibold text-gray-100">Distribuidora mayorista de ferretería.</span><br> 
-        </p>
-      </div>
-       <div class="client-card highlight rounded-xl p-6 text-center">
-        <img src="img/fica.jpg" alt="Productora Fica" class="mx-auto rounded-lg mb-4 w-36 h-36 object-cover"/>
-        <h3 class="uppercase font-semibold text-lg">Productora Fica</h3>
-        <p class="text-xs text-gray-400 mt-1 italic tracking-wide">📍 San Francisco, Córdoba</p>
-        <p class="text-sm text-gray-300 mt-3 leading-relaxed">
-          <span class="font-semibold text-gray-100">Productora de eventos y competencias.</span><br> 
-        </p>
-      </div>
-        <div class="client-card highlight rounded-xl p-6 text-center">
-        <img src="img/disribuciones.jpeg" alt="Distribuciones SRL" class="mx-auto rounded-lg mb-4 w-36 h-36 object-cover"/>
-        <h3 class="uppercase font-semibold text-lg">Distribuciones SRL</h3>
-        <p class="text-xs text-gray-400 mt-1 italic tracking-wide">📍 San Francisco, Córdoba</p>
-        <p class="text-sm text-gray-300 mt-3 leading-relaxed">
-          <span class="font-semibold text-gray-100"> Fiambres y quesos.</span><br> 
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section id="productos" class="py-16 px-6 border-t border-white/5">
   <div class="max-w-7xl mx-auto">
-    <h2 class="uppercase text-3xl font-bold text-center text-[var(--neon)] mb-10 reveal">Otros productos</h2>
+    <h2 class="uppercase text-3xl font-bold text-center text-[var(--neon)] mb-4 reveal">
+      Otros productos
+    </h2>
+
+    <p class="text-center text-gray-300 max-w-3xl mx-auto mb-10 reveal">
+      Además del sistema principal, ofrecemos productos ya desarrollados listos para usar.
+    </p>
 
     <div class="grid gap-8 reveal">
 
       <!-- Resto Master -->
-      <div class="client-card highlight rounded-xl p-6 flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-10">
-        <img src="img/resto-master-logo.png" alt="Logo Resto Master" class="rounded-lg w-52 h-52 object-cover flex-shrink-0 mb-6 md:mb-0"/>
-        <div class="text-left">
-          <h3 class="uppercase font-semibold text-lg mb-2">Resto master</h3>
-          <p class="text-sm text-gray-300 mb-3 leading-relaxed">
-            Sistema de gestión de locales gastronómicos.
+      <div class="client-card highlight rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-10">
+        <div class="w-52 h-52 rounded-2xl overflow-hidden border border-white/10 bg-white/5 flex-shrink-0">
+          <img src="img/resto-master-logo.png" alt="Logo Resto Master" class="w-full h-full object-cover"/>
+        </div>
+
+        <div class="text-left flex-1">
+          <span class="module-chip mb-3 inline-block">Gastronomía</span>
+
+          <h3 class="uppercase font-bold text-2xl text-[var(--neon)] mb-3">
+            Resto Master
+          </h3>
+
+          <p class="text-sm text-gray-300 mb-5 leading-relaxed">
+            Sistema para bares, restaurantes y locales gastronómicos. Centraliza pedidos, mesas,
+            comandas, caja, stock y reservas en una sola plataforma.
           </p>
-          <ul class="list-disc list-inside text-sm text-gray-300 space-y-1">
-            <li>Impresión automática de comandas para cocina y barra.</li>
-            <li>Administración de mesas y pedidos con o sin asignación de mesa.</li>
-            <li>Control de stock por ingrediente con actualización automática.</li>
-            <li>Gestión de caja, pagos y métodos de cobro.</li>
-            <li>Seguimiento en tiempo real de pedidos y estados en cocina.</li>
-            <li>Gestión completa de reservas y disponibilidad.</li>
-            <li>Categorización y subcategorización totalmente configurables.</li>
-            <li>Administración de productos, ingredientes, proveedores y empleados desde un mismo panel.</li>
-          </ul>
+
+          <div class="grid sm:grid-cols-2 gap-3 text-sm text-gray-300">
+            <div class="rounded-xl bg-white/5 border border-white/10 p-3">🍽️ Gestión de mesas y pedidos</div>
+            <div class="rounded-xl bg-white/5 border border-white/10 p-3">🖨️ Comandas para cocina y barra</div>
+            <div class="rounded-xl bg-white/5 border border-white/10 p-3">📦 Stock por ingredientes</div>
+            <div class="rounded-xl bg-white/5 border border-white/10 p-3">📅 Reservas y disponibilidad</div>
+          </div>
         </div>
       </div>
 
-      <!-- AyP Finance -->
-      <div class="client-card highlight rounded-xl p-6 flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-10">
-        <img src="img/ayp.png" alt="Logo AyP Finance" class="rounded-lg w-52 h-52 object-cover flex-shrink-0 mb-6 md:mb-0"/>
-        <div class="text-left">
-          <h3 class="uppercase font-semibold text-lg mb-2">A&P Finance</h3>
-          <p class="text-sm text-gray-300 mb-3 leading-relaxed">
-            Sistema de gestión de cheques y clientes.
+      <!-- A&P Finance -->
+      <div class="client-card highlight rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-10">
+        <div class="w-52 h-52 rounded-2xl overflow-hidden border border-white/10 bg-white/5 flex-shrink-0">
+          <img src="img/ayp.png" alt="Logo A&P Finance" class="w-full h-full object-cover"/>
+        </div>
+
+        <div class="text-left flex-1">
+          <span class="module-chip mb-3 inline-block">Finanzas</span>
+
+          <h3 class="uppercase font-bold text-2xl text-[var(--neon)] mb-3">
+            A&P Finance
+          </h3>
+
+          <p class="text-sm text-gray-300 mb-5 leading-relaxed">
+            Plataforma para la gestión de cheques, clientes y operaciones financieras,
+            con trazabilidad documental, cálculos automáticos y reportes claros.
           </p>
-          <ul class="list-disc list-inside text-sm text-gray-300 space-y-1">
-            <li>Gestión integral de compra y venta de cheques, con obtención automática de datos del BCRA mediante CUIT.</li>
-            <li>Cálculo automático de comisiones en operaciones de compra y venta.</li>
-            <li>Asignación de imágenes a cada cheque para trazabilidad documental.</li>
-            <li>Generación automática de recibos en PDF para cada transacción.</li>
-            <li>Gestión de gastos totalmente configurables.</li>
-            <li>Administración centralizada de clientes y operaciones.</li>
-            <li>Reportes financieros automáticos y análisis de rendimiento.</li>
-          </ul>
+
+          <div class="grid sm:grid-cols-2 gap-3 text-sm text-gray-300">
+            <div class="rounded-xl bg-white/5 border border-white/10 p-3">🏦 Compra y venta de cheques</div>
+            <div class="rounded-xl bg-white/5 border border-white/10 p-3">🧮 Comisiones automáticas</div>
+            <div class="rounded-xl bg-white/5 border border-white/10 p-3">📄 Recibos en PDF</div>
+            <div class="rounded-xl bg-white/5 border border-white/10 p-3">📊 Reportes financieros</div>
+          </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
