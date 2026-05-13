@@ -1,352 +1,588 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="google" content="notranslate">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="google" content="notranslate" />
 
-  <title>ASPA TECH</title>
-  <meta name="description" content="ASPA TECH desarrolla plataformas modernas para emprendedores, PYMEs y empresas: ventas, facturas, proveedores, stock y más. Simplificá tu gestión y crecé sin límites." />
+    <title>ASPA TECH</title>
+    <meta
+      name="description"
+      content="ASPA TECH desarrolla plataformas modernas para emprendedores, PYMEs y empresas: ventas, facturas, proveedores, stock y más. Simplificá tu gestión y crecé sin límites."
+    />
 
-  <!-- Favicons -->
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <!-- Favicons -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
 
-  <!-- SEO / Open Graph -->
-  <meta property="og:title" content="ASPA TECH — Sistemas de gestión modernos">
-  <meta property="og:description" content="Plataformas pensadas para PYMEs, emprendedores y empresas: ventas, stock, proveedores, reportes financieros y más.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://aspatech.com.ar/">
-  <meta property="og:image" content="https://aspatech.com.ar/img/logo-fondo.png">
+    <!-- SEO / Open Graph -->
+    <meta
+      property="og:title"
+      content="ASPA TECH — Sistemas de gestión modernos"
+    />
+    <meta
+      property="og:description"
+      content="Plataformas pensadas para PYMEs, emprendedores y empresas: ventas, stock, proveedores, reportes financieros y más."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://aspatech.com.ar/" />
+    <meta
+      property="og:image"
+      content="https://aspatech.com.ar/img/logo-fondo.png"
+    />
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="ASPA TECH — Sistemas de gestión modernos">
-  <meta name="twitter:description" content="Plataformas ágiles y personalizadas para PYMEs y empresas. Simplificá tu gestión.">
-  <meta name="twitter:image" content="https://aspatech.com.ar/img/logo-fondo.png">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="ASPA TECH — Sistemas de gestión modernos"
+    />
+    <meta
+      name="twitter:description"
+      content="Plataformas ágiles y personalizadas para PYMEs y empresas. Simplificá tu gestión."
+    />
+    <meta
+      name="twitter:image"
+      content="https://aspatech.com.ar/img/logo-fondo.png"
+    />
 
-  <!-- Colors & theme -->
-  <meta name="theme-color" content="#00ffb3">
-  <meta name="msapplication-TileColor" content="#00ffb3">
-  <meta name="msapplication-config" content="browserconfig.xml">
+    <!-- Colors & theme -->
+    <meta name="theme-color" content="#00ffb3" />
+    <meta name="msapplication-TileColor" content="#00ffb3" />
+    <meta name="msapplication-config" content="browserconfig.xml" />
 
-  <!-- Fuente Montserrat -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Fuente Montserrat -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Preconnect para acelerar carga de fuentes -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Preconnect para acelerar carga de fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <!-- Canonical (mejora SEO al evitar duplicados) -->
-  <link rel="canonical" href="https://aspatech.com.ar/">
+    <!-- Canonical (mejora SEO al evitar duplicados) -->
+    <link rel="canonical" href="https://aspatech.com.ar/" />
 
-  <style>
-    
+    <style>
+      :root {
+        --neon: #00ffb3;
+        --bg-a: #0b0f12;
+        --bg-b: #0e1418;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family:
+          "Montserrat",
+          ui-sans-serif,
+          system-ui,
+          -apple-system,
+          Segoe UI,
+          Roboto,
+          "Helvetica Neue",
+          Arial;
+        background:
+          linear-gradient(
+            135deg,
+            rgba(0, 255, 179, 0.12) 0%,
+            rgba(11, 15, 18, 0.1) 24%,
+            rgba(11, 15, 18, 1) 60%
+          ),
+          linear-gradient(135deg, #0d1216 0%, #0b0f12 60%, #0a0e12 100%);
+      }
+      /* Animación de entrada */
+      .reveal {
+        opacity: 0;
+        transform: translateY(12px);
+        transition:
+          opacity 0.6s ease,
+          transform 0.6s ease;
+      }
+      .reveal.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      /* Cards */
+      .card-3d {
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease,
+          border-color 0.25s ease;
+      }
+      .card-3d:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 18px 42px rgba(0, 255, 179, 0.1);
+        border-color: rgba(0, 255, 179, 0.35);
+      }
+      /* Botones con brillo */
+      .btn-glow {
+        position: relative;
+        overflow: hidden;
+        transition:
+          transform 0.15s ease,
+          box-shadow 0.2s ease;
+      }
+      .btn-glow:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 8px 24px rgba(0, 255, 179, 0.25);
+      }
+      .btn-glow::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          120px 120px at var(--x, 50%) var(--y, 50%),
+          rgba(255, 255, 255, 0.22),
+          transparent 60%
+        );
+        opacity: 0;
+        transition: opacity 0.25s ease;
+      }
+      .btn-glow:hover::after {
+        opacity: 0.85;
+      }
+      /* WhatsApp flotante */
+      .wa-float {
+        position: fixed;
+        width: 58px;
+        height: 58px;
+        bottom: 20px;
+        right: 20px;
+        z-index: 60;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 9999px;
+        background: var(--neon);
+        color: #02150f;
+        box-shadow: 0 10px 26px rgba(0, 0, 0, 0.4);
+        transition: transform 0.2s ease;
+      }
+      .wa-float:hover {
+        transform: scale(1.07);
+      }
+      .wa-float::before {
+        content: "";
+        position: absolute;
+        inset: -8px;
+        border-radius: 9999px;
+        background: radial-gradient(
+          120px 120px at 50% 50%,
+          rgba(0, 255, 179, 0.35),
+          transparent 60%
+        );
+        filter: blur(7px);
+        z-index: -1;
+        animation: pulse 2.2s infinite ease-in-out;
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          transform: scale(0.96);
+          opacity: 0.8;
+        }
+        50% {
+          transform: scale(1.04);
+          opacity: 1;
+        }
+      }
+      /* Clientes */
+      .client-card {
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease,
+          border-color 0.25s ease;
+        background: linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.06),
+          rgba(255, 255, 255, 0.02)
+        );
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .client-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 10px 28px rgba(0, 255, 179, 0.18);
+        border-color: rgba(0, 255, 179, 0.35);
+      }
+      /* Destacado: Stock Automático */
+      .highlight {
+        background:
+          radial-gradient(
+            140% 120% at 100% 0%,
+            rgba(0, 255, 179, 0.18),
+            transparent 45%
+          ),
+          linear-gradient(
+            165deg,
+            rgba(0, 255, 179, 0.08),
+            rgba(255, 255, 255, 0.02)
+          );
+        border-color: rgba(0, 255, 179, 0.35);
+        box-shadow:
+          inset 0 0 0 1px rgba(0, 255, 179, 0.12),
+          0 14px 46px rgba(0, 255, 179, 0.12);
+        position: relative;
+      }
 
-    :root{
-      --neon: #00ffb3;
-      --bg-a: #0b0f12;
-      --bg-b: #0e1418;
-    }
-    html{ scroll-behavior:smooth; }
-    body{
-      font-family: 'Montserrat', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial;
-      background: linear-gradient(135deg, rgba(0,255,179,0.12) 0%, rgba(11,15,18,0.10) 24%, rgba(11,15,18,1) 60%),
-                  linear-gradient(135deg, #0d1216 0%, #0b0f12 60%, #0a0e12 100%);
-    }
-    /* Animación de entrada */
-    .reveal{ opacity:0; transform: translateY(12px); transition: opacity .6s ease, transform .6s ease; }
-    .reveal.show{ opacity:1; transform: translateY(0); }
-    /* Cards */
-    .card-3d{ transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
-    .card-3d:hover{ transform: translateY(-6px); box-shadow: 0 18px 42px rgba(0,255,179,.10); border-color: rgba(0,255,179,.35); }
-    /* Botones con brillo */
-    .btn-glow{ position: relative; overflow: hidden; transition: transform .15s ease, box-shadow .2s ease; }
-    .btn-glow:hover{ transform: translateY(-1px); box-shadow: 0 8px 24px rgba(0,255,179,.25);}
-    .btn-glow::after{
-      content:""; position:absolute; inset:0;
-      background: radial-gradient(120px 120px at var(--x,50%) var(--y,50%), rgba(255,255,255,.22), transparent 60%);
-      opacity:0; transition: opacity .25s ease;
-    }
-    .btn-glow:hover::after{ opacity:.85; }
-    /* WhatsApp flotante */
-    .wa-float{
-      position: fixed; width:58px; height:58px; bottom:20px; right:20px; z-index:60;
-      display:flex; align-items:center; justify-content:center; border-radius:9999px;
-      background: var(--neon); color:#02150f; box-shadow: 0 10px 26px rgba(0,0,0,.4);
-      transition: transform .2s ease;
-    }
-    .wa-float:hover{ transform: scale(1.07); }
-    .wa-float::before{
-      content:""; position:absolute; inset:-8px; border-radius:9999px;
-      background: radial-gradient(120px 120px at 50% 50%, rgba(0,255,179,.35), transparent 60%);
-      filter: blur(7px); z-index:-1; animation: pulse 2.2s infinite ease-in-out;
-    }
-    @keyframes pulse{ 0%,100%{ transform:scale(.96); opacity:.8 } 50%{ transform:scale(1.04); opacity:1 } }
-    /* Clientes */
-    .client-card{
-      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
-      background: linear-gradient(145deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
-      border: 1px solid rgba(255,255,255,.08);
-    }
-    .client-card:hover{ transform: translateY(-6px); box-shadow: 0 10px 28px rgba(0,255,179,.18); border-color: rgba(0,255,179,.35); }
-    /* Destacado: Stock Automático */
-    .highlight{
-      background:
-       radial-gradient(140% 120% at 100% 0%, rgba(0,255,179,.18), transparent 45%),
-       linear-gradient(165deg, rgba(0,255,179,.08), rgba(255,255,255,.02));
-      border-color: rgba(0,255,179,.35);
-      box-shadow: inset 0 0 0 1px rgba(0,255,179,.12), 0 14px 46px rgba(0,255,179,.12);
-      position: relative;
-    }
+      .highlight {
+        position: relative;
+        border-color: var(--neon) !important;
+      }
 
-    .highlight {
-      position: relative;
-      border-color: var(--neon) !important;
-    }
+      .highlight::after {
+        content: "";
+        position: absolute;
+        inset: -4px;
+        border-radius: 18px;
+        border: 2px solid rgba(0, 255, 179, 0.35);
+        box-shadow: 0 0 24px rgba(0, 255, 179, 0.35);
+        pointer-events: none;
+      }
 
-    .highlight::after {
-      content: "";
-      position: absolute;
-      inset: -4px;
-      border-radius: 18px;
-      border: 2px solid rgba(0,255,179,.35);
-      box-shadow: 0 0 24px rgba(0,255,179,.35);
-      pointer-events: none;
-    }
+      .module-chip {
+        font-size: 0.75rem;
+        padding: 0.35rem 0.65rem;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: #d1d5db;
+      }
 
-    .module-chip {
-      font-size: .75rem;
-      padding: .35rem .65rem;
-      border-radius: 999px;
-      background: rgba(255,255,255,.05);
-      border: 1px solid rgba(255,255,255,.10);
-      color: #d1d5db;
-    }
+      .badge {
+        position: absolute;
+        top: 14px;
+        right: 14px;
+        background: rgba(0, 255, 179, 0.16);
+        color: var(--neon);
+        border: 1px solid rgba(0, 255, 179, 0.45);
+        padding: 0.35rem 0.6rem;
+        border-radius: 999px;
+        font-size: 0.7rem;
+        letter-spacing: 0.06em;
+        animation: badgePulse 2.6s infinite ease-in-out;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+      @keyframes badgePulse {
+        0%,
+        100% {
+          transform: translateZ(0) scale(0.98);
+          box-shadow: 0 0 0 rgba(0, 255, 179, 0);
+        }
+        50% {
+          transform: translateZ(0) scale(1.02);
+          box-shadow: 0 0 24px rgba(0, 255, 179, 0.25);
+        }
+      }
+    </style>
+  </head>
 
+  <body class="text-gray-200 antialiased">
+    <!-- Header -->
+    <header
+      class="fixed top-0 inset-x-0 z-50 border-b border-white/10 backdrop-blur bg-[#0b0f12]/80"
+    >
+      <nav
+        class="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 h-20"
+      >
+        <!-- Logo -->
+        <a href="#inicio" class="flex items-center gap-2">
+          <img src="img/logo.png" alt="Aspa Tech" class="h-12 sm:h-14 w-auto" />
+        </a>
 
-    .badge{
-      position:absolute; top:14px; right:14px;
-      background: rgba(0,255,179,.16); color: var(--neon);
-      border: 1px solid rgba(0,255,179,.45);
-      padding: .35rem .6rem; border-radius: 999px; font-size: .70rem; letter-spacing:.06em;
-      animation: badgePulse 2.6s infinite ease-in-out;
-      text-transform: uppercase; font-weight: 600;
-    }
-    @keyframes badgePulse{ 0%,100%{ transform: translateZ(0) scale(.98); box-shadow: 0 0 0 rgba(0,255,179,.0);} 50%{ transform: translateZ(0) scale(1.02); box-shadow: 0 0 24px rgba(0,255,179,.25);} }
-  </style>
-</head>
+        <!-- Botón hamburguesa / cierre -->
+        <button
+          id="menu-btn"
+          class="md:hidden p-2 rounded-md hover:bg-white/5 transition z-50"
+          aria-label="Abrir menú"
+        >
+          <!-- Ícono SVG (hamburguesa + X animada) -->
+          <svg
+            id="menu-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="28"
+            height="28"
+            fill="none"
+            stroke="white"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
 
-<body class="text-gray-200 antialiased">
+        <!-- Menú escritorio -->
+        <ul
+          class="hidden md:flex items-center gap-8 text-base font-medium text-gray-200"
+        >
+          <li>
+            <a href="#modulos" class="hover:text-[var(--neon)] transition"
+              >Módulos</a
+            >
+          </li>
+          <li>
+            <a href="#clientes" class="hover:text-[var(--neon)] transition"
+              >Clientes</a
+            >
+          </li>
+          <li>
+            <a href="#nosotros" class="hover:text-[var(--neon)] transition"
+              >Nosotros</a
+            >
+          </li>
+          <li>
+            <a href="#productos" class="hover:text-[var(--neon)] transition"
+              >Otros productos</a
+            >
+          </li>
+        </ul>
+      </nav>
 
-  <!-- Header -->
-  <header class="fixed top-0 inset-x-0 z-50 border-b border-white/10 backdrop-blur bg-[#0b0f12]/80">
-  <nav class="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 h-20">
-    <!-- Logo -->
-    <a href="#inicio" class="flex items-center gap-2">
-      <img src="img/logo.png" alt="Aspa Tech" class="h-12 sm:h-14 w-auto">
-    </a>
+      <!-- Menú móvil (overlay animado) -->
+      <div
+        id="mobile-menu"
+        class="fixed top-0 left-0 w-full h-screen bg-[#0b0f12]/95 backdrop-blur-sm transform -translate-y-full transition-transform duration-300 ease-in-out flex flex-col items-center justify-center space-y-8 text-xl text-gray-200"
+      >
+        <a href="#modulos" class="hover:text-[var(--neon)] transition"
+          >Módulos</a
+        >
+        <a href="#clientes" class="hover:text-[var(--neon)] transition"
+          >Clientes</a
+        >
+        <a href="#nosotros" class="hover:text-[var(--neon)] transition"
+          >Nosotros</a
+        >
+        <a href="#productos" class="hover:text-[var(--neon)] transition"
+          >Otros productos</a
+        >
+      </div>
+    </header>
 
-    <!-- Botón hamburguesa / cierre -->
-    <button id="menu-btn" class="md:hidden p-2 rounded-md hover:bg-white/5 transition z-50" aria-label="Abrir menú">
-  <!-- Ícono SVG (hamburguesa + X animada) -->
-  <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <line x1="3" y1="6" x2="21" y2="6" />
-    <line x1="3" y1="12" x2="21" y2="12" />
-    <line x1="3" y1="18" x2="21" y2="18" />
-  </svg>
-</button>
-
-
-    <!-- Menú escritorio -->
-    <ul class="hidden md:flex items-center gap-8 text-base font-medium text-gray-200">
-      <li><a href="#modulos" class="hover:text-[var(--neon)] transition">Módulos</a></li>
-      <li><a href="#clientes" class="hover:text-[var(--neon)] transition">Clientes</a></li>
-      <li><a href="#nosotros" class="hover:text-[var(--neon)] transition">Nosotros</a></li>
-      <li><a href="#productos" class="hover:text-[var(--neon)] transition">Otros productos</a></li>
-    </ul>
-  </nav>
-
-  <!-- Menú móvil (overlay animado) -->
-  <div id="mobile-menu" class="fixed top-0 left-0 w-full h-screen bg-[#0b0f12]/95 backdrop-blur-sm transform -translate-y-full transition-transform duration-300 ease-in-out flex flex-col items-center justify-center space-y-8 text-xl text-gray-200">
-    <a href="#modulos" class="hover:text-[var(--neon)] transition">Módulos</a>
-    <a href="#clientes" class="hover:text-[var(--neon)] transition">Clientes</a>
-     <a href="#nosotros" class="hover:text-[var(--neon)] transition">Nosotros</a>
-    <a href="#productos" class="hover:text-[var(--neon)] transition">Otros productos</a>
-  </div>
-</header>
-
-  <!-- Hero -->
-  <section id="inicio" class="pt-28 sm:pt-32 pb-5 sm:pb-20 px-6 text-center reveal">
-  <div class="max-w-4xl mx-auto">
-    <h1 class="uppercase text-4xl sm:text-6xl font-extrabold leading-tight">
-      <span class="text-[var(--neon)]">Simplificá</span> tu gestión.<br class="hidden sm:block"/>
-      Crecé <span class="text-[var(--neon)]">sin límites</span>.
-    </h1>
-    <p class="mt-5 text-lg sm:text-xl text-gray-300">
-      De <span class="text-[var(--neon)] font-semibold">San Francisco (Córdoba)</span>.
-    </p>
-    <p class="text-lg sm:text-xl text-gray-300">
-      a <span class="text-[var(--neon)] font-semibold">todo el país</span>.
-    </p>
-    <p class="mt-3 text-sm sm:text-base text-gray-400 leading-relaxed">
-      <span class="font-semibold text-[var(--neon)]">Adaptamos</span> y 
-      <span class="font-semibold text-[var(--neon)]">desarrollamos</span> sistemas pensados para 
-      <span class="text-gray-200">emprendedores, PYMEs y empresas</span>.
-    </p>
-  </div>
-</section>
-
-  <!-- Módulos -->
-<section id="modulos" class="py-12 border-t border-white/5 sm:py-16 px-6">
-  <div class="max-w-7xl mx-auto">
-
-    <h2 class="uppercase text-3xl font-bold text-center text-[var(--neon)] mb-10 reveal">
-      Todo tu negocio en un solo sistema
-    </h2>
-
-    <p class="text-center text-gray-300 max-w-3xl mx-auto mb-12 reveal">
-      ASPA TECH centraliza ventas, facturación, stock y finanzas en una sola plataforma.
-      Automatizá procesos, evitá errores y tomá decisiones en tiempo real.
-    </p>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-
-      <!-- Ventas + Facturación -->
-      <article class="reveal card-3d rounded-2xl border highlight p-6 md:col-span-2 relative overflow-hidden">
-        <div class="badge">ARCA / AFIP</div>
-        <div class="text-4xl mb-4">🧾</div>
-        <h3 class="uppercase text-xl font-extrabold mb-3 text-[var(--neon)]">
-          Ventas + Facturación
-        </h3>
-        <p class="text-sm text-gray-300 leading-relaxed">
-          Vendé y facturá desde un mismo lugar con cálculo automático de IVA, neto y totales.
+    <!-- Hero -->
+    <section
+      id="inicio"
+      class="pt-28 sm:pt-32 pb-5 sm:pb-20 px-6 text-center reveal"
+    >
+      <div class="max-w-4xl mx-auto">
+        <h1 class="uppercase text-4xl sm:text-6xl font-extrabold leading-tight">
+          <span class="text-[var(--neon)]">Simplificá</span> tu gestión.<br
+            class="hidden sm:block"
+          />
+          Crecé <span class="text-[var(--neon)]">sin límites</span>.
+        </h1>
+        <p class="mt-5 text-lg sm:text-xl text-gray-300">
+          De
+          <span class="text-[var(--neon)] font-semibold"
+            >San Francisco (Córdoba)</span
+          >.
         </p>
-        <div class="flex flex-wrap gap-2 mt-5">
-          <span class="module-chip">Factura A/B/C</span>
-          <span class="module-chip">IVA automático</span>
-          <span class="module-chip">PDF</span>
-        </div>
-      </article>
-
-      <!-- Pedidos -->
-      <article class="reveal card-3d rounded-2xl border highlight p-6">
-        <div class="text-4xl mb-4">📦</div>
-        <h3 class="uppercase text-xl font-extrabold mb-3 text-[var(--neon)]">
-          Pedidos en tiempo real
-        </h3>
-        <p class="text-sm text-gray-300">
-          Registrá pedidos desde cualquier lugar con impacto inmediato en el sistema.
+        <p class="text-lg sm:text-xl text-gray-300">
+          a <span class="text-[var(--neon)] font-semibold">todo el país</span>.
         </p>
-      </article>
-
-      <!-- Cuenta corriente -->
-      <article class="reveal card-3d rounded-2xl border highlight  p-6">
-        <div class="text-4xl mb-4">👥</div>
-        <h3 class="uppercase text-xl font-extrabold mb-3 text-[var(--neon)]">
-          Cuenta corriente
-        </h3>
-        <p class="text-sm text-gray-300">
-          Control total de deudas, pagos y vencimientos por cliente.
+        <p class="mt-3 text-sm sm:text-base text-gray-400 leading-relaxed">
+          <span class="font-semibold text-[var(--neon)]">Adaptamos</span> y
+          <span class="font-semibold text-[var(--neon)]">desarrollamos</span>
+          sistemas pensados para
+          <span class="text-gray-200">emprendedores, PYMEs y empresas</span>.
         </p>
-      </article>
+      </div>
+    </section>
 
-      <!-- Stock -->
-      <article class="reveal card-3d rounded-2xl border highlight  p-6">
-        <div class="text-4xl mb-4">📊</div>
-        <h3 class="uppercase text-xl font-extrabold mb-3 text-[var(--neon)]">
-          Stock automático
-        </h3>
-        <p class="text-sm text-gray-300">
-          Se actualiza solo con cada movimiento. Sin errores ni tareas manuales.
+    <!-- Módulos -->
+    <section id="modulos" class="py-12 border-t border-white/5 sm:py-16 px-6">
+      <div class="max-w-7xl mx-auto">
+        <h2
+          class="uppercase text-3xl font-bold text-center text-[var(--neon)] mb-10 reveal"
+        >
+          Todo tu negocio en un solo sistema
+        </h2>
+
+        <p class="text-center text-gray-300 max-w-3xl mx-auto mb-12 reveal">
+          ASPA TECH centraliza ventas, facturación, stock y finanzas en una sola
+          plataforma. Automatizá procesos, evitá errores y tomá decisiones en
+          tiempo real.
         </p>
-      </article>
 
-      <!-- Recibos -->
-      <article class="reveal card-3d rounded-2xl border highlight p-6">
-        <div class="text-4xl mb-4">💰</div>
-        <h3 class="uppercase text-xl font-extrabold mb-3 text-[var(--neon)]">
-          Recibos y cobros
-        </h3>
-        <p class="text-sm text-gray-300">
-          Registrá pagos y generá recibos automáticamente.
-        </p>
-      </article>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+          <!-- Ventas + Facturación -->
+          <article
+            class="reveal card-3d rounded-2xl border highlight p-6 md:col-span-2 relative overflow-hidden"
+          >
+            <div class="badge">ARCA / AFIP</div>
+            <div class="text-4xl mb-4">🧾</div>
+            <h3
+              class="uppercase text-xl font-extrabold mb-3 text-[var(--neon)]"
+            >
+              Ventas + Facturación
+            </h3>
+            <p class="text-sm text-gray-300 leading-relaxed">
+              Vendé y facturá desde un mismo lugar con cálculo automático de
+              IVA, neto y totales.
+            </p>
+            <div class="flex flex-wrap gap-2 mt-5">
+              <span class="module-chip">Factura A/B/C</span>
+              <span class="module-chip">IVA automático</span>
+              <span class="module-chip">PDF</span>
+            </div>
+          </article>
+          <article class="reveal card-3d rounded-2xl border highlight p-6 md:col-span-2 relative overflow-hidden">
+            <div class="text-4xl mb-4">📚</div>
+            <h3
+              class="uppercase text-xl font-extrabold mb-3 text-[var(--neon)]"
+            >
+              Libro IVA
+            </h3>
+            <p class="text-sm text-gray-300">
+              Exportá el Libro IVA automáticamente con toda la información
+              organizada y discriminada en un click.
+            </p>
+          </article>
+          <!-- Pedidos -->
+          <article class="reveal card-3d rounded-2xl border highlight p-6">
+            <div class="text-4xl mb-4">📦</div>
+            <h3
+              class="uppercase text-xl font-extrabold mb-3 text-[var(--neon)]"
+            >
+              Pedidos en tiempo real
+            </h3>
+            <p class="text-sm text-gray-300">
+              Registrá pedidos desde cualquier lugar con impacto inmediato en el
+              sistema.
+            </p>
+          </article>
 
-      <!-- Bancos -->
-      <article class="reveal card-3d rounded-2xl border highlight p-6">
-        <div class="text-4xl mb-4">🏦</div>
-        <h3 class="uppercase text-xl font-extrabold mb-3 text-[var(--neon)]">
-          Bancos y conciliación
-        </h3>
-        <p class="text-sm text-gray-300">
-          Controlá movimientos y conciliá ingresos fácilmente.
-        </p>
-      </article>
+          <!-- Cuenta corriente -->
+          <article class="reveal card-3d rounded-2xl border highlight p-6">
+            <div class="text-4xl mb-4">👥</div>
+            <h3
+              class="uppercase text-xl font-extrabold mb-3 text-[var(--neon)]"
+            >
+              Cuenta corriente
+            </h3>
+            <p class="text-sm text-gray-300">
+              Control total de deudas, pagos y vencimientos por cliente.
+            </p>
+          </article>
 
-      <!-- Compras -->
-      <article class="reveal card-3d rounded-2xl border highlight p-6">
-        <div class="text-4xl mb-4">🛒</div>
-        <h3 class="uppercase text-xl font-extrabold mb-3 text-[var(--neon)]">
-          Compras
-        </h3>
-        <p class="text-sm text-gray-300">
-          Gestioná órdenes y entradas de mercadería con impacto en stock.
-        </p>
-      </article>
+          <!-- Stock -->
+          <article class="reveal card-3d rounded-2xl border highlight p-6">
+            <div class="text-4xl mb-4">📊</div>
+            <h3
+              class="uppercase text-xl font-extrabold mb-3 text-[var(--neon)]"
+            >
+              Stock automático
+            </h3>
+            <p class="text-sm text-gray-300">
+              Se actualiza solo con cada movimiento. Sin errores ni tareas
+              manuales.
+            </p>
+          </article>
 
-      <!-- Proveedores -->
-      <article class="reveal card-3d rounded-2xl border highlight p-6">
-        <div class="text-4xl mb-4">📄</div>
-        <h3 class="uppercase text-xl font-extrabold mb-3 text-[var(--neon)]">
-          Proveedores
-        </h3>
-        <p class="text-sm text-gray-300">
-          Control de pagos, vencimientos y cuentas a pagar.
-        </p>
-      </article>
+          <!-- Recibos -->
+          <article class="reveal card-3d rounded-2xl border highlight p-6">
+            <div class="text-4xl mb-4">💰</div>
+            <h3
+              class="uppercase text-xl font-extrabold mb-3 text-[var(--neon)]"
+            >
+              Recibos y cobros
+            </h3>
+            <p class="text-sm text-gray-300">
+              Registrá pagos y generá recibos automáticamente.
+            </p>
+          </article>
 
-      <!-- Cheques -->
-      <article class="reveal card-3d rounded-2xl border highlight p-6">
-        <div class="text-4xl mb-4">🏷️</div>
-        <h3 class="uppercase text-xl font-extrabold mb-3 text-[var(--neon)]">
-          Cheques
-        </h3>
-        <p class="text-sm text-gray-300">
-          Gestión completa de cheques emitidos y recibidos.
-        </p>
-      </article>
+          <!-- Bancos -->
+          <article class="reveal card-3d rounded-2xl border highlight p-6">
+            <div class="text-4xl mb-4">🏦</div>
+            <h3
+              class="uppercase text-xl font-extrabold mb-3 text-[var(--neon)]"
+            >
+              Bancos y conciliación
+            </h3>
+            <p class="text-sm text-gray-300">
+              Controlá movimientos y conciliá ingresos fácilmente.
+            </p>
+          </article>
 
-      <!-- Lector -->
-      <article class="reveal card-3d rounded-2xl border highlight p-6">
-        <div class="text-4xl mb-4">📡</div>
-        <h3 class="uppercase text-xl font-extrabold mb-3 text-[var(--neon)]">
-          Lector de códigos
-        </h3>
-        <p class="text-sm text-gray-300">
-          Escaneá productos y acelerá ventas sin usar teclado.
-        </p>
-      </article>
+          <!-- Compras -->
+          <article class="reveal card-3d rounded-2xl border highlight p-6">
+            <div class="text-4xl mb-4">🛒</div>
+            <h3
+              class="uppercase text-xl font-extrabold mb-3 text-[var(--neon)]"
+            >
+              Compras
+            </h3>
+            <p class="text-sm text-gray-300">
+              Gestioná órdenes y entradas de mercadería con impacto en stock.
+            </p>
+          </article>
 
-      <!-- Impresoras -->
-      <article class="reveal card-3d rounded-2xl border highlight p-6">
-        <div class="text-4xl mb-4">🖨️</div>
-        <h3 class="uppercase text-xl font-extrabold mb-3 text-[var(--neon)]">
-          Impresoras térmicas
-        </h3>
-        <p class="text-sm text-gray-300">
-          Imprimí tickets y comprobantes automáticamente.
-        </p>
-      </article>
+          <!-- Proveedores -->
+          <article class="reveal card-3d rounded-2xl border highlight p-6">
+            <div class="text-4xl mb-4">📄</div>
+            <h3
+              class="uppercase text-xl font-extrabold mb-3 text-[var(--neon)]"
+            >
+              Proveedores
+            </h3>
+            <p class="text-sm text-gray-300">
+              Control de pagos, vencimientos y cuentas a pagar.
+            </p>
+          </article>
 
-      <!-- Rutas -->
-      <!-- <article class="reveal card-3d rounded-2xl border highlight  p-6 md:col-span-2 relative overflow-hidden">
+          <!-- Cheques -->
+          <article class="reveal card-3d rounded-2xl border highlight p-6">
+            <div class="text-4xl mb-4">🏷️</div>
+            <h3
+              class="uppercase text-xl font-extrabold mb-3 text-[var(--neon)]"
+            >
+              Cheques
+            </h3>
+            <p class="text-sm text-gray-300">
+              Gestión completa de cheques emitidos y recibidos.
+            </p>
+          </article>
+
+          <!-- Lector -->
+          <article class="reveal card-3d rounded-2xl border highlight p-6">
+            <div class="text-4xl mb-4">📡</div>
+            <h3
+              class="uppercase text-xl font-extrabold mb-3 text-[var(--neon)]"
+            >
+              Lector de códigos
+            </h3>
+            <p class="text-sm text-gray-300">
+              Escaneá productos y acelerá ventas sin usar teclado.
+            </p>
+          </article>
+
+          <!-- Impresoras -->
+          <article class="reveal card-3d rounded-2xl border highlight p-6">
+            <div class="text-4xl mb-4">🖨️</div>
+            <h3
+              class="uppercase text-xl font-extrabold mb-3 text-[var(--neon)]"
+            >
+              Impresoras térmicas
+            </h3>
+            <p class="text-sm text-gray-300">
+              Imprimí tickets y comprobantes automáticamente.
+            </p>
+          </article>
+
+          <!-- Rutas -->
+          <!-- <article class="reveal card-3d rounded-2xl border highlight  p-6 md:col-span-2 relative overflow-hidden">
         <div class="badge">Nuevo</div>
         <div class="text-4xl mb-4">🗺️</div>
         <h3 class="uppercase text-xl font-extrabold mb-3 text-[var(--neon)]">
@@ -363,275 +599,449 @@
         </ul>
         <p class="text-xs text-gray-500 mt-4">Potenciado por Google Maps</p>
       </article> -->
-
-    </div>
-
-    <!-- Cierre -->
-    <div class="text-center mt-14 reveal rounded-2xl border border-[var(--neon)]/30 bg-white/5 p-8">
-      <p class="text-gray-300 text-lg">
-        ⚡ Más velocidad · 📊 Más control · 🔗 Más integración
-      </p>
-      <p class="text-[var(--neon)] font-bold mt-3 text-2xl">
-        Llevá tu gestión al siguiente nivel
-      </p>
-    </div>
-
-  </div>
-</section>
-  
-  <!-- Clientes con logos -->
-<section id="clientes" class="py-16 px-6 border-t border-white/5">
-  <div class="max-w-7xl mx-auto">
-    <h2 class="uppercase text-3xl font-bold text-center text-[var(--neon)] mb-4 reveal">
-      Clientes que confían
-    </h2>
-
-    <p class="text-center text-gray-300 max-w-3xl mx-auto mb-10 reveal">
-      Empresas que ya gestionan sus procesos con soluciones desarrolladas por ASPA TECH.
-    </p>
-
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 reveal">
-
-      <div class="client-card highlight rounded-2xl p-6 text-center flex flex-col items-center">
-        <div class="w-36 h-36 rounded-2xl overflow-hidden border border-white/10 bg-white/5 mb-4">
-          <img src="img/pecile.jpg" alt="Logo Pecile Equipamientos" class="w-full h-full object-cover"/>
-        </div>
-        <span class="module-chip mb-3">Equipamiento automotriz</span>
-        <h3 class="uppercase font-semibold text-lg">Pecile Equipamientos</h3>
-        <p class="text-xs text-gray-400 mt-1 italic tracking-wide">📍 San Francisco, Córdoba</p>
-      </div>
-
-      <div class="client-card highlight rounded-2xl p-6 text-center flex flex-col items-center">
-        <div class="w-36 h-36 rounded-2xl overflow-hidden border border-white/10 bg-white/5 mb-4">
-          <img src="img/lupe.jpg" alt="Logo Lupe Home" class="w-full h-full object-cover"/>
-        </div>
-        <span class="module-chip mb-3">Fabricación y distribución</span>
-        <h3 class="uppercase font-semibold text-lg">Lupe Home</h3>
-        <p class="text-xs text-gray-400 mt-1 italic tracking-wide">📍 San Francisco, Córdoba</p>
-      </div>
-
-      <div class="client-card highlight rounded-2xl p-6 text-center flex flex-col items-center">
-        <div class="w-36 h-36 rounded-2xl overflow-hidden border border-white/10 bg-white/5 mb-4">
-          <img src="img/ellugar.jpg" alt="Logo El Lugar Fuego y Cava" class="w-full h-full object-cover"/>
-        </div>
-        <span class="module-chip mb-3">Gastronomía</span>
-        <h3 class="uppercase font-semibold text-lg">El Lugar Fuego y Cava</h3>
-        <p class="text-xs text-gray-400 mt-1 italic tracking-wide">📍 San Francisco, Córdoba</p>
-      </div>
-
-      <div class="client-card highlight rounded-2xl p-6 text-center flex flex-col items-center">
-        <div class="w-36 h-36 rounded-2xl overflow-hidden border border-white/10 bg-white/5 mb-4">
-          <img src="img/moon.jpg" alt="Logo Moon Boutique" class="w-full h-full object-cover"/>
-        </div>
-        <span class="module-chip mb-3">Indumentaria</span>
-        <h3 class="uppercase font-semibold text-lg">Moon Boutique</h3>
-        <p class="text-xs text-gray-400 mt-1 italic tracking-wide">📍 San Francisco, Córdoba</p>
-      </div>
-
-      <div class="client-card highlight rounded-2xl p-6 text-center flex flex-col items-center">
-        <div class="w-36 h-36 rounded-2xl overflow-hidden border border-white/10 bg-white/5 mb-4">
-          <img src="img/seven.jpg" alt="Logo Seven Padel" class="w-full h-full object-cover"/>
-        </div>
-        <span class="module-chip mb-3">Club deportivo y tienda</span>
-        <h3 class="uppercase font-semibold text-lg">Seven Padel</h3>
-        <p class="text-xs text-gray-400 mt-1 italic tracking-wide">📍 Arroyito, Córdoba</p>
-      </div>
-
-      <div class="client-card highlight rounded-2xl p-6 text-center flex flex-col items-center">
-        <div class="w-36 h-36 rounded-2xl overflow-hidden border border-white/10 bg-white/5 mb-4">
-          <img src="img/esquina.jpg" alt="Logo La Esquina de Roca" class="w-full h-full object-cover"/>
-        </div>
-        <span class="module-chip mb-3">Proveeduría</span>
-        <h3 class="uppercase font-semibold text-lg">La Esquina de Roca</h3>
-        <p class="text-xs text-gray-400 mt-1 italic tracking-wide">📍 San Francisco, Córdoba</p>
-      </div>
-
-      <div class="client-card highlight rounded-2xl p-6 text-center flex flex-col items-center">
-        <div class="w-36 h-36 rounded-2xl overflow-hidden border border-white/10 bg-white/5 mb-4">
-          <img src="img/amarre.jpg" alt="Logo Amarre" class="w-full h-full object-cover"/>
-        </div>
-        <span class="module-chip mb-3">Distribuidora mayorista</span>
-        <h3 class="uppercase font-semibold text-lg">Amarre</h3>
-        <p class="text-xs text-gray-400 mt-1 italic tracking-wide">📍 Villa Crespo, Buenos Aires</p>
-      </div>
-
-      <div class="client-card highlight rounded-2xl p-6 text-center flex flex-col items-center">
-        <div class="w-36 h-36 rounded-2xl overflow-hidden border border-white/10 bg-white/5 mb-4">
-          <img src="img/fica.jpg" alt="Logo Productora Fica" class="w-full h-full object-cover"/>
-        </div>
-        <span class="module-chip mb-3">Eventos y competencias</span>
-        <h3 class="uppercase font-semibold text-lg">Productora Fica</h3>
-        <p class="text-xs text-gray-400 mt-1 italic tracking-wide">📍 San Francisco, Córdoba</p>
-      </div>
-
-      <div class="client-card highlight rounded-2xl p-6 text-center flex flex-col items-center">
-        <div class="w-36 h-36 rounded-2xl overflow-hidden border border-white/10 bg-white/5 mb-4">
-          <img src="img/disribuciones.jpeg" alt="Logo Distribuciones SRL" class="w-full h-full object-cover"/>
-        </div>
-        <span class="module-chip mb-3">Fiambres y quesos</span>
-        <h3 class="uppercase font-semibold text-lg">Distribuciones SRL</h3>
-        <p class="text-xs text-gray-400 mt-1 italic tracking-wide">📍 San Francisco, Córdoba</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<section id="nosotros" class="py-16 px-6 border-t border-white/5">
-  <div class="max-w-5xl mx-auto text-center">
-    <h2 class="uppercase text-3xl font-bold text-[var(--neon)] mb-6 reveal">Nosotros</h2>
-    <p class="text-gray-300 reveal max-w-3xl mx-auto">
-      Transformamos procesos complejos en flujos simples y eficientes. Acompañamos a emprendedores, PYMEs y empresas con
-      tecnología accesible y un enfoque humano.
-    </p>
-    <p class="text-gray-400 reveal mt-3">
-      Acompañamos cada empresa con soporte permanente, actualizaciones continuas y mejora constante del sistema.
-    </p>
-
-    <!-- Contacto -->
-    <div class="mt-8 space-y-2 reveal">
-      <p class="text-[var(--neon)] font-semibold uppercase tracking-wide">Contacto directo</p>
-      <p class="text-gray-300">
-        WhatsApp: 
-        <a href="https://wa.me/5493564584838" target="_blank" class="text-[var(--neon)] hover:underline">
-          +54 9 3564 584838
-        </a>
-      </p>
-      <p class="text-gray-300">
-        Instagram: 
-        <a href="https://www.instagram.com/aspatechsf" target="_blank" class="text-[var(--neon)] hover:underline">
-          @aspatechsf
-        </a>
-      </p>
-    </div>
-  </div>
-</section>
-
-<section id="productos" class="py-16 px-6 border-t border-white/5">
-  <div class="max-w-7xl mx-auto">
-    <h2 class="uppercase text-3xl font-bold text-center text-[var(--neon)] mb-4 reveal">
-      Otros productos
-    </h2>
-
-    <p class="text-center text-gray-300 max-w-3xl mx-auto mb-10 reveal">
-      Además del sistema principal, ofrecemos productos ya desarrollados listos para usar.
-    </p>
-
-    <div class="grid gap-8 reveal">
-
-      <!-- Resto Master -->
-      <div class="client-card highlight rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-10">
-        <div class="w-52 h-52 rounded-2xl overflow-hidden border border-white/10 bg-white/5 flex-shrink-0">
-          <img src="img/resto-master-logo.png" alt="Logo Resto Master" class="w-full h-full object-cover"/>
         </div>
 
-        <div class="text-left flex-1">
-          <span class="module-chip mb-3 inline-block">Gastronomía</span>
-
-          <h3 class="uppercase font-bold text-2xl text-[var(--neon)] mb-3">
-            Resto Master
-          </h3>
-
-          <p class="text-sm text-gray-300 mb-5 leading-relaxed">
-            Sistema para bares, restaurantes y locales gastronómicos. Centraliza pedidos, mesas,
-            comandas, caja, stock y reservas en una sola plataforma.
+        <!-- Cierre -->
+        <div
+          class="text-center mt-14 reveal rounded-2xl border border-[var(--neon)]/30 bg-white/5 p-8"
+        >
+          <p class="text-gray-300 text-lg">
+            ⚡ Más velocidad · 📊 Más control · 🔗 Más integración
           </p>
+          <p class="text-[var(--neon)] font-bold mt-3 text-2xl">
+            Llevá tu gestión al siguiente nivel
+          </p>
+        </div>
+      </div>
+    </section>
 
-          <div class="grid sm:grid-cols-2 gap-3 text-sm text-gray-300">
-            <div class="rounded-xl bg-white/5 border border-white/10 p-3">🍽️ Gestión de mesas y pedidos</div>
-            <div class="rounded-xl bg-white/5 border border-white/10 p-3">🖨️ Comandas para cocina y barra</div>
-            <div class="rounded-xl bg-white/5 border border-white/10 p-3">📦 Stock por ingredientes</div>
-            <div class="rounded-xl bg-white/5 border border-white/10 p-3">📅 Reservas y disponibilidad</div>
+    <!-- Clientes con logos -->
+    <section id="clientes" class="py-16 px-6 border-t border-white/5">
+      <div class="max-w-7xl mx-auto">
+        <h2
+          class="uppercase text-3xl font-bold text-center text-[var(--neon)] mb-4 reveal"
+        >
+          Clientes que confían
+        </h2>
+
+        <p class="text-center text-gray-300 max-w-3xl mx-auto mb-10 reveal">
+          Empresas que ya gestionan sus procesos con soluciones desarrolladas
+          por ASPA TECH.
+        </p>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 reveal">
+          <div
+            class="client-card highlight rounded-2xl p-6 text-center flex flex-col items-center"
+          >
+            <div
+              class="w-36 h-36 rounded-2xl overflow-hidden border border-white/10 bg-white/5 mb-4"
+            >
+              <img
+                src="img/pecile.jpg"
+                alt="Logo Pecile Equipamientos"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <span class="module-chip mb-3">Equipamiento automotriz</span>
+            <h3 class="uppercase font-semibold text-lg">
+              Pecile Equipamientos
+            </h3>
+            <p class="text-xs text-gray-400 mt-1 italic tracking-wide">
+              📍 San Francisco, Córdoba
+            </p>
+          </div>
+
+          <div
+            class="client-card highlight rounded-2xl p-6 text-center flex flex-col items-center"
+          >
+            <div
+              class="w-36 h-36 rounded-2xl overflow-hidden border border-white/10 bg-white/5 mb-4"
+            >
+              <img
+                src="img/lupe.jpg"
+                alt="Logo Lupe Home"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <span class="module-chip mb-3">Fabricación y distribución</span>
+            <h3 class="uppercase font-semibold text-lg">Lupe Home</h3>
+            <p class="text-xs text-gray-400 mt-1 italic tracking-wide">
+              📍 San Francisco, Córdoba
+            </p>
+          </div>
+
+          <div
+            class="client-card highlight rounded-2xl p-6 text-center flex flex-col items-center"
+          >
+            <div
+              class="w-36 h-36 rounded-2xl overflow-hidden border border-white/10 bg-white/5 mb-4"
+            >
+              <img
+                src="img/ellugar.jpg"
+                alt="Logo El Lugar Fuego y Cava"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <span class="module-chip mb-3">Gastronomía</span>
+            <h3 class="uppercase font-semibold text-lg">
+              El Lugar Fuego y Cava
+            </h3>
+            <p class="text-xs text-gray-400 mt-1 italic tracking-wide">
+              📍 San Francisco, Córdoba
+            </p>
+          </div>
+
+          <div
+            class="client-card highlight rounded-2xl p-6 text-center flex flex-col items-center"
+          >
+            <div
+              class="w-36 h-36 rounded-2xl overflow-hidden border border-white/10 bg-white/5 mb-4"
+            >
+              <img
+                src="img/moon.jpg"
+                alt="Logo Moon Boutique"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <span class="module-chip mb-3">Indumentaria</span>
+            <h3 class="uppercase font-semibold text-lg">Moon Boutique</h3>
+            <p class="text-xs text-gray-400 mt-1 italic tracking-wide">
+              📍 San Francisco, Córdoba
+            </p>
+          </div>
+
+          <div
+            class="client-card highlight rounded-2xl p-6 text-center flex flex-col items-center"
+          >
+            <div
+              class="w-36 h-36 rounded-2xl overflow-hidden border border-white/10 bg-white/5 mb-4"
+            >
+              <img
+                src="img/seven.jpg"
+                alt="Logo Seven Padel"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <span class="module-chip mb-3">Club deportivo y tienda</span>
+            <h3 class="uppercase font-semibold text-lg">Seven Padel</h3>
+            <p class="text-xs text-gray-400 mt-1 italic tracking-wide">
+              📍 Arroyito, Córdoba
+            </p>
+          </div>
+
+          <div
+            class="client-card highlight rounded-2xl p-6 text-center flex flex-col items-center"
+          >
+            <div
+              class="w-36 h-36 rounded-2xl overflow-hidden border border-white/10 bg-white/5 mb-4"
+            >
+              <img
+                src="img/esquina.jpg"
+                alt="Logo La Esquina de Roca"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <span class="module-chip mb-3">Proveeduría</span>
+            <h3 class="uppercase font-semibold text-lg">La Esquina de Roca</h3>
+            <p class="text-xs text-gray-400 mt-1 italic tracking-wide">
+              📍 San Francisco, Córdoba
+            </p>
+          </div>
+
+          <div
+            class="client-card highlight rounded-2xl p-6 text-center flex flex-col items-center"
+          >
+            <div
+              class="w-36 h-36 rounded-2xl overflow-hidden border border-white/10 bg-white/5 mb-4"
+            >
+              <img
+                src="img/amarre.jpg"
+                alt="Logo Amarre"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <span class="module-chip mb-3">Distribuidora mayorista</span>
+            <h3 class="uppercase font-semibold text-lg">Amarre</h3>
+            <p class="text-xs text-gray-400 mt-1 italic tracking-wide">
+              📍 Villa Crespo, Buenos Aires
+            </p>
+          </div>
+
+          <div
+            class="client-card highlight rounded-2xl p-6 text-center flex flex-col items-center"
+          >
+            <div
+              class="w-36 h-36 rounded-2xl overflow-hidden border border-white/10 bg-white/5 mb-4"
+            >
+              <img
+                src="img/fica.jpg"
+                alt="Logo Productora Fica"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <span class="module-chip mb-3">Eventos y competencias</span>
+            <h3 class="uppercase font-semibold text-lg">Productora Fica</h3>
+            <p class="text-xs text-gray-400 mt-1 italic tracking-wide">
+              📍 San Francisco, Córdoba
+            </p>
+          </div>
+
+          <div
+            class="client-card highlight rounded-2xl p-6 text-center flex flex-col items-center"
+          >
+            <div
+              class="w-36 h-36 rounded-2xl overflow-hidden border border-white/10 bg-white/5 mb-4"
+            >
+              <img
+                src="img/disribuciones.jpeg"
+                alt="Logo Distribuciones SRL"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <span class="module-chip mb-3">Fiambres y quesos</span>
+            <h3 class="uppercase font-semibold text-lg">Distribuciones SRL</h3>
+            <p class="text-xs text-gray-400 mt-1 italic tracking-wide">
+              📍 San Francisco, Córdoba
+            </p>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- A&P Finance -->
-      <div class="client-card highlight rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-10">
-        <div class="w-52 h-52 rounded-2xl overflow-hidden border border-white/10 bg-white/5 flex-shrink-0">
-          <img src="img/ayp.png" alt="Logo A&P Finance" class="w-full h-full object-cover"/>
-        </div>
+    <section id="nosotros" class="py-16 px-6 border-t border-white/5">
+      <div class="max-w-5xl mx-auto text-center">
+        <h2 class="uppercase text-3xl font-bold text-[var(--neon)] mb-6 reveal">
+          Nosotros
+        </h2>
+        <p class="text-gray-300 reveal max-w-3xl mx-auto">
+          Transformamos procesos complejos en flujos simples y eficientes.
+          Acompañamos a emprendedores, PYMEs y empresas con tecnología accesible
+          y un enfoque humano.
+        </p>
+        <p class="text-gray-400 reveal mt-3">
+          Acompañamos cada empresa con soporte permanente, actualizaciones
+          continuas y mejora constante del sistema.
+        </p>
 
-        <div class="text-left flex-1">
-          <span class="module-chip mb-3 inline-block">Finanzas</span>
-
-          <h3 class="uppercase font-bold text-2xl text-[var(--neon)] mb-3">
-            A&P Finance
-          </h3>
-
-          <p class="text-sm text-gray-300 mb-5 leading-relaxed">
-            Plataforma para la gestión de cheques, clientes y operaciones financieras,
-            con trazabilidad documental, cálculos automáticos y reportes claros.
+        <!-- Contacto -->
+        <div class="mt-8 space-y-2 reveal">
+          <p class="text-[var(--neon)] font-semibold uppercase tracking-wide">
+            Contacto directo
           </p>
+          <p class="text-gray-300">
+            WhatsApp:
+            <a
+              href="https://wa.me/5493564584838"
+              target="_blank"
+              class="text-[var(--neon)] hover:underline"
+            >
+              +54 9 3564 584838
+            </a>
+          </p>
+          <p class="text-gray-300">
+            Instagram:
+            <a
+              href="https://www.instagram.com/aspatechsf"
+              target="_blank"
+              class="text-[var(--neon)] hover:underline"
+            >
+              @aspatechsf
+            </a>
+          </p>
+        </div>
+      </div>
+    </section>
 
-          <div class="grid sm:grid-cols-2 gap-3 text-sm text-gray-300">
-            <div class="rounded-xl bg-white/5 border border-white/10 p-3">🏦 Compra y venta de cheques</div>
-            <div class="rounded-xl bg-white/5 border border-white/10 p-3">🧮 Comisiones automáticas</div>
-            <div class="rounded-xl bg-white/5 border border-white/10 p-3">📄 Recibos en PDF</div>
-            <div class="rounded-xl bg-white/5 border border-white/10 p-3">📊 Reportes financieros</div>
+    <section id="productos" class="py-16 px-6 border-t border-white/5">
+      <div class="max-w-7xl mx-auto">
+        <h2
+          class="uppercase text-3xl font-bold text-center text-[var(--neon)] mb-4 reveal"
+        >
+          Otros productos
+        </h2>
+
+        <p class="text-center text-gray-300 max-w-3xl mx-auto mb-10 reveal">
+          Además del sistema principal, ofrecemos productos ya desarrollados
+          listos para usar.
+        </p>
+
+        <div class="grid gap-8 reveal">
+          <!-- Resto Master -->
+          <div
+            class="client-card highlight rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-10"
+          >
+            <div
+              class="w-52 h-52 rounded-2xl overflow-hidden border border-white/10 bg-white/5 flex-shrink-0"
+            >
+              <img
+                src="img/resto-master-logo.png"
+                alt="Logo Resto Master"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="text-left flex-1">
+              <span class="module-chip mb-3 inline-block">Gastronomía</span>
+
+              <h3 class="uppercase font-bold text-2xl text-[var(--neon)] mb-3">
+                Resto Master
+              </h3>
+
+              <p class="text-sm text-gray-300 mb-5 leading-relaxed">
+                Sistema para bares, restaurantes y locales gastronómicos.
+                Centraliza pedidos, mesas, comandas, caja, stock y reservas en
+                una sola plataforma.
+              </p>
+
+              <div class="grid sm:grid-cols-2 gap-3 text-sm text-gray-300">
+                <div class="rounded-xl bg-white/5 border border-white/10 p-3">
+                  🍽️ Gestión de mesas y pedidos
+                </div>
+                <div class="rounded-xl bg-white/5 border border-white/10 p-3">
+                  🖨️ Comandas para cocina y barra
+                </div>
+                <div class="rounded-xl bg-white/5 border border-white/10 p-3">
+                  📦 Stock por ingredientes
+                </div>
+                <div class="rounded-xl bg-white/5 border border-white/10 p-3">
+                  📅 Reservas y disponibilidad
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- A&P Finance -->
+          <div
+            class="client-card highlight rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-10"
+          >
+            <div
+              class="w-52 h-52 rounded-2xl overflow-hidden border border-white/10 bg-white/5 flex-shrink-0"
+            >
+              <img
+                src="img/ayp.png"
+                alt="Logo A&P Finance"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="text-left flex-1">
+              <span class="module-chip mb-3 inline-block">Finanzas</span>
+
+              <h3 class="uppercase font-bold text-2xl text-[var(--neon)] mb-3">
+                A&P Finance
+              </h3>
+
+              <p class="text-sm text-gray-300 mb-5 leading-relaxed">
+                Plataforma para la gestión de cheques, clientes y operaciones
+                financieras, con trazabilidad documental, cálculos automáticos y
+                reportes claros.
+              </p>
+
+              <div class="grid sm:grid-cols-2 gap-3 text-sm text-gray-300">
+                <div class="rounded-xl bg-white/5 border border-white/10 p-3">
+                  🏦 Compra y venta de cheques
+                </div>
+                <div class="rounded-xl bg-white/5 border border-white/10 p-3">
+                  🧮 Comisiones automáticas
+                </div>
+                <div class="rounded-xl bg-white/5 border border-white/10 p-3">
+                  📄 Recibos en PDF
+                </div>
+                <div class="rounded-xl bg-white/5 border border-white/10 p-3">
+                  📊 Reportes financieros
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+    </section>
 
-    </div>
-  </div>
-</section>
+    <!-- Sobre nosotros -->
+    <!-- Sobre nosotros -->
 
-  <!-- Sobre nosotros -->
-<!-- Sobre nosotros -->
+    <!-- Footer -->
+    <footer
+      class="border-t border-white/5 py-10 text-center text-sm text-gray-400"
+    >
+      <p>© 2026 ASPA TECH — Todos los derechos reservados.</p>
+    </footer>
 
+    <!-- WhatsApp -->
+    <!-- WhatsApp -->
+    <a
+      href="https://wa.me/5493564584838"
+      target="_blank"
+      class="wa-float"
+      aria-label="WhatsApp"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 32 32"
+        fill="currentColor"
+        width="28"
+        height="28"
+      >
+        <path
+          d="M16.001 2.666c-7.36 0-13.334 5.974-13.334 13.334 0 2.352.6 4.647 1.736 6.68l-1.824 6.68 6.864-1.808a13.215 13.215 0 0 0 6.558 1.8h.001c7.36 0 13.333-5.974 13.333-13.334 0-7.36-5.973-13.334-13.334-13.334Zm0 24.267c-2.047 0-4.053-.518-5.826-1.497l-.418-.237-4.073 1.07 1.09-3.992-.257-.41a10.602 10.602 0 0 1-1.63-5.867c0-5.88 4.787-10.667 10.667-10.667s10.667 4.787 10.667 10.667-4.787 10.667-10.667 10.667Zm5.84-8.013c-.32-.16-1.877-.934-2.167-1.04-.29-.107-.503-.16-.716.16-.213.32-.823 1.04-1.01 1.253-.187.213-.373.24-.693.08-.32-.16-1.353-.5-2.58-1.6-.953-.848-1.597-1.893-1.783-2.213-.187-.32-.02-.493.14-.653.144-.143.32-.373.48-.56.16-.187.213-.32.32-.533.107-.213.053-.4-.027-.56-.08-.16-.716-1.734-.98-2.387-.26-.627-.52-.54-.716-.55-.187-.01-.4-.013-.613-.013-.213 0-.56.08-.853.4-.293.32-1.12 1.094-1.12 2.667 0 1.573 1.147 3.093 1.307 3.307.16.213 2.26 3.44 5.467 4.826.763.33 1.36.526 1.825.673.766.244 1.463.21 2.014.127.614-.09 1.877-.767 2.14-1.507.267-.74.267-1.373.187-1.507-.08-.133-.293-.213-.613-.373Z"
+        />
+      </svg>
+    </a>
 
-  <!-- Footer -->
-  <footer class="border-t border-white/5 py-10 text-center text-sm text-gray-400">
-    <p>© 2026 ASPA TECH — Todos los derechos reservados.</p>
-  </footer>
+    <!-- JS: efectos de entrada + brillo en botones -->
+    <script>
+      // Reveal on scroll
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("show");
+              io.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.12 },
+      );
+      document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
 
-  <!-- WhatsApp -->
-<!-- WhatsApp -->
-<a href="https://wa.me/5493564584838" target="_blank" class="wa-float" aria-label="WhatsApp">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor" width="28" height="28">
-    <path d="M16.001 2.666c-7.36 0-13.334 5.974-13.334 13.334 0 2.352.6 4.647 1.736 6.68l-1.824 6.68 6.864-1.808a13.215 13.215 0 0 0 6.558 1.8h.001c7.36 0 13.333-5.974 13.333-13.334 0-7.36-5.973-13.334-13.334-13.334Zm0 24.267c-2.047 0-4.053-.518-5.826-1.497l-.418-.237-4.073 1.07 1.09-3.992-.257-.41a10.602 10.602 0 0 1-1.63-5.867c0-5.88 4.787-10.667 10.667-10.667s10.667 4.787 10.667 10.667-4.787 10.667-10.667 10.667Zm5.84-8.013c-.32-.16-1.877-.934-2.167-1.04-.29-.107-.503-.16-.716.16-.213.32-.823 1.04-1.01 1.253-.187.213-.373.24-.693.08-.32-.16-1.353-.5-2.58-1.6-.953-.848-1.597-1.893-1.783-2.213-.187-.32-.02-.493.14-.653.144-.143.32-.373.48-.56.16-.187.213-.32.32-.533.107-.213.053-.4-.027-.56-.08-.16-.716-1.734-.98-2.387-.26-.627-.52-.54-.716-.55-.187-.01-.4-.013-.613-.013-.213 0-.56.08-.853.4-.293.32-1.12 1.094-1.12 2.667 0 1.573 1.147 3.093 1.307 3.307.16.213 2.26 3.44 5.467 4.826.763.33 1.36.526 1.825.673.766.244 1.463.21 2.014.127.614-.09 1.877-.767 2.14-1.507.267-.74.267-1.373.187-1.507-.08-.133-.293-.213-.613-.373Z"/>
-  </svg>
-</a>
-
-  <!-- JS: efectos de entrada + brillo en botones -->
-  <script>
-    // Reveal on scroll
-    const io = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target);} });
-    },{threshold:0.12});
-    document.querySelectorAll('.reveal').forEach(el=> io.observe(el));
-
-    // Brillo animado en botones según puntero
-    document.querySelectorAll('.btn-glow').forEach(btn=>{
-      btn.addEventListener('pointermove', e=>{
-        const r = btn.getBoundingClientRect();
-        btn.style.setProperty('--x', `${e.clientX - r.left}px`);
-        btn.style.setProperty('--y', `${e.clientY - r.top}px`);
+      // Brillo animado en botones según puntero
+      document.querySelectorAll(".btn-glow").forEach((btn) => {
+        btn.addEventListener("pointermove", (e) => {
+          const r = btn.getBoundingClientRect();
+          btn.style.setProperty("--x", `${e.clientX - r.left}px`);
+          btn.style.setProperty("--y", `${e.clientY - r.top}px`);
+        });
       });
-    });
-  </script>
+    </script>
 
-   <script>
-  const btn = document.getElementById('menu-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const links = mobileMenu.querySelectorAll('a');
-  let open = false;
+    <script>
+      const btn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const links = mobileMenu.querySelectorAll("a");
+      let open = false;
 
-  function toggleMenu(forceClose = false) {
-    open = forceClose ? false : !open;
-    mobileMenu.style.transform = open ? 'translateY(0)' : 'translateY(-100%)';
-    btn.classList.toggle('open', open);
-    document.body.style.overflow = open ? 'hidden' : 'auto'; // bloquea scroll
-  }
+      function toggleMenu(forceClose = false) {
+        open = forceClose ? false : !open;
+        mobileMenu.style.transform = open
+          ? "translateY(0)"
+          : "translateY(-100%)";
+        btn.classList.toggle("open", open);
+        document.body.style.overflow = open ? "hidden" : "auto"; // bloquea scroll
+      }
 
-  btn.addEventListener('click', () => toggleMenu());
-  links.forEach(link => link.addEventListener('click', () => toggleMenu(true)));
+      btn.addEventListener("click", () => toggleMenu());
+      links.forEach((link) =>
+        link.addEventListener("click", () => toggleMenu(true)),
+      );
 
-  mobileMenu.addEventListener('click', e => {
-    if (e.target === mobileMenu) toggleMenu(true);
-  });
-  </script>
-    <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a99d5983a81b4700873e3c4e01cf3287"}'></script>
-</body>
+      mobileMenu.addEventListener("click", (e) => {
+        if (e.target === mobileMenu) toggleMenu(true);
+      });
+    </script>
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "a99d5983a81b4700873e3c4e01cf3287"}'
+    ></script>
+  </body>
 </html>
