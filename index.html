@@ -256,6 +256,31 @@
         color: #d1d5db;
       }
 
+      /* Módulos compactos */
+      .module-card {
+        min-height: 178px;
+        display: flex;
+        flex-direction: column;
+      }
+      .module-card .module-icon {
+        width: 44px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        border-radius: 12px;
+        background: rgba(0, 255, 179, 0.08);
+        border: 1px solid rgba(0, 255, 179, 0.18);
+        font-size: 1.55rem;
+      }
+      .module-card p {
+        flex-grow: 1;
+      }
+      .module-featured {
+        min-height: auto;
+      }
+
       .badge {
         position: absolute;
         top: 14px;
@@ -373,7 +398,7 @@
     <!-- Hero -->
     <section
       id="inicio"
-      class="pt-28 sm:pt-32 pb-5 sm:pb-20 px-6 text-center reveal"
+      class="pt-28 sm:pt-32 pb-5 sm:pb-15 px-6 text-center reveal"
     >
       <div class="max-w-4xl mx-auto">
         <h1 class="uppercase text-4xl sm:text-6xl font-extrabold leading-tight">
@@ -386,7 +411,7 @@
           De
           <span class="text-[var(--neon)] font-semibold"
             >San Francisco (Córdoba)</span
-          >.
+          >
         </p>
         <p class="text-lg sm:text-xl text-gray-300">
           a <span class="text-[var(--neon)] font-semibold">todo el país</span>.
@@ -401,7 +426,7 @@
     </section>
 
     <!-- Módulos -->
-    <section id="modulos" class="py-12 border-t border-white/5 sm:py-16 px-6">
+    <section id="modulos" class="py-10 border-t border-white/5 sm:py-10 px-6">
       <div class="max-w-7xl mx-auto">
         <h2
           class="uppercase text-3xl font-bold text-center text-[var(--neon)] mb-10 reveal"
@@ -415,15 +440,17 @@
           tiempo real.
         </p>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 lg:gap-5"
+        >
           <!-- Ventas + Facturación -->
           <article
-            class="reveal card-3d rounded-2xl border highlight p-6 md:col-span-2 relative overflow-hidden"
+            class="reveal card-3d module-card module-featured rounded-2xl border highlight p-5 md:col-span-2 xl:col-span-3 relative overflow-hidden"
           >
             <div class="badge">ARCA / AFIP</div>
-            <div class="text-4xl mb-4">🧾</div>
+            <div class="text-4xl mb-3">🧾</div>
             <h3
-              class="uppercase text-xl font-extrabold mb-3 text-[var(--neon)]"
+              class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]"
             >
               Ventas + Facturación
             </h3>
@@ -431,24 +458,33 @@
               Vendé y facturá desde un mismo lugar con cálculo automático de
               IVA, neto y totales.
             </p>
-            <div class="flex flex-wrap gap-2 mt-5">
-              <span class="module-chip">Factura A/B/C</span>
-              <span class="module-chip">IVA automático</span>
-              <span class="module-chip">PDF</span>
+            <div
+              class="mt-4 rounded-xl border border-white/10 bg-white/5 px-4 py-3 flex flex-col sm:flex-row sm:items-center gap-3"
+            >
+              <p class="text-sm text-gray-300">
+                Facturación electrónica conectada directamente con
+                <span class="font-semibold text-[var(--neon)]">ARCA</span>, para
+                emitir comprobantes de forma rápida, segura y desde el mismo
+                sistema.
+              </p>
             </div>
           </article>
           <!-- Carrito online con IA -->
           <article
-            class="reveal card-3d rounded-2xl border highlight p-6 md:col-span-2 relative overflow-hidden"
+            class="reveal card-3d module-card module-featured rounded-2xl border highlight p-5 md:col-span-2 xl:col-span-3 relative overflow-hidden"
           >
-            <div class="badge">Muy pronto</div>
-
-            <div class="grid lg:grid-cols-[1.2fr_0.8fr] gap-8 items-center">
+            <div class="grid lg:grid-cols-[1.25fr_0.75fr] gap-5 items-center">
               <div>
-                <div class="text-4xl mb-4">🛒</div>
+                <span
+                  class="inline-flex mb-3 bg-[var(--neon)]/15 text-[var(--neon)] border border-[var(--neon)]/40 px-3 py-1 rounded-full text-[0.7rem] uppercase tracking-wider font-semibold"
+                >
+                  Muy pronto
+                </span>
+
+                <div class="text-4xl mb-3">🛒</div>
 
                 <h3
-                  class="uppercase text-xl font-extrabold mb-3 text-[var(--neon)]"
+                  class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]"
                 >
                   Carrito online
                 </h3>
@@ -457,17 +493,10 @@
                   Mostrá tus productos en un catálogo online y permití que tus
                   clientes armen su pedido de forma simple, rápida y guiada.
                 </p>
-
-                <div class="flex flex-wrap gap-2 mt-5">
-                  <span class="module-chip">Catálogo online</span>
-                  <span class="module-chip">Selección de packs</span>
-                  <span class="module-chip">Checkout guiado</span>
-                  <span class="module-chip">Pedido por WhatsApp</span>
-                </div>
               </div>
 
               <div
-                class="rounded-2xl border border-[var(--neon)]/40 bg-[var(--neon)]/10 p-5 shadow-[0_0_30px_rgba(0,255,179,0.12)]"
+                class="rounded-xl border border-[var(--neon)]/40 bg-[var(--neon)]/10 p-4 shadow-[0_0_30px_rgba(0,255,179,0.12)]"
               >
                 <div class="flex items-start gap-4">
                   <div
@@ -498,10 +527,8 @@
             </div>
 
             <div
-              class="mt-6 rounded-xl border border-white/10 bg-white/5 px-5 py-4 flex flex-col sm:flex-row sm:items-center gap-3"
+              class="mt-4 rounded-xl border border-white/10 bg-white/5 px-4 py-3 flex flex-col sm:flex-row sm:items-center gap-3"
             >
-              <span class="text-2xl">🔗</span>
-
               <p class="text-sm text-gray-300">
                 Todo conectado con
                 <span class="font-semibold text-[var(--neon)]">Aspa Tech</span>:
@@ -511,11 +538,11 @@
             </div>
           </article>
           <article
-            class="reveal card-3d rounded-2xl border highlight p-6 md:col-span-2 relative overflow-hidden"
+            class="reveal card-3d module-card module-featured rounded-2xl border highlight p-5 md:col-span-2 xl:col-span-3"
           >
-            <div class="text-4xl mb-4">📚</div>
+            <div class="module-icon mb-3">📚</div>
             <h3
-              class="uppercase text-xl font-extrabold mb-3 text-[var(--neon)]"
+              class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]"
             >
               Libro IVA
             </h3>
@@ -524,11 +551,30 @@
               organizada y discriminada en un click.
             </p>
           </article>
-          <!-- Pedidos -->
-          <article class="reveal card-3d rounded-2xl border highlight p-6">
-            <div class="text-4xl mb-4">📦</div>
+          <!-- Stock -->
+          <article
+            class="reveal card-3d module-card module-featured rounded-2xl border highlight p-5 md:col-span-2 xl:col-span-3 relative overflow-hidden"
+          >
+            <div class="badge">Control automático</div>
+            <div class="module-icon mb-3">📊</div>
             <h3
-              class="uppercase text-xl font-extrabold mb-3 text-[var(--neon)]"
+              class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]"
+            >
+              Stock automático
+            </h3>
+            <p class="text-sm text-gray-300">
+              Se actualiza solo con cada movimiento. Sin errores ni tareas
+              manuales.
+            </p>
+          </article>
+
+          <!-- Pedidos -->
+          <article
+            class="reveal card-3d module-card rounded-2xl border highlight p-5"
+          >
+            <div class="module-icon mb-3">📦</div>
+            <h3
+              class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]"
             >
               Pedidos en tiempo real
             </h3>
@@ -539,10 +585,12 @@
           </article>
 
           <!-- Cuenta corriente -->
-          <article class="reveal card-3d rounded-2xl border highlight p-6">
-            <div class="text-4xl mb-4">👥</div>
+          <article
+            class="reveal card-3d module-card rounded-2xl border highlight p-5"
+          >
+            <div class="module-icon mb-3">👥</div>
             <h3
-              class="uppercase text-xl font-extrabold mb-3 text-[var(--neon)]"
+              class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]"
             >
               Cuenta corriente
             </h3>
@@ -551,25 +599,13 @@
             </p>
           </article>
 
-          <!-- Stock -->
-          <article class="reveal card-3d rounded-2xl border highlight p-6">
-            <div class="text-4xl mb-4">📊</div>
-            <h3
-              class="uppercase text-xl font-extrabold mb-3 text-[var(--neon)]"
-            >
-              Stock automático
-            </h3>
-            <p class="text-sm text-gray-300">
-              Se actualiza solo con cada movimiento. Sin errores ni tareas
-              manuales.
-            </p>
-          </article>
-
           <!-- Recibos -->
-          <article class="reveal card-3d rounded-2xl border highlight p-6">
-            <div class="text-4xl mb-4">💰</div>
+          <article
+            class="reveal card-3d module-card rounded-2xl border highlight p-5"
+          >
+            <div class="module-icon mb-3">💰</div>
             <h3
-              class="uppercase text-xl font-extrabold mb-3 text-[var(--neon)]"
+              class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]"
             >
               Recibos y cobros
             </h3>
@@ -579,10 +615,12 @@
           </article>
 
           <!-- Bancos -->
-          <article class="reveal card-3d rounded-2xl border highlight p-6">
-            <div class="text-4xl mb-4">🏦</div>
+          <article
+            class="reveal card-3d module-card rounded-2xl border highlight p-5"
+          >
+            <div class="module-icon mb-3">🏦</div>
             <h3
-              class="uppercase text-xl font-extrabold mb-3 text-[var(--neon)]"
+              class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]"
             >
               Bancos y conciliación
             </h3>
@@ -592,10 +630,12 @@
           </article>
 
           <!-- Compras -->
-          <article class="reveal card-3d rounded-2xl border highlight p-6">
-            <div class="text-4xl mb-4">🛒</div>
+          <article
+            class="reveal card-3d module-card rounded-2xl border highlight p-5"
+          >
+            <div class="module-icon mb-3">🛒</div>
             <h3
-              class="uppercase text-xl font-extrabold mb-3 text-[var(--neon)]"
+              class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]"
             >
               Compras
             </h3>
@@ -605,10 +645,12 @@
           </article>
 
           <!-- Proveedores -->
-          <article class="reveal card-3d rounded-2xl border highlight p-6">
-            <div class="text-4xl mb-4">📄</div>
+          <article
+            class="reveal card-3d module-card rounded-2xl border highlight p-5"
+          >
+            <div class="module-icon mb-3">📄</div>
             <h3
-              class="uppercase text-xl font-extrabold mb-3 text-[var(--neon)]"
+              class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]"
             >
               Proveedores
             </h3>
@@ -618,10 +660,12 @@
           </article>
 
           <!-- Cheques -->
-          <article class="reveal card-3d rounded-2xl border highlight p-6">
-            <div class="text-4xl mb-4">🏷️</div>
+          <article
+            class="reveal card-3d module-card rounded-2xl border highlight p-5"
+          >
+            <div class="module-icon mb-3">🏷️</div>
             <h3
-              class="uppercase text-xl font-extrabold mb-3 text-[var(--neon)]"
+              class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]"
             >
               Cheques
             </h3>
@@ -631,10 +675,12 @@
           </article>
 
           <!-- Lector -->
-          <article class="reveal card-3d rounded-2xl border highlight p-6">
-            <div class="text-4xl mb-4">📡</div>
+          <article
+            class="reveal card-3d module-card rounded-2xl border highlight p-5"
+          >
+            <div class="module-icon mb-3">📡</div>
             <h3
-              class="uppercase text-xl font-extrabold mb-3 text-[var(--neon)]"
+              class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]"
             >
               Lector de códigos
             </h3>
@@ -644,10 +690,12 @@
           </article>
 
           <!-- Impresoras -->
-          <article class="reveal card-3d rounded-2xl border highlight p-6">
-            <div class="text-4xl mb-4">🖨️</div>
+          <article
+            class="reveal card-3d module-card rounded-2xl border highlight p-5"
+          >
+            <div class="module-icon mb-3">🖨️</div>
             <h3
-              class="uppercase text-xl font-extrabold mb-3 text-[var(--neon)]"
+              class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]"
             >
               Impresoras térmicas
             </h3>
@@ -659,8 +707,8 @@
           <!-- Rutas -->
           <!-- <article class="reveal card-3d rounded-2xl border highlight  p-6 md:col-span-2 relative overflow-hidden">
         <div class="badge">Nuevo</div>
-        <div class="text-4xl mb-4">🗺️</div>
-        <h3 class="uppercase text-xl font-extrabold mb-3 text-[var(--neon)]">
+        <div class="module-icon mb-3">🗺️</div>
+        <h3 class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]">
           Optimización de rutas
         </h3>
         <p class="text-sm text-gray-300 mb-3">
@@ -704,7 +752,7 @@
           por ASPA TECH.
         </p>
 
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 reveal">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 reveal">
           <div
             class="client-card highlight rounded-2xl p-6 text-center flex flex-col items-center"
           >
@@ -856,6 +904,26 @@
             </div>
             <span class="module-chip mb-3">Eventos y competencias</span>
             <h3 class="uppercase font-semibold text-lg">Productora Fica</h3>
+            <p class="text-xs text-gray-400 mt-1 italic tracking-wide">
+              📍 San Francisco, Córdoba
+            </p>
+          </div>
+
+          <!-- Reemplazá el nombre y la imagen por los datos definitivos de la perfumería -->
+          <div
+            class="client-card highlight rounded-2xl p-6 text-center flex flex-col items-center"
+          >
+            <div
+              class="w-36 h-36 rounded-2xl overflow-hidden border border-white/10 bg-white/5 mb-4"
+            >
+              <img
+                src="img/karem.jpg"
+                alt="Logo Karem"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <span class="module-chip mb-3">Perfumería</span>
+            <h3 class="uppercase font-semibold text-lg">Karem</h3>
             <p class="text-xs text-gray-400 mt-1 italic tracking-wide">
               📍 San Francisco, Córdoba
             </p>
