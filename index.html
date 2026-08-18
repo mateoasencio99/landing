@@ -307,6 +307,81 @@
           box-shadow: 0 0 24px rgba(0, 255, 179, 0.25);
         }
       }
+
+      /* Destacado ASPA TECH Consulta debajo del menú */
+      .promo-banner {
+        position: relative;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 85% 20%, rgba(0, 255, 179, 0.18), transparent 34%),
+          linear-gradient(135deg, rgba(0, 255, 179, 0.08), rgba(255, 255, 255, 0.025));
+        border: 1px solid rgba(0, 255, 179, 0.3);
+        box-shadow: 0 18px 55px rgba(0, 0, 0, 0.24);
+      }
+
+      .promo-banner::after {
+        content: "";
+        position: absolute;
+        inset: -1px;
+        border-radius: inherit;
+        pointer-events: none;
+        box-shadow: inset 0 0 35px rgba(0, 255, 179, 0.05);
+      }
+
+      .promo-banner__logo {
+        width: 76px;
+        height: 76px;
+        border-radius: 18px;
+        object-fit: cover;
+        flex-shrink: 0;
+        border: 1px solid rgba(0, 255, 179, 0.35);
+        box-shadow: 0 0 30px rgba(0, 255, 179, 0.12);
+      }
+
+      .promo-banner__badge {
+        display: inline-flex;
+        border-radius: 999px;
+        padding: 0.3rem 0.65rem;
+        background: rgba(0, 255, 179, 0.14);
+        border: 1px solid rgba(0, 255, 179, 0.4);
+        color: var(--neon);
+        font-size: 0.68rem;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .promo-banner__link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        padding: 0.7rem 1.1rem;
+        border-radius: 12px;
+        background: var(--neon);
+        color: #02150f;
+        font-size: 0.85rem;
+        font-weight: 800;
+        white-space: nowrap;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .promo-banner__link:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 28px rgba(0, 255, 179, 0.22);
+      }
+
+      #aspa-tech-consulta {
+        scroll-margin-top: 105px;
+      }
+
+      @media (max-width: 640px) {
+        .promo-banner__logo {
+          width: 62px;
+          height: 62px;
+          border-radius: 15px;
+        }
+      }
     </style>
   </head>
 
@@ -395,10 +470,40 @@
       </div>
     </header>
 
+    <!-- Destacado: ASPA TECH Consulta -->
+    <section class="pt-24 sm:pt-28 px-4 sm:px-6">
+      <div class="promo-banner max-w-7xl mx-auto rounded-2xl px-5 py-5 sm:px-7 sm:py-6">
+        <div class="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-5">
+          <div class="flex items-center gap-4 flex-1 min-w-0">
+            <img
+              src="img/aspa-tech-consulta.png"
+              alt="ASPA TECH Consulta"
+              class="promo-banner__logo"
+            />
+
+            <div class="min-w-0">
+              <span class="promo-banner__badge">Nuevo producto</span>
+              <h2 class="mt-2 text-xl sm:text-2xl font-extrabold text-white leading-tight">
+                ASPA TECH <span class="text-[var(--neon)]">Consulta</span>
+              </h2>
+              <p class="mt-1 text-sm sm:text-base text-gray-300 leading-relaxed max-w-3xl">
+                Consultá información fiscal, financiera y crediticia de personas y empresas, con datos de 
+                <span class="font-semibold text-white">ARCA y BCRA</span> centralizados en un solo lugar.
+              </p>
+            </div>
+          </div>
+
+          <a href="#aspa-tech-consulta" class="promo-banner__link w-full sm:w-auto">
+            Ver ASPA TECH Consulta →
+          </a>
+        </div>
+      </div>
+    </section>
+
     <!-- Hero -->
     <section
       id="inicio"
-      class="pt-28 sm:pt-32 pb-5 sm:pb-15 px-6 text-center reveal"
+      class="pt-10 sm:pt-12 pb-5 sm:pb-15 px-6 text-center reveal"
     >
       <div class="max-w-4xl mx-auto">
         <h1 class="uppercase text-4xl sm:text-6xl font-extrabold leading-tight">
@@ -992,6 +1097,7 @@
         <div class="grid gap-8 reveal">
           <!-- ASPA TECH Consulta -->
           <div
+            id="aspa-tech-consulta"
             class="client-card highlight rounded-2xl p-6 md:p-8 relative overflow-hidden"
           >
             <div class="badge">ARCA · BCRA</div>
