@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="google" content="notranslate" />
 
-    <title>ASPA TECH</title>
+    <title>ASPA TECH — Software a medida para empresas</title>
     <meta
       name="description"
-      content="ASPA TECH desarrolla plataformas modernas para emprendedores, PYMEs y empresas: ventas, facturas, proveedores, stock y más. Simplificá tu gestión y crecé sin límites."
+      content="Desarrollamos software a medida para la forma en que trabaja tu empresa: ventas, stock, compras, administración, integraciones con tu tienda online y mejoras sobre el sistema que ya usás."
     />
 
     <!-- Favicons -->
@@ -21,11 +21,11 @@
     <!-- SEO / Open Graph -->
     <meta
       property="og:title"
-      content="ASPA TECH — Sistemas de gestión modernos"
+      content="ASPA TECH — Software a medida para empresas"
     />
     <meta
       property="og:description"
-      content="Plataformas pensadas para PYMEs, emprendedores y empresas: ventas, stock, proveedores, reportes financieros y más."
+      content="Entendemos cómo trabaja tu empresa y desarrollamos el sistema alrededor de eso. Desde cero o mejorando el que ya usás."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://aspatech.com.ar/" />
@@ -38,11 +38,11 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="ASPA TECH — Sistemas de gestión modernos"
+      content="ASPA TECH — Software a medida para empresas"
     />
     <meta
       name="twitter:description"
-      content="Plataformas ágiles y personalizadas para PYMEs y empresas. Simplificá tu gestión."
+      content="Software a medida para empresas. Nos adaptamos a tu forma de trabajar, no al revés."
     />
     <meta
       name="twitter:image"
@@ -375,6 +375,75 @@
         scroll-margin-top: 105px;
       }
 
+
+      /* Bloques de contenido comercial */
+      .pain-item {
+        display: flex;
+        gap: 0.75rem;
+        align-items: flex-start;
+        padding: 0.95rem 1.1rem;
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        transition: border-color 0.25s ease, background 0.25s ease;
+      }
+      .pain-item:hover {
+        border-color: rgba(0, 255, 179, 0.3);
+        background: rgba(255, 255, 255, 0.06);
+      }
+      .pain-item .pain-mark {
+        color: var(--neon);
+        flex-shrink: 0;
+        font-weight: 700;
+      }
+      .step-num {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        background: rgba(0, 255, 179, 0.1);
+        border: 1px solid rgba(0, 255, 179, 0.35);
+        color: var(--neon);
+        font-weight: 800;
+        margin-bottom: 0.85rem;
+      }
+      .btn-primary {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        min-height: 48px;
+        padding: 0.7rem 1.5rem;
+        border-radius: 14px;
+        background: var(--neon);
+        color: #02150f;
+        font-weight: 800;
+      }
+      .btn-secondary {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        min-height: 48px;
+        padding: 0.7rem 1.5rem;
+        border-radius: 14px;
+        border: 1px solid rgba(0, 255, 179, 0.45);
+        color: #e5e7eb;
+        font-weight: 700;
+        transition: background 0.2s ease, border-color 0.2s ease;
+      }
+      .btn-secondary:hover {
+        background: rgba(0, 255, 179, 0.08);
+        border-color: var(--neon);
+      }
+      section[id] {
+        scroll-margin-top: 96px;
+      }
+      .text-balance {
+        text-wrap: balance;
+      }
       @media (max-width: 640px) {
         .promo-banner__logo {
           width: 62px;
@@ -425,11 +494,21 @@
 
         <!-- Menú escritorio -->
         <ul
-          class="hidden md:flex items-center gap-8 text-base font-medium text-gray-200"
+          class="hidden md:flex items-center gap-6 lg:gap-7 text-sm lg:text-base font-medium text-gray-200"
         >
           <li>
-            <a href="#modulos" class="hover:text-[var(--neon)] transition"
-              >Módulos</a
+            <a href="#servicios" class="hover:text-[var(--neon)] transition"
+              >Qué hacemos</a
+            >
+          </li>
+          <li>
+            <a href="#sistema" class="hover:text-[var(--neon)] transition"
+              >Tu sistema</a
+            >
+          </li>
+          <li>
+            <a href="#trabajamos" class="hover:text-[var(--neon)] transition"
+              >Cómo trabajamos</a
             >
           </li>
           <li>
@@ -438,13 +517,15 @@
             >
           </li>
           <li>
-            <a href="#nosotros" class="hover:text-[var(--neon)] transition"
-              >Nosotros</a
+            <a href="#productos" class="hover:text-[var(--neon)] transition"
+              >Productos</a
             >
           </li>
           <li>
-            <a href="#productos" class="hover:text-[var(--neon)] transition"
-              >Otros productos</a
+            <a
+              href="#contacto"
+              class="text-[var(--neon)] border border-[var(--neon)]/45 rounded-xl px-4 py-2 hover:bg-[var(--neon)]/10 transition"
+              >Contacto</a
             >
           </li>
         </ul>
@@ -453,26 +534,85 @@
       <!-- Menú móvil (overlay animado) -->
       <div
         id="mobile-menu"
-        class="fixed top-0 left-0 w-full h-screen bg-[#0b0f12]/95 backdrop-blur-sm transform -translate-y-full transition-transform duration-300 ease-in-out flex flex-col items-center justify-center space-y-8 text-xl text-gray-200"
+        class="fixed top-0 left-0 w-full h-screen bg-[#0b0f12]/95 backdrop-blur-sm transform -translate-y-full transition-transform duration-300 ease-in-out flex flex-col items-center justify-center space-y-7 text-xl text-gray-200"
       >
-        <a href="#modulos" class="hover:text-[var(--neon)] transition"
-          >Módulos</a
+        <a href="#servicios" class="hover:text-[var(--neon)] transition"
+          >Qué hacemos</a
+        >
+        <a href="#sistema" class="hover:text-[var(--neon)] transition"
+          >Tu sistema</a
+        >
+        <a href="#trabajamos" class="hover:text-[var(--neon)] transition"
+          >Cómo trabajamos</a
         >
         <a href="#clientes" class="hover:text-[var(--neon)] transition"
           >Clientes</a
         >
-        <a href="#nosotros" class="hover:text-[var(--neon)] transition"
-          >Nosotros</a
-        >
         <a href="#productos" class="hover:text-[var(--neon)] transition"
-          >Otros productos</a
+          >Productos</a
         >
+        <a href="#contacto" class="text-[var(--neon)] transition">Contacto</a>
       </div>
     </header>
 
+    <!-- Hero -->
+    <section
+      id="inicio"
+      class="pt-28 pb-8 sm:pb-10 px-6 text-center reveal"
+    >
+      <div class="max-w-5xl mx-auto">
+        <span
+          class="inline-flex mb-4 bg-[var(--neon)]/15 text-[var(--neon)] border border-[var(--neon)]/40 px-3.5 py-1 rounded-full text-[0.7rem] sm:text-xs uppercase tracking-wider font-semibold"
+        >
+          Desarrollo de software a medida
+        </span>
+
+        <h1
+          class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-[1.15] text-balance"
+        >
+          Tu empresa no trabaja como las demás.<br class="hidden md:block" />
+          Tu sistema
+          <span class="text-[var(--neon)]">tampoco debería</span>.
+        </h1>
+
+        <p
+          class="mt-5 text-base sm:text-lg text-gray-300 leading-relaxed max-w-2xl mx-auto"
+        >
+          Entendemos cómo trabaja tu empresa y desarrollamos el sistema
+          alrededor de eso. Desde cero o
+          <span class="text-gray-200">mejorando el que ya usás</span>.
+        </p>
+
+        <div
+          class="mt-6 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3"
+        >
+          <a
+            href="https://wa.me/5493564584838"
+            target="_blank"
+            class="btn-primary btn-glow"
+          >
+            Contanos qué necesitás
+          </a>
+          <a href="#servicios" class="btn-secondary">
+            Ver qué podemos resolver
+          </a>
+        </div>
+
+        <p class="mt-5 text-sm text-gray-400">
+          De
+          <span class="text-[var(--neon)] font-semibold"
+            >San Francisco (Córdoba)</span
+          >
+          a <span class="text-[var(--neon)] font-semibold">todo el país</span>.
+        </p>
+      </div>
+    </section>
+
     <!-- Destacado: ASPA TECH Consulta -->
-    <section class="pt-24 sm:pt-28 px-4 sm:px-6">
-      <div class="promo-banner max-w-7xl mx-auto rounded-2xl px-5 py-5 sm:px-7 sm:py-6">
+    <section class="px-4 sm:px-6 pb-4">
+      <div
+        class="promo-banner max-w-7xl mx-auto rounded-2xl px-5 py-5 sm:px-7 sm:py-6"
+      >
         <div class="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-5">
           <div class="flex items-center gap-4 flex-1 min-w-0">
             <img
@@ -483,361 +623,495 @@
 
             <div class="min-w-0">
               <span class="promo-banner__badge">Nuevo producto</span>
-              <h2 class="mt-2 text-xl sm:text-2xl font-extrabold text-white leading-tight">
+              <h2
+                class="mt-2 text-xl sm:text-2xl font-extrabold text-white leading-tight"
+              >
                 ASPA TECH <span class="text-[var(--neon)]">Consulta</span>
               </h2>
-              <p class="mt-1 text-sm sm:text-base text-gray-300 leading-relaxed max-w-3xl">
-                Consultá información fiscal, financiera y crediticia de personas y empresas, con datos de 
-                <span class="font-semibold text-white">ARCA y BCRA</span> centralizados en un solo lugar.
+              <p
+                class="mt-1 text-sm sm:text-base text-gray-300 leading-relaxed max-w-3xl"
+              >
+                Consultá información fiscal, financiera y crediticia de personas
+                y empresas, con datos de
+                <span class="font-semibold text-white">ARCA y BCRA</span>
+                centralizados en un solo lugar.
               </p>
             </div>
           </div>
 
-          <a href="#aspa-tech-consulta" class="promo-banner__link w-full sm:w-auto">
+          <a
+            href="#aspa-tech-consulta"
+            class="promo-banner__link w-full sm:w-auto"
+          >
             Ver ASPA TECH Consulta →
           </a>
         </div>
       </div>
     </section>
 
-    <!-- Hero -->
-    <section
-      id="inicio"
-      class="pt-10 sm:pt-12 pb-5 sm:pb-15 px-6 text-center reveal"
-    >
-      <div class="max-w-4xl mx-auto">
-        <h1 class="uppercase text-4xl sm:text-6xl font-extrabold leading-tight">
-          <span class="text-[var(--neon)]">Simplificá</span> tu gestión.<br
-            class="hidden sm:block"
-          />
-          Crecé <span class="text-[var(--neon)]">sin límites</span>.
-        </h1>
-        <p class="mt-5 text-lg sm:text-xl text-gray-300">
-          De
+    <!-- Problemas -->
+    <section id="problemas" class="py-14 sm:py-16 px-6 border-t border-white/5">
+      <div class="max-w-5xl mx-auto">
+        <h2
+          class="uppercase text-3xl font-bold text-center text-[var(--neon)] mb-4 reveal"
+        >
+          ¿Algo de esto te suena?
+        </h2>
+
+        <p class="text-center text-gray-300 max-w-3xl mx-auto mb-10 reveal">
+          Son las situaciones que más nos plantean las empresas que nos
+          escriben.
+        </p>
+
+        <div class="grid sm:grid-cols-2 gap-3 sm:gap-4 reveal">
+          <div class="pain-item">
+            <span class="pain-mark">›</span>
+            <p class="text-sm sm:text-base text-gray-300">
+              Cargás la misma información en dos o tres lugares distintos.
+            </p>
+          </div>
+          <div class="pain-item">
+            <span class="pain-mark">›</span>
+            <p class="text-sm sm:text-base text-gray-300">
+              El stock del sistema nunca termina de coincidir con el del
+              depósito.
+            </p>
+          </div>
+          <div class="pain-item">
+            <span class="pain-mark">›</span>
+            <p class="text-sm sm:text-base text-gray-300">
+              Tu tienda online y tu administración funcionan por separado.
+            </p>
+          </div>
+          <div class="pain-item">
+            <span class="pain-mark">›</span>
+            <p class="text-sm sm:text-base text-gray-300">
+              Hay tareas que se hacen a mano todos los días y siempre se escapa
+              algo.
+            </p>
+          </div>
+          <div class="pain-item">
+            <span class="pain-mark">›</span>
+            <p class="text-sm sm:text-base text-gray-300">
+              La información del negocio está repartida entre planillas,
+              cuadernos y mensajes.
+            </p>
+          </div>
+          <div class="pain-item">
+            <span class="pain-mark">›</span>
+            <p class="text-sm sm:text-base text-gray-300">
+              Tenés un sistema, pero le faltan cosas que tu empresa necesita.
+            </p>
+          </div>
+        </div>
+
+        <p
+          class="text-center text-gray-300 max-w-3xl mx-auto mt-10 text-base sm:text-lg reveal"
+        >
+          Ninguna de estas cosas se arregla con un sistema genérico. Se arreglan
           <span class="text-[var(--neon)] font-semibold"
-            >San Francisco (Córdoba)</span
-          >
-        </p>
-        <p class="text-lg sm:text-xl text-gray-300">
-          a <span class="text-[var(--neon)] font-semibold">todo el país</span>.
-        </p>
-        <p class="mt-3 text-sm sm:text-base text-gray-400 leading-relaxed">
-          <span class="font-semibold text-[var(--neon)]">Adaptamos</span> y
-          <span class="font-semibold text-[var(--neon)]">desarrollamos</span>
-          sistemas pensados para
-          <span class="text-gray-200">emprendedores, PYMEs y empresas</span>.
+            >mirando cómo trabaja tu empresa</span
+          >.
         </p>
       </div>
     </section>
 
-    <!-- Módulos -->
-    <section id="modulos" class="py-10 border-t border-white/5 sm:py-10 px-6">
+    <!-- Servicios -->
+    <section id="servicios" class="py-14 sm:py-16 px-6 border-t border-white/5">
       <div class="max-w-7xl mx-auto">
         <h2
-          class="uppercase text-3xl font-bold text-center text-[var(--neon)] mb-10 reveal"
+          class="uppercase text-3xl font-bold text-center text-[var(--neon)] mb-4 reveal"
         >
-          Todo tu negocio en un solo sistema
+          Qué podemos resolver
         </h2>
 
         <p class="text-center text-gray-300 max-w-3xl mx-auto mb-12 reveal">
-          ASPA TECH centraliza ventas, facturación, stock y finanzas en una sola
-          plataforma. Automatizá procesos, evitá errores y tomá decisiones en
-          tiempo real.
+          Desarrollamos software para empresas que necesitan ordenar su
+          operación y su administración. Cada proyecto arranca por tu problema,
+          no por un sistema ya armado.
         </p>
 
         <div
           class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 lg:gap-5"
         >
-          <!-- Ventas + Facturación -->
+          <!-- Sistemas a medida -->
           <article
-            class="reveal card-3d module-card module-featured rounded-2xl border highlight p-5 md:col-span-2 xl:col-span-3 relative overflow-hidden"
+            class="reveal card-3d module-card rounded-2xl border highlight p-6"
           >
-            <div class="badge">ARCA / AFIP</div>
-            <div class="text-4xl mb-3">🧾</div>
+            <div class="module-icon mb-3">🧩</div>
             <h3
-              class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]"
+              class="uppercase text-lg font-extrabold mb-2 text-[var(--neon)]"
             >
-              Ventas + Facturación
+              Sistemas a medida
             </h3>
             <p class="text-sm text-gray-300 leading-relaxed">
-              Vendé y facturá desde un mismo lugar con cálculo automático de
-              IVA, neto y totales.
+              Un sistema construido alrededor de tus procesos: ventas, stock,
+              compras, clientes, proveedores, administración y cualquier
+              circuito propio que hoy resolvés a mano.
             </p>
-            <div
-              class="mt-4 rounded-xl border border-white/10 bg-white/5 px-4 py-3 flex flex-col sm:flex-row sm:items-center gap-3"
-            >
-              <p class="text-sm text-gray-300">
-                Facturación electrónica conectada directamente con
-                <span class="font-semibold text-[var(--neon)]">ARCA</span>, para
-                emitir comprobantes de forma rápida, segura y desde el mismo
-                sistema.
-              </p>
-            </div>
           </article>
-          <!-- Carrito online con IA -->
+
+          <!-- Integraciones -->
           <article
-            class="reveal card-3d module-card module-featured rounded-2xl border highlight p-5 md:col-span-2 xl:col-span-3 relative overflow-hidden"
+            class="reveal card-3d module-card rounded-2xl border highlight p-6"
           >
-            <div class="grid lg:grid-cols-[1.25fr_0.75fr] gap-5 items-center">
+            <div class="module-icon mb-3">🔗</div>
+            <h3
+              class="uppercase text-lg font-extrabold mb-2 text-[var(--neon)]"
+            >
+              Integraciones
+            </h3>
+            <p class="text-sm text-gray-300 leading-relaxed">
+              Conectamos las herramientas que ya usás para que dejen de
+              funcionar por separado: tienda online, facturación, medios de pago
+              y otras plataformas de tu empresa.
+            </p>
+          </article>
+
+          <!-- Automatización -->
+          <article
+            class="reveal card-3d module-card rounded-2xl border highlight p-6"
+          >
+            <div class="module-icon mb-3">⚙️</div>
+            <h3
+              class="uppercase text-lg font-extrabold mb-2 text-[var(--neon)]"
+            >
+              Automatización
+            </h3>
+            <p class="text-sm text-gray-300 leading-relaxed">
+              Menos carga manual y menos errores: información que se actualiza
+              sola, controles más simples y pasos administrativos que dejás de
+              hacer.
+            </p>
+          </article>
+
+          <!-- Información para decidir -->
+          <article
+            class="reveal card-3d module-card rounded-2xl border highlight p-6"
+          >
+            <div class="module-icon mb-3">📈</div>
+            <h3
+              class="uppercase text-lg font-extrabold mb-2 text-[var(--neon)]"
+            >
+              Información para decidir
+            </h3>
+            <p class="text-sm text-gray-300 leading-relaxed">
+              Ver rápido cómo viene el negocio: los números que mirás todos los
+              días y los reportes que necesitás, sin tener que armar planillas.
+            </p>
+          </article>
+
+          <!-- Mejoras sobre lo que ya tenés -->
+          <article
+            class="reveal card-3d module-card rounded-2xl border highlight p-6"
+          >
+            <div class="module-icon mb-3">🛠️</div>
+            <h3
+              class="uppercase text-lg font-extrabold mb-2 text-[var(--neon)]"
+            >
+              Mejoras sobre lo que ya tenés
+            </h3>
+            <p class="text-sm text-gray-300 leading-relaxed">
+              No siempre hay que empezar de cero. Agregamos funciones,
+              conectamos herramientas y corregimos lo que hoy te complica del
+              sistema que usás.
+            </p>
+          </article>
+
+          <!-- Acompañamiento -->
+          <article
+            class="reveal card-3d module-card rounded-2xl border highlight p-6"
+          >
+            <div class="module-icon mb-3">🤝</div>
+            <h3
+              class="uppercase text-lg font-extrabold mb-2 text-[var(--neon)]"
+            >
+              Acompañamiento
+            </h3>
+            <p class="text-sm text-gray-300 leading-relaxed">
+              Después de la entrega seguimos cerca: soporte, ajustes y nuevas
+              funciones a medida que tu forma de trabajar cambia.
+            </p>
+          </article>
+
+          <!-- Tienda online conectada -->
+          <article
+            class="reveal card-3d rounded-2xl border highlight p-6 md:col-span-2 xl:col-span-3 relative overflow-hidden"
+          >
+            <div class="grid lg:grid-cols-[1.2fr_0.8fr] gap-5 items-center">
               <div>
-                <span
-                  class="inline-flex mb-3 bg-[var(--neon)]/15 text-[var(--neon)] border border-[var(--neon)]/40 px-3 py-1 rounded-full text-[0.7rem] uppercase tracking-wider font-semibold"
-                >
-                  Muy pronto
-                </span>
-
-                <div class="text-4xl mb-3">🛒</div>
-
+                <div class="module-icon mb-3">🛍️</div>
                 <h3
                   class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]"
                 >
-                  Carrito online
+                  Tu tienda online, conectada con tu gestión
                 </h3>
-
                 <p class="text-sm text-gray-300 leading-relaxed max-w-3xl">
-                  Mostrá tus productos en un catálogo online y permití que tus
-                  clientes armen su pedido de forma simple, rápida y guiada.
+                  Conectamos tu tienda online con tu sistema para que productos,
+                  stock y pedidos formen parte de un mismo flujo de trabajo. Se
+                  termina la doble carga y la venta que sale sin mercadería
+                  disponible.
                 </p>
               </div>
 
               <div
-                class="rounded-xl border border-[var(--neon)]/40 bg-[var(--neon)]/10 p-4 shadow-[0_0_30px_rgba(0,255,179,0.12)]"
+                class="rounded-xl border border-[var(--neon)]/40 bg-[var(--neon)]/10 p-4"
               >
-                <div class="flex items-start gap-4">
-                  <div
-                    class="w-14 h-14 flex-shrink-0 rounded-xl border border-[var(--neon)]/40 bg-[#0b0f12]/70 flex items-center justify-center text-3xl"
-                  >
-                    🧠
-                  </div>
-
-                  <div>
-                    <p
-                      class="text-xs font-bold uppercase tracking-[0.16em] text-[var(--neon)]"
-                    >
-                      Asistencia inteligente
-                    </p>
-
-                    <h4 class="text-lg font-bold mt-1">
-                      Agente de
-                      <span class="text-[var(--neon)]">IA</span>
-                    </h4>
-
-                    <p class="text-sm text-gray-300 mt-2 leading-relaxed">
-                      Asistirá al cliente para buscar productos, elegir opciones
-                      y completar el pedido fácilmente.
-                    </p>
-                  </div>
-                </div>
+                <p
+                  class="text-xs font-bold uppercase tracking-[0.16em] text-[var(--neon)]"
+                >
+                  Plataformas
+                </p>
+                <p class="text-sm text-gray-300 mt-2 leading-relaxed">
+                  Trabajamos con
+                  <span class="font-semibold text-white">Tiendanube</span> y con
+                  otras plataformas de venta online. Si usás otra, la miramos y
+                  te decimos qué se puede conectar.
+                </p>
               </div>
             </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-            <div
-              class="mt-4 rounded-xl border border-white/10 bg-white/5 px-4 py-3 flex flex-col sm:flex-row sm:items-center gap-3"
-            >
-              <p class="text-sm text-gray-300">
-                Todo conectado con
-                <span class="font-semibold text-[var(--neon)]">Aspa Tech</span>:
-                productos, clientes y pedidos centralizados en tu sistema de
-                gestión.
-              </p>
-            </div>
-          </article>
+    <!-- Tu sistema puede incluir -->
+    <section id="sistema" class="py-14 sm:py-16 px-6 border-t border-white/5">
+      <div class="max-w-7xl mx-auto">
+        <h2
+          class="uppercase text-3xl font-bold text-center text-[var(--neon)] mb-4 reveal"
+        >
+          Lo que tu sistema puede incluir
+        </h2>
+
+        <p class="text-center text-gray-300 max-w-3xl mx-auto mb-12 reveal">
+          No todas las empresas necesitan lo mismo. Estas son áreas que solemos
+          resolver: en cada proyecto se incluye lo que hace falta y se deja
+          afuera lo que no.
+        </p>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 lg:gap-5"
+        >
+          <!-- Ventas y facturación -->
           <article
-            class="reveal card-3d module-card module-featured rounded-2xl border highlight p-5 md:col-span-2 xl:col-span-3"
+            class="reveal card-3d module-card rounded-2xl border highlight p-5 relative overflow-hidden"
           >
-            <div class="module-icon mb-3">📚</div>
+            <div class="badge">ARCA</div>
+            <div class="module-icon mb-3">🧾</div>
             <h3
-              class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]"
+              class="uppercase text-lg font-extrabold mb-2 text-[var(--neon)]"
             >
-              Libro IVA
+              Ventas y facturación
             </h3>
-            <p class="text-sm text-gray-300">
-              Exportá el Libro IVA automáticamente con toda la información
-              organizada y discriminada en un click.
-            </p>
-          </article>
-          <!-- Stock -->
-          <article
-            class="reveal card-3d module-card module-featured rounded-2xl border highlight p-5 md:col-span-2 xl:col-span-3 relative overflow-hidden"
-          >
-            <div class="badge">Control automático</div>
-            <div class="module-icon mb-3">📊</div>
-            <h3
-              class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]"
-            >
-              Stock automático
-            </h3>
-            <p class="text-sm text-gray-300">
-              Se actualiza solo con cada movimiento. Sin errores ni tareas
-              manuales.
+            <p class="text-sm text-gray-300 leading-relaxed">
+              Presupuestos, pedidos y ventas con facturación electrónica desde
+              el mismo lugar, con IVA y totales calculados solos. Incluye el
+              Libro IVA listo para exportar.
             </p>
           </article>
 
-          <!-- Pedidos -->
+          <!-- Stock y depósitos -->
           <article
             class="reveal card-3d module-card rounded-2xl border highlight p-5"
           >
             <div class="module-icon mb-3">📦</div>
             <h3
-              class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]"
+              class="uppercase text-lg font-extrabold mb-2 text-[var(--neon)]"
             >
-              Pedidos en tiempo real
+              Stock y depósitos
             </h3>
-            <p class="text-sm text-gray-300">
-              Registrá pedidos desde cualquier lugar con impacto inmediato en el
-              sistema.
+            <p class="text-sm text-gray-300 leading-relaxed">
+              Stock que se actualiza con cada movimiento y se puede controlar
+              por depósito, sucursal o punto de venta.
             </p>
           </article>
 
-          <!-- Cuenta corriente -->
+          <!-- Compras y proveedores -->
+          <article
+            class="reveal card-3d module-card rounded-2xl border highlight p-5"
+          >
+            <div class="module-icon mb-3">🚚</div>
+            <h3
+              class="uppercase text-lg font-extrabold mb-2 text-[var(--neon)]"
+            >
+              Compras y proveedores
+            </h3>
+            <p class="text-sm text-gray-300 leading-relaxed">
+              Órdenes de compra, entrada de mercadería, cuentas a pagar y
+              vencimientos de cada proveedor.
+            </p>
+          </article>
+
+          <!-- Clientes y cuentas corrientes -->
           <article
             class="reveal card-3d module-card rounded-2xl border highlight p-5"
           >
             <div class="module-icon mb-3">👥</div>
             <h3
-              class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]"
+              class="uppercase text-lg font-extrabold mb-2 text-[var(--neon)]"
             >
-              Cuenta corriente
+              Clientes y cuentas corrientes
             </h3>
-            <p class="text-sm text-gray-300">
-              Control total de deudas, pagos y vencimientos por cliente.
+            <p class="text-sm text-gray-300 leading-relaxed">
+              El historial de cada cliente en un solo lugar: saldos, pagos y
+              vencimientos siempre actualizados.
             </p>
           </article>
 
-          <!-- Recibos -->
+          <!-- Cobros y finanzas -->
           <article
             class="reveal card-3d module-card rounded-2xl border highlight p-5"
           >
             <div class="module-icon mb-3">💰</div>
             <h3
-              class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]"
+              class="uppercase text-lg font-extrabold mb-2 text-[var(--neon)]"
             >
-              Recibos y cobros
+              Cobros y finanzas
             </h3>
-            <p class="text-sm text-gray-300">
-              Registrá pagos y generá recibos automáticamente.
+            <p class="text-sm text-gray-300 leading-relaxed">
+              Recibos, cobros, cheques, bancos y conciliación, para saber en
+              todo momento cómo está la caja.
             </p>
           </article>
 
-          <!-- Bancos -->
+          <!-- Usuarios y permisos -->
           <article
             class="reveal card-3d module-card rounded-2xl border highlight p-5"
           >
-            <div class="module-icon mb-3">🏦</div>
+            <div class="module-icon mb-3">🔐</div>
             <h3
-              class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]"
+              class="uppercase text-lg font-extrabold mb-2 text-[var(--neon)]"
             >
-              Bancos y conciliación
+              Usuarios y permisos
             </h3>
-            <p class="text-sm text-gray-300">
-              Controlá movimientos y conciliá ingresos fácilmente.
+            <p class="text-sm text-gray-300 leading-relaxed">
+              Cada persona ve y hace lo que le corresponde según su rol, sin
+              tocar lo que no le toca.
             </p>
           </article>
 
-          <!-- Compras -->
+          <!-- Mostrador -->
           <article
             class="reveal card-3d module-card rounded-2xl border highlight p-5"
           >
+            <div class="module-icon mb-3">🏪</div>
+            <h3
+              class="uppercase text-lg font-extrabold mb-2 text-[var(--neon)]"
+            >
+              Trabajo en el mostrador
+            </h3>
+            <p class="text-sm text-gray-300 leading-relaxed">
+              Venta rápida con lector de códigos e impresión automática de
+              tickets y comprobantes.
+            </p>
+          </article>
+
+          <!-- Pedidos online -->
+          <article
+            class="reveal card-3d rounded-2xl border highlight p-5 md:col-span-2 relative overflow-hidden"
+          >
+            <span
+              class="inline-flex mb-3 bg-[var(--neon)]/15 text-[var(--neon)] border border-[var(--neon)]/40 px-3 py-1 rounded-full text-[0.7rem] uppercase tracking-wider font-semibold"
+            >
+              Muy pronto
+            </span>
             <div class="module-icon mb-3">🛒</div>
             <h3
-              class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]"
+              class="uppercase text-lg font-extrabold mb-2 text-[var(--neon)]"
             >
-              Compras
+              Catálogo y pedidos online
             </h3>
-            <p class="text-sm text-gray-300">
-              Gestioná órdenes y entradas de mercadería con impacto en stock.
+            <p class="text-sm text-gray-300 leading-relaxed">
+              Un catálogo donde tus clientes arman el pedido solos, con tus
+              productos y tus precios, y ese pedido entra directo a tu sistema.
+              Muy pronto, con un asistente que los ayuda a encontrar lo que
+              buscan y completar la compra.
             </p>
           </article>
-
-          <!-- Proveedores -->
-          <article
-            class="reveal card-3d module-card rounded-2xl border highlight p-5"
-          >
-            <div class="module-icon mb-3">📄</div>
-            <h3
-              class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]"
-            >
-              Proveedores
-            </h3>
-            <p class="text-sm text-gray-300">
-              Control de pagos, vencimientos y cuentas a pagar.
-            </p>
-          </article>
-
-          <!-- Cheques -->
-          <article
-            class="reveal card-3d module-card rounded-2xl border highlight p-5"
-          >
-            <div class="module-icon mb-3">🏷️</div>
-            <h3
-              class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]"
-            >
-              Cheques
-            </h3>
-            <p class="text-sm text-gray-300">
-              Gestión completa de cheques emitidos y recibidos.
-            </p>
-          </article>
-
-          <!-- Lector -->
-          <article
-            class="reveal card-3d module-card rounded-2xl border highlight p-5"
-          >
-            <div class="module-icon mb-3">📡</div>
-            <h3
-              class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]"
-            >
-              Lector de códigos
-            </h3>
-            <p class="text-sm text-gray-300">
-              Escaneá productos y acelerá ventas sin usar teclado.
-            </p>
-          </article>
-
-          <!-- Impresoras -->
-          <article
-            class="reveal card-3d module-card rounded-2xl border highlight p-5"
-          >
-            <div class="module-icon mb-3">🖨️</div>
-            <h3
-              class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]"
-            >
-              Impresoras térmicas
-            </h3>
-            <p class="text-sm text-gray-300">
-              Imprimí tickets y comprobantes automáticamente.
-            </p>
-          </article>
-
-          <!-- Rutas -->
-          <!-- <article class="reveal card-3d rounded-2xl border highlight  p-6 md:col-span-2 relative overflow-hidden">
-        <div class="badge">Nuevo</div>
-        <div class="module-icon mb-3">🗺️</div>
-        <h3 class="uppercase text-xl font-extrabold mb-2 text-[var(--neon)]">
-          Optimización de rutas
-        </h3>
-        <p class="text-sm text-gray-300 mb-3">
-          Calculá recorridos inteligentes automáticamente según múltiples destinos.
-        </p>
-        <ul class="text-sm text-gray-300 space-y-1">
-          <li>⚡ Rutas optimizadas automáticamente</li>
-          <li>📍 Según tráfico real</li>
-          <li>🧠 Decisiones en segundos</li>
-          <li>💰 Menos tiempo y costos</li>
-        </ul>
-        <p class="text-xs text-gray-500 mt-4">Potenciado por Google Maps</p>
-      </article> -->
         </div>
 
-        <!-- Cierre -->
         <div
-          class="text-center mt-14 reveal rounded-2xl border border-[var(--neon)]/30 bg-white/5 p-8"
+          class="text-center mt-12 reveal rounded-2xl border border-[var(--neon)]/30 bg-white/5 p-8"
         >
-          <p class="text-gray-300 text-lg">
-            ⚡ Más velocidad · 📊 Más control · 🔗 Más integración
+          <p class="text-gray-300 text-base sm:text-lg max-w-3xl mx-auto">
+            ¿Tu empresa tiene un proceso que no entra en ninguna de estas cajas?
+            Es justamente lo que hacemos: desarrollar esa parte que ningún
+            sistema estándar resuelve.
           </p>
-          <p class="text-[var(--neon)] font-bold mt-3 text-2xl">
-            Llevá tu gestión al siguiente nivel
+          <a
+            href="https://wa.me/5493564584838"
+            target="_blank"
+            class="btn-primary btn-glow mt-6"
+          >
+            Contanos tu caso
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cómo trabajamos -->
+    <section
+      id="trabajamos"
+      class="py-14 sm:py-16 px-6 border-t border-white/5"
+    >
+      <div class="max-w-7xl mx-auto">
+        <h2
+          class="uppercase text-3xl font-bold text-center text-[var(--neon)] mb-4 reveal"
+        >
+          Cómo trabajamos
+        </h2>
+
+        <p class="text-center text-gray-300 max-w-3xl mx-auto mb-12 reveal">
+          Sin vueltas y con contacto directo, de principio a fin.
+        </p>
+
+        <div class="grid sm:grid-cols-2 xl:grid-cols-4 gap-4 lg:gap-5 reveal">
+          <div class="card-3d rounded-2xl border highlight p-6">
+            <div class="step-num">1</div>
+            <h3 class="font-extrabold text-lg mb-2">Escuchamos</h3>
+            <p class="text-sm text-gray-300 leading-relaxed">
+              Antes de proponer nada queremos entender cómo funciona hoy tu
+              empresa y dónde se traba.
+            </p>
+          </div>
+
+          <div class="card-3d rounded-2xl border highlight p-6">
+            <div class="step-num">2</div>
+            <h3 class="font-extrabold text-lg mb-2">
+              Definimos qué hace falta
+            </h3>
+            <p class="text-sm text-gray-300 leading-relaxed">
+              Desarrollamos sólo lo que te sirve. Lo que hoy funciona bien lo
+              aprovechamos en lugar de reemplazarlo.
+            </p>
+          </div>
+
+          <div class="card-3d rounded-2xl border highlight p-6">
+            <div class="step-num">3</div>
+            <h3 class="font-extrabold text-lg mb-2">Avanzamos por etapas</h3>
+            <p class="text-sm text-gray-300 leading-relaxed">
+              Empezamos por lo que más te está costando, así usás el sistema
+              desde temprano y no esperás meses para ver resultados.
+            </p>
+          </div>
+
+          <div class="card-3d rounded-2xl border highlight p-6">
+            <div class="step-num">4</div>
+            <h3 class="font-extrabold text-lg mb-2">Acompañamos el cambio</h3>
+            <p class="text-sm text-gray-300 leading-relaxed">
+              Cuando el negocio cambia, el sistema se adapta. Seguimos
+              trabajando con vos después de la entrega.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="mt-8 reveal rounded-2xl border border-[var(--neon)]/30 bg-white/5 p-6 sm:p-8 text-center"
+        >
+          <p class="text-gray-300 text-base sm:text-lg max-w-3xl mx-auto">
+            Hablás siempre con las personas que desarrollan tu sistema. Sin
+            intermediarios y sin esperar respuestas que no llegan.
           </p>
         </div>
       </div>
@@ -849,12 +1123,12 @@
         <h2
           class="uppercase text-3xl font-bold text-center text-[var(--neon)] mb-4 reveal"
         >
-          Clientes que confían
+          Empresas que confían en nosotros
         </h2>
 
         <p class="text-center text-gray-300 max-w-3xl mx-auto mb-10 reveal">
-          Empresas que ya gestionan sus procesos con soluciones desarrolladas
-          por ASPA TECH.
+          Rubros distintos, tamaños distintos y cada uno con su propia forma de
+          trabajar.
         </p>
 
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 reveal">
@@ -1037,61 +1311,38 @@
       </div>
     </section>
 
+    <!-- Nosotros -->
     <section id="nosotros" class="py-16 px-6 border-t border-white/5">
       <div class="max-w-5xl mx-auto text-center">
         <h2 class="uppercase text-3xl font-bold text-[var(--neon)] mb-6 reveal">
-          Nosotros
+          Quiénes somos
         </h2>
-        <p class="text-gray-300 reveal max-w-3xl mx-auto">
-          Transformamos procesos complejos en flujos simples y eficientes.
-          Acompañamos a emprendedores, PYMEs y empresas con tecnología accesible
-          y un enfoque humano.
+        <p class="text-gray-300 reveal max-w-3xl mx-auto leading-relaxed">
+          Somos un equipo de desarrollo de San Francisco, Córdoba, que trabaja
+          con empresas de todo el país. Hacemos software para negocios que
+          necesitan resolver algo concreto: ordenar la operación, dejar de
+          repetir trabajo y tener la información en un solo lugar.
         </p>
-        <p class="text-gray-400 reveal mt-3">
-          Acompañamos cada empresa con soporte permanente, actualizaciones
-          continuas y mejora constante del sistema.
+        <p class="text-gray-400 reveal mt-4 max-w-3xl mx-auto leading-relaxed">
+          Trabajamos con empresas chicas, medianas y en crecimiento. Algunas
+          empiezan con un sistema completo y otras con una sola parte que hoy
+          les está costando.
         </p>
-
-        <!-- Contacto -->
-        <div class="mt-8 space-y-2 reveal">
-          <p class="text-[var(--neon)] font-semibold uppercase tracking-wide">
-            Contacto directo
-          </p>
-          <p class="text-gray-300">
-            WhatsApp:
-            <a
-              href="https://wa.me/5493564584838"
-              target="_blank"
-              class="text-[var(--neon)] hover:underline"
-            >
-              +54 9 3564 584838
-            </a>
-          </p>
-          <p class="text-gray-300">
-            Instagram:
-            <a
-              href="https://www.instagram.com/aspatechsf"
-              target="_blank"
-              class="text-[var(--neon)] hover:underline"
-            >
-              @aspatechsf
-            </a>
-          </p>
-        </div>
       </div>
     </section>
 
+    <!-- Productos -->
     <section id="productos" class="py-16 px-6 border-t border-white/5">
       <div class="max-w-7xl mx-auto">
         <h2
           class="uppercase text-3xl font-bold text-center text-[var(--neon)] mb-4 reveal"
         >
-          Otros productos
+          Productos listos para usar
         </h2>
 
         <p class="text-center text-gray-300 max-w-3xl mx-auto mb-10 reveal">
-          Además del sistema principal, ofrecemos productos ya desarrollados
-          listos para usar.
+          Además del desarrollo a medida, tenemos productos ya terminados que
+          podés empezar a usar enseguida y adaptar si tu empresa lo necesita.
         </p>
 
         <div class="grid gap-8 reveal">
@@ -1269,8 +1520,72 @@
       </div>
     </section>
 
-    <!-- Sobre nosotros -->
-    <!-- Sobre nosotros -->
+    <!-- Contacto -->
+    <section id="contacto" class="py-16 px-6 border-t border-white/5">
+      <div class="max-w-4xl mx-auto text-center reveal">
+        <h2 class="uppercase text-3xl font-bold text-[var(--neon)] mb-5">
+          Contanos qué necesitás
+        </h2>
+
+        <p class="text-gray-300 text-base sm:text-lg leading-relaxed max-w-3xl mx-auto">
+          No hace falta que sepas qué sistema necesitás ni cómo se hace.
+          Contanos cómo trabaja hoy tu empresa y qué te está complicando, y te
+          decimos si podemos ayudarte y por dónde conviene empezar.
+        </p>
+
+        <p class="text-gray-400 mt-3">
+          La primera charla no tiene costo ni compromiso.
+        </p>
+
+        <div
+          class="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4"
+        >
+          <a
+            href="https://wa.me/5493564584838"
+            target="_blank"
+            class="btn-primary btn-glow"
+          >
+            Escribinos por WhatsApp
+          </a>
+          <a
+            href="https://www.instagram.com/aspatechsf"
+            target="_blank"
+            class="btn-secondary"
+          >
+            Ver nuestro Instagram
+          </a>
+        </div>
+
+        <div class="mt-10 space-y-2">
+          <p class="text-[var(--neon)] font-semibold uppercase tracking-wide">
+            Contacto directo
+          </p>
+          <p class="text-gray-300">
+            WhatsApp:
+            <a
+              href="https://wa.me/5493564584838"
+              target="_blank"
+              class="text-[var(--neon)] hover:underline"
+            >
+              +54 9 3564 584838
+            </a>
+          </p>
+          <p class="text-gray-300">
+            Instagram:
+            <a
+              href="https://www.instagram.com/aspatechsf"
+              target="_blank"
+              class="text-[var(--neon)] hover:underline"
+            >
+              @aspatechsf
+            </a>
+          </p>
+          <p class="text-gray-400 text-sm pt-1">
+            San Francisco, Córdoba · Trabajamos con empresas de todo el país.
+          </p>
+        </div>
+      </div>
+    </section>
 
     <!-- Footer -->
     <footer
