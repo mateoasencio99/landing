@@ -212,6 +212,55 @@
         box-shadow: 0 10px 28px rgba(0, 255, 179, 0.18);
         border-color: rgba(0, 255, 179, 0.35);
       }
+      /* Carrusel de clientes (una línea, automático) */
+      .marquee {
+        overflow: hidden;
+        /* aire arriba/abajo para el glow y el hover de las tarjetas */
+        padding: 1.5rem 0;
+        -webkit-mask-image: linear-gradient(
+          to right,
+          transparent,
+          #000 6%,
+          #000 94%,
+          transparent
+        );
+        mask-image: linear-gradient(
+          to right,
+          transparent,
+          #000 6%,
+          #000 94%,
+          transparent
+        );
+      }
+      .marquee-track {
+        display: flex;
+        gap: 1.5rem;
+        width: max-content;
+        animation: marquee-scroll 45s linear infinite;
+      }
+      .marquee:hover .marquee-track {
+        animation-play-state: paused;
+      }
+      .marquee-track > .client-card {
+        flex: none;
+        width: 240px;
+      }
+      @keyframes marquee-scroll {
+        to {
+          /* mitad del track + media separación: el segundo set queda donde estaba el primero */
+          transform: translateX(calc(-50% - 0.75rem));
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .marquee {
+          overflow-x: auto;
+          -webkit-mask-image: none;
+          mask-image: none;
+        }
+        .marquee-track {
+          animation: none;
+        }
+      }
       /* Destacado: Stock Automático */
       .highlight {
         background:
@@ -1131,7 +1180,8 @@
           trabajar.
         </p>
 
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 reveal">
+        <div class="marquee reveal" id="clientes-marquee">
+          <div class="marquee-track">
           <div
             class="client-card highlight rounded-2xl p-6 text-center flex flex-col items-center"
           >
@@ -1306,6 +1356,26 @@
             <p class="text-xs text-gray-400 mt-1 italic tracking-wide">
               📍 San Francisco, Córdoba
             </p>
+          </div>
+
+          <div
+            class="client-card highlight rounded-2xl p-6 text-center flex flex-col items-center"
+          >
+            <div
+              class="w-36 h-36 rounded-2xl overflow-hidden border border-white/10 bg-white/5 mb-4"
+            >
+              <img
+                src="img/Samom.jpg"
+                alt="Logo Samom"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <span class="module-chip mb-3">Mayorista de calzado</span>
+            <h3 class="uppercase font-semibold text-lg">Samom</h3>
+            <p class="text-xs text-gray-400 mt-1 italic tracking-wide">
+              📍 San Francisco, Córdoba
+            </p>
+          </div>
           </div>
         </div>
       </div>
@@ -1630,6 +1700,19 @@
         { threshold: 0.12 },
       );
       document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+      // Carrusel de clientes: duplica las tarjetas para que el loop no tenga corte
+      (() => {
+        const track = document.querySelector("#clientes-marquee .marquee-track");
+        if (!track) return;
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+        [...track.children].forEach((card) => {
+          const copy = card.cloneNode(true);
+          copy.setAttribute("aria-hidden", "true");
+          copy.querySelector("img")?.setAttribute("alt", "");
+          track.appendChild(copy);
+        });
+      })();
 
       // Brillo animado en botones según puntero
       document.querySelectorAll(".btn-glow").forEach((btn) => {
